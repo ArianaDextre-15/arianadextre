@@ -12,14 +12,15 @@
         }
 
         :root {
-            --pastel-pink: #F8BBD9;
-            --pastel-blue: #B4E7CE;
-            --pastel-lavender: #C8A8E9;
-            --pastel-peach: #FFD1DC;
-            --soft-gray: #F7F9FC;
+            --pastel-lilac: #E8D5E8;
+            --light-lilac: #F5F0F5;
+            --cream: #FFF8E7;
+            --cream-dark: #F5E6D3;
+            --soft-gray: #FAFAFA;
             --dark-gray: #2C3E50;
             --light-gray: #ECF0F1;
-            --accent-color: #6C5CE7;
+            --accent-color: #A084CA;
+            --text-muted: #6B7280;
         }
 
         body {
@@ -78,7 +79,7 @@
             transform: translateX(-50%);
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue));
+            background: var(--pastel-lilac);
             transition: width 0.3s ease;
         }
 
@@ -105,7 +106,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-blue) 50%, var(--pastel-lavender) 100%);
+            background: var(--pastel-lilac);
             padding: 8rem 2rem;
             text-align: center;
             position: relative;
@@ -119,7 +120,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="%23ffffff15"/><circle cx="800" cy="300" r="150" fill="%23ffffff10"/><circle cx="400" cy="700" r="120" fill="%23ffffff15"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="%23ffffff20"/><circle cx="800" cy="300" r="150" fill="%23ffffff15"/><circle cx="400" cy="700" r="120" fill="%23ffffff20"/></svg>');
             z-index: 1;
         }
 
@@ -135,41 +136,82 @@
             height: 180px;
             border-radius: 50%;
             margin: 0 auto 2rem;
-            background: linear-gradient(45deg, white, var(--pastel-peach));
+            background: var(--cream);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3.5rem;
-            border: 3px solid rgba(255,255,255,0.7);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 3px solid rgba(255,255,255,0.8);
+            box-shadow: 0 20px 40px rgba(160, 132, 202, 0.2);
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: white;
+            color: var(--dark-gray);
             font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .hero .subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            color: rgba(255,255,255,0.95);
-            font-weight: 400;
+            color: var(--accent-color);
+            font-weight: 500;
         }
 
         .hero .description {
             font-size: 1.1rem;
             margin-bottom: 3rem;
-            color: rgba(255,255,255,0.85);
+            color: var(--text-muted);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
+        /* About Me Section */
+        .about-me {
+            background: var(--light-lilac);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .about-me h3 {
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-me p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: var(--cream);
+            color: var(--dark-gray);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(160, 132, 202, 0.1);
+        }
+
         .cta-button {
-            background: white;
+            background: var(--cream);
             color: var(--accent-color);
             padding: 1rem 2.5rem;
             border: none;
@@ -178,12 +220,13 @@
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(160, 132, 202, 0.2);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(160, 132, 202, 0.3);
+            background: var(--cream-dark);
         }
 
         /* Section Headers */
@@ -204,7 +247,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue));
+            background: var(--pastel-lilac);
             border-radius: 2px;
         }
 
@@ -234,25 +277,25 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--pastel-pink), var(--pastel-blue), var(--pastel-lavender));
+            background: var(--pastel-lilac);
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(160, 132, 202, 0.15);
         }
 
         .project-img {
             width: 100%;
             height: 200px;
-            background: linear-gradient(45deg, var(--pastel-blue), var(--pastel-lavender));
+            background: var(--light-lilac);
             border-radius: 15px;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: white;
+            color: var(--accent-color);
         }
 
         .project-card h3 {
@@ -263,7 +306,7 @@
         }
 
         .project-card p {
-            color: #7F8C8D;
+            color: var(--text-muted);
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
@@ -276,7 +319,7 @@
         }
 
         .tag {
-            background: var(--light-gray);
+            background: var(--light-lilac);
             color: var(--dark-gray);
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
@@ -290,15 +333,19 @@
         }
 
         .project-link {
+            background: var(--cream);
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
-            padding: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
         }
 
         .project-link:hover {
-            color: var(--pastel-lavender);
+            background: var(--cream-dark);
+            transform: translateY(-2px);
         }
 
         /* Timeline */
@@ -316,7 +363,7 @@
             top: 0;
             bottom: 0;
             width: 2px;
-            background: linear-gradient(180deg, var(--pastel-pink), var(--pastel-blue), var(--pastel-lavender));
+            background: var(--pastel-lilac);
         }
 
         .timeline-item {
@@ -345,9 +392,9 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: var(--pastel-lavender);
-            border: 3px solid white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            background: var(--accent-color);
+            border: 3px solid var(--cream);
+            box-shadow: 0 2px 8px rgba(160, 132, 202, 0.2);
         }
 
         .timeline-item:nth-child(odd)::before {
@@ -372,7 +419,7 @@
         }
 
         .timeline-item p {
-            color: #7F8C8D;
+            color: var(--text-muted);
             line-height: 1.6;
         }
 
@@ -412,15 +459,15 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--pastel-lavender);
-            box-shadow: 0 0 0 3px rgba(200, 168, 233, 0.1);
+            border-color: var(--pastel-lilac);
+            box-shadow: 0 0 0 3px rgba(232, 213, 232, 0.3);
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-lavender));
-            color: white;
+            background: var(--cream);
+            color: var(--accent-color);
             padding: 1rem 2rem;
-            border: none;
+            border: 2px solid var(--pastel-lilac);
             border-radius: 30px;
             font-size: 1rem;
             cursor: pointer;
@@ -431,7 +478,8 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(200, 168, 233, 0.4);
+            box-shadow: 0 10px 25px rgba(160, 132, 202, 0.3);
+            background: var(--cream-dark);
         }
 
         /* Responsive Design */
@@ -443,6 +491,7 @@
             .timeline-item::before { left: -25px !important; }
             .projects-grid { grid-template-columns: 1fr; }
             nav ul { gap: 1rem; flex-wrap: wrap; }
+            .skills { justify-content: center; }
         }
     </style>
 </head>
@@ -467,9 +516,27 @@
                 <div class="hero-content">
                     <div class="profile-img">👩‍💻</div>
                     <h1>Ariana Dextre</h1>
-                    <p class="subtitle">Desarrolladora & Diseñadora</p>
-                    <p class="description">Apasionada por crear experiencias digitales excepcionales que combinan diseño elegante con tecnología innovadora.</p>
-                    <a href="#" class="cta-button nav-link" data-section="projects">Ver Proyectos</a>
+                    <p class="subtitle">Desarrolladora Frontend & Diseñadora UX/UI</p>
+                    <p class="description">Transformo ideas creativas en experiencias digitales únicas, combinando código limpio con diseño centrado en el usuario para crear soluciones que realmente importen.</p>
+                    
+                    <div class="about-me">
+                        <h3>Sobre Mí</h3>
+                        <p>Soy una desarrolladora apasionada con más de 3 años de experiencia creando interfaces web modernas y aplicaciones móviles. Me especializo en React, diseño UX/UI y desarrollo frontend, siempre buscando la perfecta armonía entre funcionalidad y estética.</p>
+                        <p>Mi enfoque se centra en crear experiencias digitales accesibles e intuitivas que generen un impacto positivo en la vida de las personas.</p>
+                        
+                        <div class="skills">
+                            <span class="skill-tag">React & Next.js</span>
+                            <span class="skill-tag">JavaScript & TypeScript</span>
+                            <span class="skill-tag">Figma & Adobe XD</span>
+                            <span class="skill-tag">CSS & Tailwind</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">UX Research</span>
+                            <span class="skill-tag">Prototipado</span>
+                            <span class="skill-tag">Git & GitHub</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="cta-button nav-link" data-section="projects">Explorar Proyectos</a>
                 </div>
             </div>
         </section>
@@ -481,46 +548,49 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-img">🎨</div>
-                        <h3>Diseño UX/UI</h3>
-                        <p>Interfaz moderna y intuitiva para aplicación móvil, enfocada en la experiencia del usuario.</p>
+                        <h3>Plataforma E-learning</h3>
+                        <p>Diseño y desarrollo completo de una plataforma educativa interactiva con sistema de progreso personalizado y gamificación para mejorar la experiencia de aprendizaje.</p>
                         <div class="project-tags">
+                            <span class="tag">React</span>
                             <span class="tag">Figma</span>
-                            <span class="tag">Adobe XD</span>
-                            <span class="tag">Prototipado</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">CSS Grid</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Ver Diseño</a>
-                            <a href="#" class="project-link">Prototipo</a>
+                            <a href="#" class="project-link">Ver Demo</a>
+                            <a href="#" class="project-link">Diseño</a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-img">💻</div>
-                        <h3>Aplicación Web</h3>
-                        <p>Plataforma web responsiva con funcionalidades avanzadas y diseño minimalista.</p>
+                        <h3>Dashboard Analítico</h3>
+                        <p>Aplicación web responsiva para visualización de datos en tiempo real con gráficos interactivos y sistema de filtros avanzados para análisis empresarial.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">D3.js</span>
                             <span class="tag">Node.js</span>
                             <span class="tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">Demo Live</a>
-                            <a href="#" class="project-link">Código</a>
+                            <a href="#" class="project-link">Ver Proyecto</a>
+                            <a href="#" class="project-link">GitHub</a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-img">📱</div>
-                        <h3>App Móvil</h3>
-                        <p>Aplicación móvil nativa con interfaz elegante y funcionalidades innovadoras.</p>
+                        <h3>App de Bienestar</h3>
+                        <p>Aplicación móvil para seguimiento de hábitos saludables con interfaz minimalista, recordatorios inteligentes y sistema de recompensas motivacional.</p>
                         <div class="project-tags">
                             <span class="tag">React Native</span>
+                            <span class="tag">TypeScript</span>
                             <span class="tag">Firebase</span>
-                            <span class="tag">API Rest</span>
+                            <span class="tag">Expo</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">App Store</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            <a href="#" class="project-link">Prototipo</a>
                         </div>
                     </div>
                 </div>
@@ -534,20 +604,20 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <h3>Ingeniería de Sistemas</h3>
-                        <h4>Universidad - 2020-2024</h4>
-                        <p>Especialización en desarrollo de software y gestión de proyectos tecnológicos.</p>
+                        <h4>Universidad Nacional Mayor de San Marcos - 2020-2024</h4>
+                        <p>Especialización en desarrollo de software, gestión de proyectos tecnológicos y arquitectura de sistemas. Enfoque en metodologías ágiles y desarrollo full-stack.</p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3>Certificación en UX/UI</h3>
-                        <h4>Google Design - 2023</h4>
-                        <p>Certificación profesional en diseño de experiencia de usuario e interfaces.</p>
+                        <h3>Certificación Google UX Design</h3>
+                        <h4>Google Career Certificates - 2023</h4>
+                        <p>Certificación profesional completa en diseño de experiencia de usuario, investigación UX, prototipado, testing de usabilidad y diseño centrado en el usuario.</p>
                     </div>
 
                     <div class="timeline-item">
                         <h3>Full Stack Development</h3>
-                        <h4>Platzi - 2022</h4>
-                        <p>Formación completa en desarrollo web frontend y backend.</p>
+                        <h4>Platzi & freeCodeCamp - 2022</h4>
+                        <p>Formación intensiva en desarrollo web completo: frontend moderno con React, backend con Node.js, bases de datos y deployment en la nube.</p>
                     </div>
                 </div>
             </div>
@@ -559,21 +629,21 @@
                 <h2>Experiencia Profesional</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>Frontend Developer</h3>
-                        <h4>TechCorp - 2023-Presente</h4>
-                        <p>Desarrollo de interfaces web modernas y responsivas utilizando React y tecnologías actuales.</p>
+                        <h3>Frontend Developer Senior</h3>
+                        <h4>InnovaTech Solutions - 2024-Presente</h4>
+                        <p>Liderazgo en el desarrollo de interfaces modernas y responsivas para aplicaciones empresariales. Implementación de design systems y optimización de performance web.</p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3>UX/UI Designer</h3>
-                        <h4>DesignStudio - 2022-2023</h4>
-                        <p>Diseño de experiencias digitales para startups y empresas establecidas.</p>
+                        <h3>UX/UI Designer & Frontend Developer</h3>
+                        <h4>DigitalCraft Studio - 2022-2024</h4>
+                        <p>Diseño de experiencias digitales para startups y PyMEs. Desarrollo de prototipos interactivos y aplicaciones web con enfoque en usabilidad y conversión.</p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3>Junior Developer</h3>
-                        <h4>StartupXYZ - 2021-2022</h4>
-                        <p>Desarrollo de aplicaciones web y soporte técnico para proyectos internos.</p>
+                        <h3>Junior Frontend Developer</h3>
+                        <h4>TechStart Peru - 2021-2022</h4>
+                        <p>Desarrollo de componentes reutilizables, mantenimiento de aplicaciones legacy y colaboración en proyectos de modernización tecnológica.</p>
                     </div>
                 </div>
             </div>
@@ -582,24 +652,24 @@
         <!-- Voluntariado Section -->
         <section id="voluntariado" class="section">
             <div class="container">
-                <h2>Impacto Social</h2>
+                <h2>Impacto Social & Voluntariado</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <h3>Mentora en Tecnología</h3>
                         <h4>Laboratoria - 2023-Presente</h4>
-                        <p>Mentoreo a mujeres jóvenes en programación y desarrollo profesional en tech.</p>
+                        <p>Mentoreo y acompañamiento a mujeres jóvenes en su transición hacia carreras tech. Workshops sobre programación, soft skills y desarrollo profesional.</p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3>Organizadora de Eventos</h3>
-                        <h4>Women in Tech Peru - 2022-2023</h4>
-                        <p>Coordinación de workshops y eventos para promover la diversidad en tecnología.</p>
+                        <h3>Lead Organizadora</h3>
+                        <h4>Women in Tech Peru - 2022-2024</h4>
+                        <p>Coordinación de eventos, meetups y workshops para promover la diversidad e inclusión en tecnología. Más de 500 participantes en eventos organizados.</p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3>Voluntaria Digital</h3>
-                        <h4>ONG Educación Digital - 2021-2022</h4>
-                        <p>Desarrollo de plataformas educativas para comunidades de bajos recursos.</p>
+                        <h3>Desarrolladora Voluntaria</h3>
+                        <h4>Code for Peru - 2021-2022</h4>
+                        <p>Desarrollo de soluciones tecnológicas para ONGs locales. Creación de plataformas web para gestión educativa en comunidades de bajos recursos.</p>
                     </div>
                 </div>
             </div>
@@ -608,24 +678,24 @@
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
-                <h2>Conversemos</h2>
+                <h2>¡Conversemos!</h2>
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
                         </div>
                         <div class="form-group">
                             <label for="subject">Asunto</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto o idea..."></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Enviar Mensaje</button>
                     </form>
@@ -658,7 +728,7 @@
         // Form submission
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('¡Mensaje enviado! Gracias por contactarme.');
+            alert('¡Mensaje enviado exitosamente! Te contactaré pronto. 💜');
         });
 
         // Smooth animations
@@ -676,12 +746,22 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card, .timeline-item').forEach(el => {
+        document.querySelectorAll('.project-card, .timeline-item, .skill-tag').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        // Skills animation
+        setTimeout(() => {
+            document.querySelectorAll('.skill-tag').forEach((tag, index) => {
+                setTimeout(() => {
+                    tag.style.opacity = '1';
+                    tag.style.transform = 'translateY(0) scale(1)';
+                }, index * 100);
+            });
+        }, 500);
     </script>
 </body>
 </html>
