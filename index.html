@@ -46,25 +46,36 @@
             backdrop-filter: blur(20px);
             border-radius: 25px;
             padding: 0.5rem;
-            border: 1px solid rgba(0,0,0,0.1);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .language-selector select {
             background: transparent;
             border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
             color: var(--dark-gray);
             font-weight: 500;
             cursor: pointer;
-            padding: 0.3rem 0.5rem;
-            border-radius: 20px;
             outline: none;
-            font-size: 0.9rem;
-            min-width: 140px;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23A084CA" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 1rem;
+            padding-right: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            background-color: var(--light-lilac);
         }
 
         .language-selector select:focus {
-            background: var(--light-lilac);
+            background-color: var(--light-lilac);
+            box-shadow: 0 0 0 2px rgba(232, 213, 232, 0.5);
         }
 
         /* Navigation */
@@ -526,7 +537,12 @@
             .language-selector {
                 top: 10px;
                 right: 10px;
-                transform: scale(0.9);
+                padding: 0.3rem;
+            }
+            .language-selector select {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.8rem;
+                padding-right: 1.5rem;
             }
         }
     </style>
@@ -534,43 +550,20 @@
 <body>
     <div class="language-selector">
         <select id="languageSelect">
-            <option value="es">🇪🇸 Español</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="it">🇮🇹 Italiano</option>
-            <option value="fr">🇫🇷 Français</option>
-            <option value="pt">🇵🇹 Português</option>
-            <option value="ko">🇰🇷 한국어</option>
+            <option value="es" data-flag="🇪🇸">Español</option>
+            <option value="en" data-flag="🇺🇸">English</option>
         </select>
     </div>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#" class="nav-link active" data-section="home" 
-                    data-lang-es="Inicio" data-lang-en="Home" data-lang-zh="主页" 
-                    data-lang-it="Home" data-lang-fr="Accueil" data-lang-pt="Início" 
-                    data-lang-ko="홈">Inicio</a></li>
-                <li><a href="#" class="nav-link" data-section="projects" 
-                    data-lang-es="Proyectos" data-lang-en="Projects" data-lang-zh="项目" 
-                    data-lang-it="Progetti" data-lang-fr="Projets" data-lang-pt="Projetos" 
-                    data-lang-ko="프로젝트">Proyectos</a></li>
-                <li><a href="#" class="nav-link" data-section="education" 
-                    data-lang-es="Educación" data-lang-en="Education" data-lang-zh="教育" 
-                    data-lang-it="Istruzione" data-lang-fr="Éducation" data-lang-pt="Educação" 
-                    data-lang-ko="교육">Educación</a></li>
-                <li><a href="#" class="nav-link" data-section="experience" 
-                    data-lang-es="Experiencia" data-lang-en="Experience" data-lang-zh="经验" 
-                    data-lang-it="Esperienza" data-lang-fr="Expérience" data-lang-pt="Experiência" 
-                    data-lang-ko="경험">Experiencia</a></li>
-                <li><a href="#" class="nav-link" data-section="voluntariado" 
-                    data-lang-es="Voluntariado" data-lang-en="Volunteering" data-lang-zh="志愿服务" 
-                    data-lang-it="Volontariato" data-lang-fr="Bénévolat" data-lang-pt="Voluntariado" 
-                    data-lang-ko="자원봉사">Voluntariado</a></li>
-                <li><a href="#" class="nav-link" data-section="contact" 
-                    data-lang-es="Contacto" data-lang-en="Contact" data-lang-zh="联系" 
-                    data-lang-it="Contatto" data-lang-fr="Contact" data-lang-pt="Contato" 
-                    data-lang-ko="연락처">Contacto</a></li>
+                <li><a href="#" class="nav-link active" data-section="home" data-text="nav-home">Inicio</a></li>
+                <li><a href="#" class="nav-link" data-section="projects" data-text="nav-projects">Proyectos</a></li>
+                <li><a href="#" class="nav-link" data-section="education" data-text="nav-education">Educación</a></li>
+                <li><a href="#" class="nav-link" data-section="experience" data-text="nav-experience">Experiencia</a></li>
+                <li><a href="#" class="nav-link" data-section="voluntariado" data-text="nav-volunteer">Voluntariado</a></li>
+                <li><a href="#" class="nav-link" data-section="contact" data-text="nav-contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -582,41 +575,13 @@
                 <div class="hero-content">
                     <div class="profile-img">👩‍💻</div>
                     <h1>Ariana Dextre</h1>
-                    <p class="subtitle" 
-                        data-lang-es="Desarrolladora Frontend & Diseñadora UX/UI" 
-                        data-lang-en="Frontend Developer & UX/UI Designer"
-                        data-lang-zh="前端开发者 & UX/UI设计师"
-                        data-lang-it="Sviluppatrice Frontend & Designer UX/UI"
-                        data-lang-fr="Développeuse Frontend & Designer UX/UI"
-                        data-lang-pt="Desenvolvedora Frontend & Designer UX/UI"
-                        data-lang-ko="프론트엔드 개발자 & UX/UI 디자이너">Desarrolladora Frontend & Diseñadora UX/UI</p>
-                    <p class="description" 
-                        data-lang-es="Transformo ideas creativas en experiencias digitales únicas, combinando código limpio con diseño centrado en el usuario para crear soluciones que realmente importen." 
-                        data-lang-en="I transform creative ideas into unique digital experiences, combining clean code with user-centered design to create solutions that truly matter."
-                        data-lang-zh="我将创意想法转化为独特的数字体验，结合简洁的代码和以用户为中心的设计，创造真正重要的解决方案。"
-                        data-lang-it="Trasformo idee creative in esperienze digitali uniche, combinando codice pulito con design centrato sull'utente per creare soluzioni che contano davvero."
-                        data-lang-fr="Je transforme les idées créatives en expériences numériques uniques, en combinant du code propre avec un design centré sur l'utilisateur pour créer des solutions qui comptent vraiment."
-                        data-lang-pt="Transformo ideias criativas em experiências digitais únicas, combinando código limpo com design centrado no usuário para criar soluções que realmente importam."
-                        data-lang-ko="창의적인 아이디어를 독특한 디지털 경험으로 변화시키며, 깔끔한 코드와 사용자 중심 디자인을 결합하여 정말 중요한 솔루션을 만듭니다.">Transformo ideas creativas en experiencias digitales únicas, combinando código limpio con diseño centrado en el usuario para crear soluciones que realmente importen.</p>
+                    <p class="subtitle" data-text="hero-subtitle">Desarrolladora Frontend & Diseñadora UX/UI</p>
+                    <p class="description" data-text="hero-description">Transformo ideas creativas en experiencias digitales únicas, combinando código limpio con diseño centrado en el usuario para crear soluciones que realmente importen.</p>
                     
                     <div class="about-me">
-                        <h3 data-lang-es="Sobre Mí" data-lang-en="About Me" data-lang-zh="关于我" 
-                            data-lang-it="Su di Me" data-lang-fr="À Propos" data-lang-pt="Sobre Mim" 
-                            data-lang-ko="소개">Sobre Mí</h3>
-                        <p data-lang-es="Soy una desarrolladora apasionada con más de 3 años de experiencia creando interfaces web modernas y aplicaciones móviles. Me especializo en React, diseño UX/UI y desarrollo frontend, siempre buscando la perfecta armonía entre funcionalidad y estética." 
-                           data-lang-en="I'm a passionate developer with over 3 years of experience creating modern web interfaces and mobile applications. I specialize in React, UX/UI design, and frontend development, always seeking the perfect harmony between functionality and aesthetics."
-                           data-lang-zh="我是一名充满激情的开发者，拥有超过3年的现代网页界面和移动应用开发经验。我专精于React、UX/UI设计和前端开发，始终寻求功能性和美学之间的完美和谐。"
-                           data-lang-it="Sono una sviluppatrice appassionata con oltre 3 anni di esperienza nella creazione di interfacce web moderne e applicazioni mobili. Mi specializzo in React, design UX/UI e sviluppo frontend, cercando sempre l'armonia perfetta tra funzionalità ed estetica."
-                           data-lang-fr="Je suis une développeuse passionnée avec plus de 3 ans d'expérience dans la création d'interfaces web modernes et d'applications mobiles. Je me spécialise en React, design UX/UI et développement frontend, toujours à la recherche de l'harmonie parfaite entre fonctionnalité et esthétique."
-                           data-lang-pt="Sou uma desenvolvedora apaixonada com mais de 3 anos de experiência criando interfaces web modernas e aplicações móveis. Me especializo em React, design UX/UI e desenvolvimento frontend, sempre buscando a harmonia perfeita entre funcionalidade e estética."
-                           data-lang-ko="저는 현대적인 웹 인터페이스와 모바일 애플리케이션 개발에서 3년 이상의 경험을 가진 열정적인 개발자입니다. React, UX/UI 디자인, 프론트엔드 개발을 전문으로 하며, 항상 기능성과 미학 사이의 완벽한 조화를 추구합니다.">Soy una desarrolladora apasionada con más de 3 años de experiencia creando interfaces web modernas y aplicaciones móviles. Me especializo en React, diseño UX/UI y desarrollo frontend, siempre buscando la perfecta armonía entre funcionalidad y estética.</p>
-                        <p data-lang-es="Mi enfoque se centra en crear experiencias digitales accesibles e intuitivas que generen un impacto positivo en la vida de las personas." 
-                           data-lang-en="My approach focuses on creating accessible and intuitive digital experiences that generate a positive impact on people's lives."
-                           data-lang-zh="我的方法专注于创建可访问且直观的数字体验，为人们的生活产生积极影响。"
-                           data-lang-it="Il mio approccio si concentra sulla creazione di esperienze digitali accessibili e intuitive che generano un impatto positivo nella vita delle persone."
-                           data-lang-fr="Mon approche se concentre sur la création d'expériences numériques accessibles et intuitives qui génèrent un impact positif dans la vie des gens."
-                           data-lang-pt="Minha abordagem foca em criar experiências digitais acessíveis e intuitivas que geram um impacto positivo na vida das pessoas."
-                           data-lang-ko="제 접근 방식은 사람들의 삶에 긍정적인 영향을 미치는 접근 가능하고 직관적인 디지털 경험을 만드는 데 중점을 둡니다.">Mi enfoque se centra en crear experiencias digitales accesibles e intuitivas que generen un impacto positivo en la vida de las personas.</p>
+                        <h3 data-text="about-title">Sobre Mí</h3>
+                        <p data-text="about-p1">Soy una desarrolladora apasionada con más de 3 años de experiencia creando interfaces web modernas y aplicaciones móviles. Me especializo en React, diseño UX/UI y desarrollo frontend, siempre buscando la perfecta armonía entre funcionalidad y estética.</p>
+                        <p data-text="about-p2">Mi enfoque se centra en crear experiencias digitales accesibles e intuitivas que generen un impacto positivo en la vida de las personas.</p>
                         
                         <div class="skills">
                             <span class="skill-tag">React & Next.js</span>
@@ -625,18 +590,12 @@
                             <span class="skill-tag">CSS & Tailwind</span>
                             <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">UX Research</span>
-                            <span class="skill-tag" data-lang-es="Prototipado" data-lang-en="Prototyping" 
-                                data-lang-zh="原型设计" data-lang-it="Prototipazione" data-lang-fr="Prototypage" 
-                                data-lang-pt="Prototipagem" data-lang-ko="프로토타이핑">Prototipado</span>
+                            <span class="skill-tag" data-text="skill-prototyping">Prototipado</span>
                             <span class="skill-tag">Git & GitHub</span>
                         </div>
                     </div>
 
-                    <a href="#" class="cta-button nav-link" data-section="projects" 
-                        data-lang-es="Explorar Proyectos" data-lang-en="Explore Projects" 
-                        data-lang-zh="探索项目" data-lang-it="Esplora Progetti" 
-                        data-lang-fr="Explorer les Projets" data-lang-pt="Explorar Projetos" 
-                        data-lang-ko="프로젝트 탐색">Explorar Proyectos</a>
+                    <a href="#" class="cta-button nav-link" data-section="projects" data-text="cta-explore">Explorar Proyectos</a>
                 </div>
             </div>
         </section>
@@ -644,18 +603,152 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 data-lang-es="Proyectos Destacados" data-lang-en="Featured Projects" 
-                    data-lang-zh="精选项目" data-lang-it="Progetti in Evidenza" 
-                    data-lang-fr="Projets en Vedette" data-lang-pt="Projetos em Destaque" 
-                    data-lang-ko="주요 프로젝트">Proyectos Destacados</h2>
+                <h2 data-text="projects-title">Proyectos Destacados</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-img">🎨</div>
-                        <h3 data-lang-es="Plataforma E-learning" data-lang-en="E-learning Platform" 
-                            data-lang-zh="在线学习平台" data-lang-it="Piattaforma E-learning" 
-                            data-lang-fr="Plateforme E-learning" data-lang-pt="Plataforma E-learning" 
-                            data-lang-ko="이러닝 플랫폼">Plataforma E-learning</h3>
-                        <p data-lang-es="Diseño y desarrollo completo de una plataforma educativa interactiva con sistema de progreso personalizado y gamificación para mejorar la experiencia de aprendizaje." 
-                           data-lang-en="Complete design and development of an interactive educational platform with personalized progress system and gamification to enhance the learning experience."
-                           data-lang-zh="完整设计和开发互动教育平台，配有个性化进度系统和游戏化功能，以提升学习体验。"
-                           data-lang-it="Progettazione e sviluppo completo di una piattaforma educativa interattiva con sistema di progresso personalizzato e gamification per migliorare l'esperienza di app
+                        <h3 data-text="project1-title">Plataforma E-learning</h3>
+                        <p data-text="project1-desc">Diseño y desarrollo completo de una plataforma educativa interactiva con sistema de progreso personalizado y gamificación para mejorar la experiencia de aprendizaje.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">CSS Grid</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-text="project-demo">Ver Demo</a>
+                            <a href="#" class="project-link" data-text="project-design">Diseño</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">💻</div>
+                        <h3 data-text="project2-title">Dashboard Analítico</h3>
+                        <p data-text="project2-desc">Aplicación web responsiva para visualización de datos en tiempo real con gráficos interactivos y sistema de filtros avanzados para análisis empresarial.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-text="project-view">Ver Proyecto</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-img">📱</div>
+                        <h3 data-text="project3-title">App de Bienestar</h3>
+                        <p data-text="project3-desc">Aplicación móvil para seguimiento de hábitos saludables con interfaz minimalista, recordatorios inteligentes y sistema de recompensas motivacional.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Expo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">App Store</a>
+                            <a href="#" class="project-link" data-text="project-prototype">Prototipo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 data-text="education-title">Formación Académica</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 data-text="edu1-degree">Ingeniería de Sistemas</h3>
+                        <h4 data-text="edu1-school">Universidad Nacional Mayor de San Marcos - 2020-2024</h4>
+                        <p data-text="edu1-desc">Especialización en desarrollo de software, gestión de proyectos tecnológicos y arquitectura de sistemas. Enfoque en metodologías ágiles y desarrollo full-stack.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="edu2-degree">Certificación Google UX Design</h3>
+                        <h4 data-text="edu2-school">Google Career Certificates - 2023</h4>
+                        <p data-text="edu2-desc">Certificación profesional completa en diseño de experiencia de usuario, investigación UX, prototipado, testing de usabilidad y diseño centrado en el usuario.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="edu3-degree">Full Stack Development</h3>
+                        <h4 data-text="edu3-school">Platzi & freeCodeCamp - 2022</h4>
+                        <p data-text="edu3-desc">Formación intensiva en desarrollo web completo: frontend moderno con React, backend con Node.js, bases de datos y deployment en la nube.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 data-text="experience-title">Experiencia Profesional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 data-text="exp1-role">Frontend Developer Senior</h3>
+                        <h4 data-text="exp1-company">InnovaTech Solutions - 2024-Presente</h4>
+                        <p data-text="exp1-desc">Liderazgo en el desarrollo de interfaces modernas y responsivas para aplicaciones empresariales. Implementación de design systems y optimización de performance web.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="exp2-role">UX/UI Designer & Frontend Developer</h3>
+                        <h4 data-text="exp2-company">DigitalCraft Studio - 2022-2024</h4>
+                        <p data-text="exp2-desc">Diseño de experiencias digitales para startups y PyMEs. Desarrollo de prototipos interactivos y aplicaciones web con enfoque en usabilidad y conversión.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="exp3-role">Junior Frontend Developer</h3>
+                        <h4 data-text="exp3-company">TechStart Peru - 2021-2022</h4>
+                        <p data-text="exp3-desc">Desarrollo de componentes reutilizables, mantenimiento de aplicaciones legacy y colaboración en proyectos de modernización tecnológica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voluntariado Section -->
+        <section id="voluntariado" class="section">
+            <div class="container">
+                <h2 data-text="volunteer-title">Impacto Social & Voluntariado</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 data-text="vol1-role">Mentora en Tecnología</h3>
+                        <h4 data-text="vol1-org">Laboratoria - 2023-Presente</h4>
+                        <p data-text="vol1-desc">Mentoreo y acompañamiento a mujeres jóvenes en su transición hacia carreras tech. Workshops sobre programación, soft skills y desarrollo profesional.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="vol2-role">Lead Organizadora</h3>
+                        <h4 data-text="vol2-org">Women in Tech Peru - 2022-2024</h4>
+                        <p data-text="vol2-desc">Coordinación de eventos, meetups y workshops para promover la diversidad e inclusión en tecnología. Más de 500 participantes en eventos organizados.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 data-text="vol3-role">Desarrolladora Voluntaria</h3>
+                        <h4 data-text="vol3-org">Code for Peru - 2021-2022</h4>
+                        <p data-text="vol3-desc">Desarrollo de soluciones tecnológicas para ONGs locales. Creación de plataformas web para gestión educativa en comunidades de bajos recursos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 data-text="contact-title">¡Conversemos!</h2>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" data-text="form-name">Nombre completo</label>
+                            <input type="text" id="name" name="name" required data-placeholder="form-name-placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-text="form-email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required data-placeholder="form-email-placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-text="form-subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required data-placeholder="form-subject-placeholder">
+                        </div>
