@@ -424,9 +424,15 @@
         }
 
         /* Contact Form */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto 3rem;
             background: white;
             padding: 3rem;
             border-radius: 20px;
@@ -490,8 +496,6 @@
 
         /* Other Ways to Reach Me Section */
         .contact-links {
-            max-width: 600px;
-            margin: 0 auto;
             background: var(--light-lilac);
             padding: 3rem;
             border-radius: 20px;
@@ -563,6 +567,10 @@
             .projects-grid { grid-template-columns: 1fr; }
             nav ul { gap: 1rem; flex-wrap: wrap; }
             .skills { justify-content: center; }
+            .contact-container { 
+                grid-template-columns: 1fr; 
+                gap: 2rem; 
+            }
         }
     </style>
 </head>
@@ -751,46 +759,49 @@
             <div class="container">
                 <h2>¡Conversemos!</h2>
                 
-                <div class="contact-form">
-                    <div id="statusMessage" class="status-message"></div>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto o idea..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensaje</button>
-                    </form>
-                </div>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <div id="statusMessage" class="status-message"></div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto o idea..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensaje</button>
+                        </form>
+                    </div>
 
-                <div class="contact-links">
-                    <h3>Other ways to reach me</h3>
-                    <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
-                        <span class="icon">📧</span>
-                        <span>ariana.dextre@pucp.edu.pe</span>
-                    </a>
-                    <a href="https://github.com/arianadextre" target="_blank" class="contact-link">
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/arianadextre" target="_blank" class="contact-link">
-                        <span class="icon">💼</span>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://twitter.com/arianadextre" target="_blank" class="contact-link">
-                        <span class="icon">🐦</span>
-                        <span>Twitter</span>
-                    </a>
+                    <div class="contact-links">
+                        <h3>Other ways to reach me</h3>
+                        <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
+                            <span class="icon">📧</span>
+                            <span>ariana.dextre@pucp.edu.pe</span>
+                        </a>
+                        <a href="https://github.com/arianadextre" target="_blank" class="contact-link">
+                            <span class="icon">🐙</span>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/arianadextre" target="_blank" class="contact-link">
+                            <span class="icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com/arianadextre" target="_blank" class="contact-link">
+                            <span class="icon">🐦</span>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
