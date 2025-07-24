@@ -268,6 +268,7 @@
             border: 1px solid var(--light-gray);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .project-card::before {
@@ -346,6 +347,169 @@
         .project-link:hover {
             background: var(--cream-dark);
             transform: translateY(-2px);
+        }
+
+        /* Project Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.9) translateY(50px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .modal-subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .project-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-details {
+            margin: 2rem 0;
+        }
+
+        .project-details h3 {
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .project-details p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .team-info {
+            background: var(--light-lilac);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .team-info h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .team-info p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .quote {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-color);
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-muted);
         }
 
         /* Timeline */
@@ -582,6 +746,13 @@
                 grid-template-columns: 1fr; 
                 gap: 2rem; 
             }
+            .modal-content {
+                margin: 1rem;
+                max-height: 95vh;
+            }
+            .project-images {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -636,7 +807,7 @@
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card" data-project="game">
                         <div class="project-img">🎮</div>
                         <h3>Therapeutic Video Game for Rehabilitation</h3>
                         <p>I'm developing a therapeutic video game in Unity focused on motor rehabilitation. I'm in charge of programming and currently learning through modules such as game design, programming logic, and EMG-based interaction.</p>
@@ -652,7 +823,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-project="bioprinter">
                         <div class="project-img">🖨️</div>
                         <h3>Low-Cost Bioprinter Evaluation Project</h3>
                         <p>I'm working on a comparative evaluation of affordable and commercial bioprinters for academic biofabrication labs. This includes disassembling, redesigning, and adapting components for bioprinting, as well as testing usability, technical parameters, and feasibility.</p>
@@ -668,7 +839,23 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-project="sorting">
+                        <div class="project-img">📦</div>
+                        <h3>Automatic Package Sorting System</h3>
+                        <p>Modular mechatronic system for automated package classification using barcode detection and independent sorting modules. Designed to reduce space requirements while maintaining scalability.</p>
+                        <div class="project-tags">
+                            <span class="tag">Mechatronics</span>
+                            <span class="tag">Barcode Detection</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Modular Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Watch Demo</a>
+                            <a href="#" class="project-link">Technical Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="signals">
                         <div class="project-img">🧬</div>
                         <h3>Biomedical Signal Analysis</h3>
                         <p>Development of algorithms and tools for analyzing biomedical signals including EMG, ECG, and EEG data. Focus on feature extraction, pattern recognition, and real-time processing for healthcare applications.</p>
@@ -835,6 +1022,18 @@
         </section>
     </main>
 
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
     <script>
         // Navigation functionality
         const navLinks = document.querySelectorAll('.nav-link');
@@ -855,6 +1054,156 @@
                 }
             });
         });
+
+        // Project data
+        const projectData = {
+            sorting: {
+                title: "Automatic Package Sorting System",
+                subtitle: "Modular mechatronic system for automated package classification",
+                description: "Final project for the Mechatronic Design course at PUCP. We identified that current package sorting methods are error-prone and require extensive space. Our team designed a modular mechatronic system using barcode detection and independent sorting modules. Each module employs only two actuators (translation and rotation) and adds two sorting destinations, allowing easy expansion in reduced space. The system includes a camera for package identification, presence sensors for classification, and an electronic control box for power management.",
+                images: [
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23f0f0f0'/><text x='200' y='130' text-anchor='middle' fill='%236666' font-size='16'>Project Team Photo</text></svg>",
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23e8e8e8'/><text x='200' y='130' text-anchor='middle' fill='%236666' font-size='16'>System Assembly</text></svg>",
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23f5f5f5'/><text x='200' y='130' text-anchor='middle' fill='%236666' font-size='16'>Technical Diagrams</text></svg>"
+                ],
+                features: [
+                    "Modular design allowing easy addition of new sorting destinations",
+                    "Barcode detection system for accurate package identification",
+                    "Independent control modules with translation and rotation actuators",
+                    "Compact design - each module adds two sorting destinations",
+                    "Configurable interface for system control and monitoring"
+                ],
+                team: "Itala Latorre; Isabel Miranda Salazar; Johan Edward Palomino Delgado; Mitshell Bikrham Ramos Quispe; Alonso de Jesús Velis Jara; Brik Meza (Team Lead)",
+                quote: "Beyond technical achievements, this project strengthened our team resilience. We faced numerous challenges and constant changes, learning to adapt and recover from adverse situations - experiencing firsthand the definition of resilience in engineering projects."
+            },
+            game: {
+                title: "Therapeutic Video Game for Rehabilitation",
+                subtitle: "Unity-based motor rehabilitation game with EMG integration",
+                description: "I'm developing an innovative therapeutic video game in Unity focused on motor rehabilitation for patients with mobility impairments. The project combines game design principles with biomedical engineering to create an engaging rehabilitation experience. I'm responsible for the programming aspects and am currently advancing through specialized modules including game design fundamentals, programming logic, and EMG sensor integration for biofeedback.",
+                images: [
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23e8d5e8'/><text x='200' y='130' text-anchor='middle' fill='%23a084ca' font-size='16'>Game Interface</text></svg>",
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23f5f0f5'/><text x='200' y='130' text-anchor='middle' fill='%23a084ca' font-size='16'>EMG Integration</text></svg>"
+                ],
+                features: [
+                    "Unity-based game engine for smooth, responsive gameplay",
+                    "EMG sensor integration for muscle activity monitoring",
+                    "Adaptive difficulty levels based on patient progress",
+                    "Real-time biofeedback for motor control training",
+                    "Progress tracking and rehabilitation analytics",
+                    "Engaging game mechanics to motivate continued therapy"
+                ],
+                team: "Individual project with supervision from rehabilitation specialists and biomedical engineering faculty",
+                quote: "This project represents the intersection of my passion for technology and healthcare, creating solutions that can genuinely improve patients' quality of life through engaging, data-driven rehabilitation."
+            },
+            bioprinter: {
+                title: "Low-Cost Bioprinter Evaluation Project",
+                subtitle: "Comparative analysis of affordable bioprinting solutions for academic labs",
+                description: "I'm conducting a comprehensive evaluation of low-cost bioprinters compared to commercial alternatives for academic biofabrication laboratories. This research involves hands-on disassembly, redesign, and adaptation of bioprinter components to optimize them for biological material printing. The project focuses on assessing usability, technical parameters, cost-effectiveness, and overall feasibility for educational and research applications in biomedical engineering programs.",
+                images: [
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23e8f4fd'/><text x='200' y='130' text-anchor='middle' fill='%234a90e2' font-size='16'>Bioprinter Hardware</text></svg>",
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23f0f8ff'/><text x='200' y='130' text-anchor='middle' fill='%234a90e2' font-size='16'>Component Analysis</text></svg>"
+                ],
+                features: [
+                    "Hardware disassembly and component analysis",
+                    "Custom component redesign for bioprinting applications",
+                    "Comparative performance testing vs. commercial systems",
+                    "Cost-benefit analysis for academic institutions",
+                    "Usability assessment for educational environments",
+                    "Technical parameter optimization for biological materials"
+                ],
+                team: "Research collaboration with bioengineering faculty and lab technicians",
+                quote: "Making bioprinting technology accessible to academic institutions is crucial for advancing education and research in tissue engineering and regenerative medicine."
+            },
+            signals: {
+                title: "Biomedical Signal Analysis",
+                subtitle: "Advanced algorithms for EMG, ECG, and EEG signal processing",
+                description: "Development of sophisticated algorithms and computational tools for analyzing various biomedical signals including electromyography (EMG), electrocardiography (ECG), and electroencephalography (EEG) data. The project focuses on feature extraction techniques, pattern recognition algorithms, and real-time processing capabilities for healthcare applications. This work supports both clinical diagnostics and research applications in biomedical engineering.",
+                images: [
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23e8f5e8'/><text x='200' y='130' text-anchor='middle' fill='%2334a853' font-size='16'>Signal Analysis Dashboard</text></svg>",
+                    "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'><rect width='400' height='250' fill='%23f0f8f0'/><text x='200' y='130' text-anchor='middle' fill='%2334a853' font-size='16'>Algorithm Visualization</text></svg>"
+                ],
+                features: [
+                    "Multi-signal processing (EMG, ECG, EEG)",
+                    "Advanced feature extraction algorithms",
+                    "Machine learning pattern recognition",
+                    "Real-time signal processing capabilities",
+                    "Clinical diagnostic support tools",
+                    "Research-grade analysis precision",
+                    "Customizable filtering and preprocessing"
+                ],
+                team: "Collaboration with signal processing researchers and clinical partners",
+                quote: "Biomedical signal analysis is at the heart of modern healthcare technology, enabling us to understand and interpret the body's electrical language for better diagnostics and treatment."
+            }
+        };
+
+        // Project modal functionality
+        const modal = document.getElementById('projectModal');
+        const modalBody = document.getElementById('modalBody');
+        const closeModal = document.getElementById('closeModal');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = card.dataset.project;
+                const project = projectData[projectId];
+                
+                if (project) {
+                    showProjectModal(project);
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', hideProjectModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideProjectModal();
+            }
+        });
+
+        function showProjectModal(project) {
+            modalBody.innerHTML = `
+                <h1 class="modal-title">${project.title}</h1>
+                <p class="modal-subtitle">${project.subtitle}</p>
+                
+                <div class="project-details">
+                    <h3>Project Details</h3>
+                    <p>${project.description}</p>
+                </div>
+
+                <div class="project-images">
+                    ${project.images.map(img => `
+                        <div class="project-image">
+                            <img src="${img}" alt="Project image" />
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="project-details">
+                    <h3>Key Features</h3>
+                    <ul class="features-list">
+                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+
+                <div class="team-info">
+                    <h3>Team</h3>
+                    <p>${project.team}</p>
+                </div>
+
+                <div class="quote">
+                    ${project.quote}
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideProjectModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
 
         // Form submission with EmailJS
         document.getElementById('contactForm').addEventListener('submit', async (e) => {
@@ -977,6 +1326,13 @@ ${data.email}
             link.addEventListener('mouseleave', () => {
                 link.style.transform = 'translateY(0) scale(1)';
             });
+        });
+
+        // Escape key to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                hideProjectModal();
+            }
         });
     </script>
 </body>
