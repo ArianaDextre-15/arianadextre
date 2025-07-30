@@ -125,72 +125,150 @@
         <section id="technical-showcase" class="section">
             <div class="container">
                 <h2>Technical Showcase</h2>
-                <div class="tech-showcase-grid">
-                    <div class="tech-card">
-                        <div class="tech-icon">🔬</div>
-                        <h3>Bioengineering Tools</h3>
-                        <p>Advanced proficiency in CAD design for biomedical applications, including Fusion 360 and Inventor for designing custom laboratory equipment, bioprinter components, and medical devices.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">Fusion 360</span>
-                            <span class="tech-item">Inventor</span>
-                            <span class="tech-item">SolidWorks</span>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Explore my technical skills through hands-on projects and practical applications. Each category showcases different tools and technologies I've mastered through coursework and personal projects.
+                </p>
+
+                <!-- Prosthetics Category -->
+                <div class="category-section">
+                    <h3 class="category-title">🦾 Prosthetics & Medical Devices</h3>
+                    <div class="mini-projects-grid">
+                        <div class="mini-project-card" data-category="prosthetics" data-project="leg-prosthetic">
+                            <h4>3D Printed Leg Prosthetic</h4>
+                            <p>Custom-designed prosthetic leg component using advanced CAD modeling and 3D printing techniques.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Fusion 360</span>
+                                <span class="mini-tag">3D Printing</span>
+                                <span class="mini-tag">STL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="prosthetics" data-project="hand-prosthetic">
+                            <h4>Articulated Hand Prosthetic</h4>
+                            <p>Multi-joint prosthetic hand with articulated fingers designed for improved functionality.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Inventor</span>
+                                <span class="mini-tag">Mechanism Design</span>
+                                <span class="mini-tag">STL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="prosthetics" data-project="knee-joint">
+                            <h4>Biomechanical Knee Joint</h4>
+                            <p>Advanced knee joint mechanism with optimized biomechanics for natural movement.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">SolidWorks</span>
+                                <span class="mini-tag">Biomechanics</span>
+                                <span class="mini-tag">Assembly</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">🖨️</div>
-                        <h3>3D Printing & Fabrication</h3>
-                        <p>Expertise in both traditional 3D printing and bioprinting technologies, with hands-on experience in printer modification, material optimization, and print parameter tuning.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">PrusaSlicer</span>
-                            <span class="tech-item">Bambu Studio</span>
-                            <span class="tech-item">Cura</span>
-                            <span class="tech-item">Bioprinting</span>
+                </div>
+
+                <!-- CAD Design Category -->
+                <div class="category-section">
+                    <h3 class="category-title">🔧 CAD Design & Engineering</h3>
+                    <div class="mini-projects-grid">
+                        <div class="mini-project-card" data-category="fusion360" data-project="medical-device">
+                            <h4>Surgical Instrument Design</h4>
+                            <p>Precision surgical tool designed with ergonomic considerations and manufacturing constraints.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Fusion 360</span>
+                                <span class="mini-tag">Ergonomics</span>
+                                <span class="mini-tag">Manufacturing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="fusion360" data-project="lab-equipment">
+                            <h4>Laboratory Equipment Housing</h4>
+                            <p>Custom housing design for biomedical laboratory equipment with ventilation and access considerations.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Inventor</span>
+                                <span class="mini-tag">Sheet Metal</span>
+                                <span class="mini-tag">Technical Drawing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="fusion360" data-project="bioprinter-component">
+                            <h4>Bioprinter Extruder Component</h4>
+                            <p>Modified extruder component for bioprinting applications with precise material flow control.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Fusion 360</span>
+                                <span class="mini-tag">Precision Engineering</span>
+                                <span class="mini-tag">Bioprinting</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">🧠</div>
-                        <h3>Data Analysis & AI</h3>
-                        <p>Strong foundation in data analysis, machine learning, and AI applications in healthcare, with experience in biomedical signal processing and medical data interpretation.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">Python</span>
-                            <span class="tech-item">MATLAB</span>
-                            <span class="tech-item">MedGemma</span>
-                            <span class="tech-item">RStudio</span>
+                </div>
+
+                <!-- Data Analysis Category -->
+                <div class="category-section">
+                    <h3 class="category-title">📊 Data Analysis & Statistics</h3>
+                    <div class="mini-projects-grid">
+                        <div class="mini-project-card" data-category="rstudio" data-project="clinical-data">
+                            <h4>Clinical Trial Data Analysis</h4>
+                            <p>Statistical analysis of clinical trial data using R, including survival analysis and efficacy metrics.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">R Studio</span>
+                                <span class="mini-tag">Statistics</span>
+                                <span class="mini-tag">Clinical Data</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="rstudio" data-project="biomarker-analysis">
+                            <h4>Biomarker Discovery Analysis</h4>
+                            <p>Comprehensive biomarker analysis using machine learning techniques for disease prediction.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">R Studio</span>
+                                <span class="mini-tag">Machine Learning</span>
+                                <span class="mini-tag">Biomarkers</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-project-card" data-category="rstudio" data-project="population-study">
+                            <h4>Population Health Study</h4>
+                            <p>Large-scale population health data analysis with visualization and trend identification.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">R Studio</span>
+                                <span class="mini-tag">Data Visualization</span>
+                                <span class="mini-tag">Public Health</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">🎮</div>
-                        <h3>Interactive Development</h3>
-                        <p>Game development and interactive application creation using Unity, with focus on therapeutic applications and EMG-based user interfaces for rehabilitation.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">Unity</span>
-                            <span class="tech-item">C#</span>
-                            <span class="tech-item">EMG Integration</span>
+                </div>
+
+                <!-- Unity Development Category -->
+                <div class="category-section">
+                    <h3 class="category-title">🎮 Interactive Development</h3>
+                    <div class="mini-projects-grid">
+                        <div class="mini-project-card" data-category="unity" data-project="rehab-game">
+                            <h4>Motor Rehabilitation Game</h4>
+                            <p>Interactive Unity game designed for motor skill rehabilitation with EMG sensor integration.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Unity</span>
+                                <span class="mini-tag">C#</span>
+                                <span class="mini-tag">EMG Integration</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">⚡</div>
-                        <h3>Development & Collaboration</h3>
-                        <p>Proficient in modern development workflows, version control, and collaborative project management for research and development projects.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">Git & GitHub</span>
-                            <span class="tech-item">Project Management</span>
-                            <span class="tech-item">Documentation</span>
+                        
+                        <div class="mini-project-card" data-category="unity" data-project="anatomy-viewer">
+                            <h4>3D Anatomy Viewer</h4>
+                            <p>Interactive 3D anatomy visualization tool for educational purposes with detailed organ models.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Unity</span>
+                                <span class="mini-tag">3D Modeling</span>
+                                <span class="mini-tag">Education</span>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <div class="tech-icon">🔗</div>
-                        <h3>Systems Integration</h3>
-                        <p>Experience in integrating various biomedical systems, sensors, and software platforms to create comprehensive solutions for healthcare and research applications.</p>
-                        <div class="tech-stack">
-                            <span class="tech-item">Hardware Integration</span>
-                            <span class="tech-item">Sensor Networks</span>
-                            <span class="tech-item">System Design</span>
+                        
+                        <div class="mini-project-card" data-category="unity" data-project="vr-surgery">
+                            <h4>VR Surgery Simulation</h4>
+                            <p>Virtual reality surgical training simulation with haptic feedback and performance metrics.</p>
+                            <div class="mini-project-tags">
+                                <span class="mini-tag">Unity</span>
+                                <span class="mini-tag">VR Development</span>
+                                <span class="mini-tag">Medical Training</span>
+                            </div>
                         </div>
                     </div>
                 </div>
