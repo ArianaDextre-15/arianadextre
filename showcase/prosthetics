@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printed Leg Prosthetic - Ariana Dextre</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../../index.html#research-projects" class="nav-link">Research & Projects</a></li>
+                <li><a href="../../index.html#technical-showcase" class="nav-link active">Technical Showcase</a></li>
+                <li><a href="../../index.html#education" class="nav-link">Education</a></li>
+                <li><a href="../../index.html#experience-leadership" class="nav-link">Experience & Leadership</a></li>
+                <li><a href="../../index.html#volunteering" class="nav-link">Volunteering</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <main style="margin-top: 80px;">
+        <div class="project-viewer">
+            <a href="../../index.html#technical-showcase" class="back-to-showcase">← Back to Technical Showcase</a>
+            
+            <div class="project-header">
+                <div class="project-header-content">
+                    <div class="project-icon">🦿</div>
+                    <h1 class="project-title">3D Printed Leg Prosthetic</h1>
+                    <p class="project-subtitle">Custom-designed prosthetic leg component</p>
+                    <p class="project-description">
+                        Advanced CAD modeling and 3D printing techniques applied to create a functional and lightweight prosthetic leg component with optimized biomechanics and patient comfort considerations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-info-grid">
+                <div class="project-details">
+                    <h3>Project Details</h3>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Technology Used:</span>
+                        <span class="detail-value">Fusion 360, 3D Printing (PLA+), Post-processing</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Course/Lab:</span>
+                        <span class="detail-value">Biomedical Design Lab - PUCP</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Duration:</span>
+                        <span class="detail-value">4 weeks (Design to prototype)</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Key Features:</span>
+                        <span class="detail-value">
+                            • Lightweight construction (40% weight reduction)<br>
+                            • Ergonomic socket design<br>
+                            • Optimized load distribution<br>
+                            • Modular attachment system<br>
+                            • Patient-specific customization
+                        </span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Description:</span>
+                        <span class="detail-value">
+                            This project involved designing a below-knee prosthetic component using advanced CAD modeling techniques. The design process included biomechanical analysis, material selection, and iterative prototyping. Special attention was given to weight optimization while maintaining structural integrity and user comfort.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="model-viewer">
+                    <div class="model-placeholder">🦿</div>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">3D Model Preview</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Click the model to rotate</p>
+                    
+                    <div class="download-section">
+                        <h4 style="color: var(--dark-gray); margin-bottom: 1rem;">Download Files</h4>
+                        <div class="download-buttons">
+                            <a href="files/leg-prosthetic.stl" class="download-btn" download>
+                                📄 Download STL
+                            </a>
+                            <a href="files/leg-prosthetic.f3d" class="download-btn" download>
+                                🔧 Download F3D
+                            </a>
+                            <a href="files/leg-prosthetic-drawings.pdf" class="download-btn" download>
+                                📋 Technical Drawings
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h2>Design Process</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>1. Research & Analysis</h3>
+                        <p>Studied existing prosthetic designs, biomechanical requirements, and user needs through literature review and expert consultations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>2. CAD Modeling</h3>
+                        <p>Created detailed 3D models in Fusion 360 with parametric design features for customization and optimization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>3. Simulation & Testing</h3>
+                        <p>Performed FEA analysis to ensure structural integrity under various loading conditions and walking patterns.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>4. Prototyping</h3>
+                        <p>3D printed multiple iterations using PLA+ material, testing fit, comfort, and functionality with each version.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-section">
+                "This project taught me the importance of user-centered design in medical devices. Every design decision must consider not just functionality, but the real-world impact on a person's daily life and mobility."
+            </div>
+        </div>
+    </main>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
