@@ -1,189 +1,265 @@
 // Navigation functionality
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        navLinks.forEach(nl => nl.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
-        
-        link.classList.add('active');
-        
-        const targetSection = document.getElementById(link.dataset.section);
-        if (targetSection) {
-            targetSection.classList.add('active');
-        }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    initializeNavigation();
+    initializeProjectCards();
+    initializeContactForm();
+    initializeAnimations();
+    initializeTechnicalShowcaseNavigation();
+    initialize3DViewer();
+    
+    // Handle navigation from hash on page load
+    handleHashNavigation();
 });
 
-// Project cards functionality - now redirects to individual pages
-const projectCards = document.querySelectorAll('.project-card');
+// Initialize main navigation
+function initializeNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
 
-projectCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-        e.preventDefault();
-        const projectId = card.dataset.project;
-        
-        // Redirect to individual project page
-        window.location.href = `projects/${projectId}.html`;
-    });
-});
-
-// Form submission functionality
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const submitBtn = document.getElementById('submitBtn');
-        const statusMessage = document.getElementById('statusMessage');
-        const form = e.target;
-        
-        // Disable button and show loading state
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Enviando...';
-        statusMessage.style.display = 'none';
-        
-        // Get form data
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message')
-        };
-        
-        try {
-            // Send email using FormSubmit (alternative to EmailJS)
-            const response = await fetch('https://formsubmit.co/ariana.dextre@pucp.edu.pe', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: data.name,
-                    email: data.email,
-                    subject: data.subject,
-                    message: `
-                    Nombre: ${data.name}
-                    Email: ${data.email}
-                    Asunto: ${data.subject}
-                    
-                    Mensaje:
-                    ${data.message}
-                    `
-                })
-            });
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
             
-            if (response.ok) {
-                statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronto. 💜';
-                statusMessage.className = 'status-message success';
-                statusMessage.style.display = 'block';
-                form.reset();
-            } else {
-                throw new Error('Error en el envío');
+            const targetSection = link.dataset.section;
+            
+            // If we're on a project page, navigate back to main site
+            if (window.location.pathname.includes('/projects/')) {
+                window.location.href = `../index.html#${targetSection}`;
+                return;
             }
             
-        } catch (error) {
-            // Fallback: open email client
-            const subject = encodeURIComponent(data.subject);
-            const body = encodeURIComponent(`
-Hola Ariana,
-
-Mi nombre es ${data.name}.
-
-${data.message}
-
-Saludos,
-${data.name}
-${data.email}
-            `);
+            // If we're on a technical showcase page, navigate back to main site
+            if (window.location.pathname.includes('/technical-showcase/')) {
+                window.location.href = `../../index.html#${targetSection}`;
+                return;
+            }
             
-            window.location.href = `mailto:ariana.dextre@pucp.edu.pe?subject=${subject}&body=${body}`;
+            // Normal navigation within the same page
+            navLinks.forEach(nl => nl.classList.remove('active'));
+            sections.forEach(section => section.classList.remove('active'));
             
-            statusMessage.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
-            statusMessage.className = 'status-message success';
-            statusMessage.style.display = 'block';
-        } finally {
-            // Re-enable button
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Enviar Mensaje';
-        }
+            link.classList.add('active');
+            
+            const targetSectionElement = document.getElementById(targetSection);
+            if (targetSectionElement) {
+                targetSectionElement.classList.add('active');
+                
+                // Update URL hash
+                history.pushState(null, null, `#${targetSection}`);
+                
+                // Smooth scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
     });
 }
 
-// Smooth animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+// Handle hash navigation on page load and back/forward buttons
+function handleHashNavigation() {
+    const hash = window.location.hash.substring(1);
+    
+    if (hash) {
+        const targetSection = document.getElementById(hash);
+        const targetNavLink = document.querySelector(`[data-section="${hash}"]`);
+        
+        if (targetSection && targetNavLink) {
+            // Remove active classes
+            document.querySelectorAll('.nav-link').forEach(nl => nl.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            
+            // Add active classes
+            targetNavLink.classList.add('active');
+            targetSection.classList.add('active');
         }
-    });
-}, observerOptions);
+    }
+}
 
-// Apply animations to elements
-document.querySelectorAll('.project-card, .timeline-item, .skill-tag, .feature-card, .tech-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
-});
+// Listen for hash changes (back/forward buttons)
+window.addEventListener('hashchange', handleHashNavigation);
 
-// Skills animation
-setTimeout(() => {
-    document.querySelectorAll('.skill-tag').forEach((tag, index) => {
-        setTimeout(() => {
-            tag.style.opacity = '1';
-            tag.style.transform = 'translateY(0) scale(1)';
-        }, index * 100);
-    });
-}, 500);
+// Initialize project cards functionality
+function initializeProjectCards() {
+    const projectCards = document.querySelectorAll('.project-card');
 
-// Contact links hover effects
-document.querySelectorAll('.contact-link').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        link.style.transform = 'translateY(-3px) scale(1.02)';
+    projectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectId = card.dataset.project;
+            
+            // Redirect to individual project page
+            window.location.href = `projects/${projectId}.html`;
+        });
     });
-    
-    link.addEventListener('mouseleave', () => {
-        link.style.transform = 'translateY(0) scale(1)';
-    });
-});
+}
 
-// Tech stack animation for project pages and technical showcase
-document.querySelectorAll('.tech-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = 'all 0.5s ease';
-    
+// Initialize contact form
+function initializeContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMessage = document.getElementById('statusMessage');
+            const form = e.target;
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            statusMessage.style.display = 'none';
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+            
+            try {
+                // Send email using FormSubmit (alternative to EmailJS)
+                const response = await fetch('https://formsubmit.co/ariana.dextre@pucp.edu.pe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: data.name,
+                        email: data.email,
+                        subject: data.subject,
+                        message: `
+                        Nombre: ${data.name}
+                        Email: ${data.email}
+                        Asunto: ${data.subject}
+                        
+                        Mensaje:
+                        ${data.message}
+                        `
+                    })
+                });
+                
+                if (response.ok) {
+                    statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronto. 💜';
+                    statusMessage.className = 'status-message success';
+                    statusMessage.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error('Error en el envío');
+                }
+                
+            } catch (error) {
+                // Fallback: open email client
+                const subject = encodeURIComponent(data.subject);
+                const body = encodeURIComponent(`
+    Hola Ariana,
+
+    Mi nombre es ${data.name}.
+
+    ${data.message}
+
+    Saludos,
+    ${data.name}
+    ${data.email}
+                `);
+                
+                window.location.href = `mailto:ariana.dextre@pucp.edu.pe?subject=${subject}&body=${body}`;
+                
+                statusMessage.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
+                statusMessage.className = 'status-message success';
+                statusMessage.style.display = 'block';
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensaje';
+            }
+        });
+    }
+}
+
+// Initialize animations
+function initializeAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply animations to elements
+    document.querySelectorAll('.project-card, .timeline-item, .skill-tag, .feature-card, .feature-card-clean, .tech-item, .tech-item-clean').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Skills animation
     setTimeout(() => {
-        item.style.opacity = '1';
-        item.style.transform = 'translateY(0)';
-    }, index * 100 + 300);
-});
+        document.querySelectorAll('.skill-tag').forEach((tag, index) => {
+            setTimeout(() => {
+                tag.style.opacity = '1';
+                tag.style.transform = 'translateY(0) scale(1)';
+            }, index * 100);
+        });
+    }, 500);
 
-// Feature cards hover effects
-document.querySelectorAll('.feature-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-5px)';
-        card.style.boxShadow = '0 15px 35px rgba(160, 132, 202, 0.15)';
+    // Contact links hover effects
+    document.querySelectorAll('.contact-link').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            link.style.transform = 'translateY(0) scale(1)';
+        });
     });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-        card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
+
+    // Tech stack animation for project pages and technical showcase
+    document.querySelectorAll('.tech-item, .tech-item-clean').forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.5s ease';
+        
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, index * 100 + 300);
     });
-});
+
+    // Feature cards hover effects
+    document.querySelectorAll('.feature-card, .feature-card-clean').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            if (card.classList.contains('feature-card-clean')) {
+                card.style.transform = 'translateY(-3px)';
+                card.style.boxShadow = '0 8px 20px rgba(160, 132, 202, 0.1)';
+            } else {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 15px 35px rgba(160, 132, 202, 0.15)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            if (card.classList.contains('feature-card-clean')) {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            } else {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
+            }
+        });
+    });
+}
+
 // Technical Showcase mini-project navigation
-document.addEventListener('DOMContentLoaded', function() {
+function initializeTechnicalShowcaseNavigation() {
     const miniProjectCards = document.querySelectorAll('.mini-project-card');
     
     miniProjectCards.forEach(card => {
@@ -198,13 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Enhanced navigation for Technical Showcase pages
-    initializeTechnicalShowcaseNavigation();
-    initialize3DViewer();
-});
-
-// Enhanced navigation for Technical Showcase pages
-function initializeTechnicalShowcaseNavigation() {
-    // Check if we're on a technical showcase page
     const currentPath = window.location.pathname;
     const isTechnicalShowcase = currentPath.includes('technical-showcase');
     
@@ -248,3 +317,36 @@ function initialize3DViewer() {
         });
     }
 }
+
+// Project-specific navigation for individual project pages
+function initializeProjectPageNavigation() {
+    // Check if we're on a project page
+    const currentPath = window.location.pathname;
+    const isProjectPage = currentPath.includes('/projects/');
+    
+    if (isProjectPage) {
+        // Update all navigation links to go back to main site
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            const section = link.dataset.section;
+            if (section) {
+                // Update href to go back to main site with the correct hash
+                link.href = `../index.html#${section}`;
+            }
+        });
+        
+        // Handle back button
+        const backButton = document.querySelector('.back-button-clean a');
+        if (backButton) {
+            backButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = '../index.html#research-projects';
+            });
+        }
+    }
+}
+
+// Initialize project page navigation when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeProjectPageNavigation();
+});
