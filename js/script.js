@@ -182,3 +182,69 @@ document.querySelectorAll('.feature-card').forEach(card => {
         card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
     });
 });
+// Technical Showcase mini-project navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const miniProjectCards = document.querySelectorAll('.mini-project-card');
+    
+    miniProjectCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = card.dataset.category;
+            const projectId = card.dataset.project;
+            
+            // Redirect to individual mini-project page
+            window.location.href = `technical-showcase/${category}/${projectId}.html`;
+        });
+    });
+    
+    // Enhanced navigation for Technical Showcase pages
+    initializeTechnicalShowcaseNavigation();
+    initialize3DViewer();
+});
+
+// Enhanced navigation for Technical Showcase pages
+function initializeTechnicalShowcaseNavigation() {
+    // Check if we're on a technical showcase page
+    const currentPath = window.location.pathname;
+    const isTechnicalShowcase = currentPath.includes('technical-showcase');
+    
+    if (isTechnicalShowcase) {
+        // Update navigation links to go back to main site
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            const section = link.dataset.section;
+            if (section && section !== 'technical-showcase') {
+                // Update href to go back to main site with hash
+                link.href = `../../index.html#${section}`;
+            } else if (link.textContent.includes('Technical Showcase')) {
+                link.href = `../../index.html#technical-showcase`;
+            }
+        });
+        
+        // Add click handler for back to showcase button
+        const backToShowcase = document.querySelector('.back-to-showcase');
+        if (backToShowcase) {
+            backToShowcase.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = '../../index.html#technical-showcase';
+            });
+        }
+    }
+}
+
+// 3D Model viewer placeholder interaction
+function initialize3DViewer() {
+    const modelPlaceholder = document.querySelector('.model-placeholder');
+    
+    if (modelPlaceholder) {
+        modelPlaceholder.addEventListener('click', () => {
+            // Add rotation animation
+            modelPlaceholder.style.transform = 'rotateY(360deg)';
+            modelPlaceholder.style.transition = 'transform 1s ease';
+            
+            setTimeout(() => {
+                modelPlaceholder.style.transform = 'rotateY(0deg)';
+            }, 1000);
+        });
+    }
+}
