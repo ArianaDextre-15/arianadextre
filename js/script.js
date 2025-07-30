@@ -130,7 +130,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Apply animations to elements
-document.querySelectorAll('.project-card, .timeline-item, .skill-tag, .feature-card').forEach(el => {
+document.querySelectorAll('.project-card, .timeline-item, .skill-tag, .feature-card, .tech-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
@@ -158,7 +158,7 @@ document.querySelectorAll('.contact-link').forEach(link => {
     });
 });
 
-// Tech stack animation for project pages
+// Tech stack animation for project pages and technical showcase
 document.querySelectorAll('.tech-item').forEach((item, index) => {
     item.style.opacity = '0';
     item.style.transform = 'translateY(20px)';
