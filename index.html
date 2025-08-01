@@ -1,451 +1,114 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ariana Dextre - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-section="research-projects">Research & Projects</a></li>
-                <li><a href="#" class="nav-link" data-section="technical-showcase">Technical Showcase</a></li>
-                <li><a href="#" class="nav-link" data-section="education">Education</a></li>
-                <li><a href="#" class="nav-link" data-section="experience-leadership">Experience & Leadership</a></li>
-                <li><a href="#" class="nav-link" data-section="volunteering">Volunteering</a></li>
-                <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-content">
-                    <div class="profile-img">👩‍💻</div>
-                    <h1>Hi! I'm Ariana Dextre</h1>
-                    <p class="subtitle">Biomedical Researcher & Health Technology Developer</p>
-                    <p class="description">Passionate about biomedical innovation, genetic engineering, cell culture, 3D bioprinting, and biomedical signal analysis.</p>
-                    <p class="description">Always exploring, building, and learning.</p>
-                    <div class="about-me">
-                        <h3>About Me</h3>
-                        <p>I've always been fascinated by how the human body works—and even more by how we can understand, replicate, and improve it through technology. That curiosity led me to explore everything from 3D bioprinting and genetic engineering to biomedical signals and health tech design,</p>
-                        <p>I enjoy collaborating with people from different fields and believe the best innovations happen when science, creativity, and empathy come together.</p>
-                        <p>I've built strong technical skills in the following tools and platforms:</p>
-                        <div class="skills">
-                            <span class="skill-tag">Fusion 360 & Inventor</span>
-                            <span class="skill-tag">PrusaSlicer & Bambu Studio</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">MATLAB</span>
-                            <span class="skill-tag">MedGemma</span>
-                            <span class="skill-tag">Unity</span>
-                            <span class="skill-tag">RStudio</span>
-                            <span class="skill-tag">Git & GitHub</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="cta-button nav-link" data-section="research-projects">Explore Projects</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research & Projects Section -->
-<section id="research-projects" class="section">
-    <div class="container">
-        <h2>Research & Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card" data-project="game">
-                <div class="project-img">🎮</div>
-                <div class="project-badges">
-                    <span class="badge biomedical">Biomedical</span>
-                    <span class="badge rehabilitation">Rehabilitation</span>
-                    <span class="badge ai">AI</span>
-                    <span class="badge in-progress">In Progress</span>
-                </div>
-                <h3>Therapeutic Video Game for Rehabilitation</h3>
-                <p>I'm developing a therapeutic video game in Unity focused on motor rehabilitation. I'm in charge of programming and currently learning through modules such as game design, programming logic, and EMG-based interaction.</p>
-                <div class="project-tags">
-                    <span class="tag">Unity</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">EMG Sensors</span>
-                    <span class="tag">Rehabilitation</span>
-                </div>
-                <div class="project-links">
-                    <a href="projects/game.html" class="project-link">View Full Project</a>
-                </div>
-            </div>
-
-            <div class="project-card" data-project="bioprinter">
-                <div class="project-img">🖨️</div>
-                <div class="project-badges">
-                    <span class="badge biomedical">Biomedical</span>
-                    <span class="badge mechatronics">Mechatronics</span>
-                    <span class="badge research">Research</span>
-                    <span class="badge in-progress">In Progress</span>
-                </div>
-                <h3>Low-Cost Bioprinter Evaluation Project</h3>
-                <p>I'm working on a comparative evaluation of affordable and commercial bioprinters for academic biofabrication labs. This includes disassembling, redesigning, and adapting components for bioprinting, as well as testing usability, technical parameters, and feasibility.</p>
-                <div class="project-tags">
-                    <span class="tag">3D Bioprinting</span>
-                    <span class="tag">Hardware</span>
-                    <span class="tag">Research</span>
-                    <span class="tag">CAD Design</span>
-                </div>
-                <div class="project-links">
-                    <a href="projects/bioprinter.html" class="project-link">View Full Project</a>
-                </div>
-            </div>
-
-            <div class="project-card" data-project="sorting">
-                <div class="project-img">📦</div>
-                <div class="project-badges">
-                    <span class="badge mechatronics">Mechatronics</span>
-                    <span class="badge ai">AI</span>
-                    <span class="badge completed">Completed</span>
-                </div>
-                <h3>Automatic Package Sorting System</h3>
-                <p>Modular mechatronic system for automated package classification using barcode detection and independent sorting modules. Designed to reduce space requirements while maintaining scalability.</p>
-                <div class="project-tags">
-                    <span class="tag">Mechatronics</span>
-                    <span class="tag">Barcode Detection</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Modular Design</span>
-                </div>
-                <div class="project-links">
-                    <a href="projects/sorting.html" class="project-link">View Full Project</a>
-                </div>
-            </div>
-
-            <div class="project-card" data-project="signals">
-                <div class="project-img">🧬</div>
-                <div class="project-badges">
-                    <span class="badge biomedical">Biomedical</span>
-                    <span class="badge ai">AI</span>
-                    <span class="badge research">Research</span>
-                    <span class="badge in-progress">In Progress</span>
-                </div>
-                <h3>Biomedical Signal Analysis</h3>
-                <p>Development of algorithms and tools for analyzing biomedical signals including EMG, ECG, and EEG data. Focus on feature extraction, pattern recognition, and real-time processing for healthcare applications.</p>
-                <div class="project-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">MATLAB</span>
-                    <span class="tag">Signal Processing</span>
-                    <span class="tag">Machine Learning</span>
-                </div>
-                <div class="project-links">
-                    <a href="projects/signals.html" class="project-link">View Full Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <!-- Technical Showcase Section -->
-        <section id="technical-showcase" class="section">
-            <div class="container">
-                <h2>Technical Showcase</h2>
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Explore my technical skills through hands-on projects and practical applications. Each category showcases different tools and technologies I've mastered through coursework and personal projects.
-                </p>
-
-                <!-- Prosthetics Category -->
-                <div class="category-section">
-                    <h3 class="category-title">🦾 Prosthetics & Medical Devices</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="prosthetics" data-project="leg-prosthetic">
-                            <h4>3D Printed Leg Prosthetic</h4>
-                            <p>Custom-designed prosthetic leg component using advanced CAD modeling and 3D printing techniques.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Fusion 360</span>
-                                <span class="mini-tag">3D Printing</span>
-                                <span class="mini-tag">STL</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="prosthetics" data-project="hand-prosthetic">
-                            <h4>Articulated Hand Prosthetic</h4>
-                            <p>Multi-joint prosthetic hand with articulated fingers designed for improved functionality.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Inventor</span>
-                                <span class="mini-tag">Mechanism Design</span>
-                                <span class="mini-tag">STL</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="prosthetics" data-project="knee-joint">
-                            <h4>Biomechanical Knee Joint</h4>
-                            <p>Advanced knee joint mechanism with optimized biomechanics for natural movement.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">SolidWorks</span>
-                                <span class="mini-tag">Biomechanics</span>
-                                <span class="mini-tag">Assembly</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CAD Design Category -->
-                <div class="category-section">
-                    <h3 class="category-title">🔧 CAD Design & Engineering</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="fusion360" data-project="medical-device">
-                            <h4>Surgical Instrument Design</h4>
-                            <p>Precision surgical tool designed with ergonomic considerations and manufacturing constraints.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Fusion 360</span>
-                                <span class="mini-tag">Ergonomics</span>
-                                <span class="mini-tag">Manufacturing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="fusion360" data-project="lab-equipment">
-                            <h4>Laboratory Equipment Housing</h4>
-                            <p>Custom housing design for biomedical laboratory equipment with ventilation and access considerations.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Inventor</span>
-                                <span class="mini-tag">Sheet Metal</span>
-                                <span class="mini-tag">Technical Drawing</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="fusion360" data-project="bioprinter-component">
-                            <h4>Bioprinter Extruder Component</h4>
-                            <p>Modified extruder component for bioprinting applications with precise material flow control.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Fusion 360</span>
-                                <span class="mini-tag">Precision Engineering</span>
-                                <span class="mini-tag">Bioprinting</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Analysis Category -->
-                <div class="category-section">
-                    <h3 class="category-title">📊 Data Analysis & Statistics</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="rstudio" data-project="clinical-data">
-                            <h4>Clinical Trial Data Analysis</h4>
-                            <p>Statistical analysis of clinical trial data using R, including survival analysis and efficacy metrics.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">R Studio</span>
-                                <span class="mini-tag">Statistics</span>
-                                <span class="mini-tag">Clinical Data</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="rstudio" data-project="biomarker-analysis">
-                            <h4>Biomarker Discovery Analysis</h4>
-                            <p>Comprehensive biomarker analysis using machine learning techniques for disease prediction.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">R Studio</span>
-                                <span class="mini-tag">Machine Learning</span>
-                                <span class="mini-tag">Biomarkers</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="rstudio" data-project="population-study">
-                            <h4>Population Health Study</h4>
-                            <p>Large-scale population health data analysis with visualization and trend identification.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">R Studio</span>
-                                <span class="mini-tag">Data Visualization</span>
-                                <span class="mini-tag">Public Health</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Unity Development Category -->
-                <div class="category-section">
-                    <h3 class="category-title">🎮 Interactive Development</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="unity" data-project="rehab-game">
-                            <h4>Motor Rehabilitation Game</h4>
-                            <p>Interactive Unity game designed for motor skill rehabilitation with EMG sensor integration.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Unity</span>
-                                <span class="mini-tag">C#</span>
-                                <span class="mini-tag">EMG Integration</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="unity" data-project="anatomy-viewer">
-                            <h4>3D Anatomy Viewer</h4>
-                            <p>Interactive 3D anatomy visualization tool for educational purposes with detailed organ models.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Unity</span>
-                                <span class="mini-tag">3D Modeling</span>
-                                <span class="mini-tag">Education</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mini-project-card" data-category="unity" data-project="vr-surgery">
-                            <h4>VR Surgery Simulation</h4>
-                            <p>Virtual reality surgical training simulation with haptic feedback and performance metrics.</p>
-                            <div class="mini-project-tags">
-                                <span class="mini-tag">Unity</span>
-                                <span class="mini-tag">VR Development</span>
-                                <span class="mini-tag">Medical Training</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
+<!-- Education Section -->
         <section id="education" class="section">
             <div class="container">
                 <h2>Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Biomedical Engineering</h3>
-                        <h4>Pontificia Universidad Católica del Perú - 2020-Present</h4>
-                        <p>Specializing in biomedical innovation, genetic engineering, cell culture, 3D bioprinting, and biomedical signal analysis. Focus on interdisciplinary research combining engineering principles with biological systems.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Bioengineering Research Program</h3>
-                        <h4>Advanced Laboratory Training - 2023</h4>
-                        <p>Intensive hands-on training in advanced bioengineering techniques including cell culture, tissue engineering, biomaterial characterization, and bioprinting technologies.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Unity Game Development Certification</h3>
-                        <h4>Unity Technologies - 2023</h4>
-                        <p>Comprehensive training in game development with Unity, focusing on therapeutic applications and rehabilitation gaming systems with EMG sensor integration.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience & Leadership Section -->
-        <section id="experience-leadership" class="section">
-            <div class="container">
-                <h2>Experience & Leadership</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Biomedical Research Assistant</h3>
-                        <h4>PUCP Bioengineering Lab - 2023-Present</h4>
-                        <p>Leading research projects in 3D bioprinting and therapeutic gaming systems. Responsible for equipment modification, experimental design, and data analysis for biomedical applications.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Project Team Leader</h3>
-                        <h4>Therapeutic Gaming Development - 2023-Present</h4>
-                        <p>Leading a multidisciplinary team in developing therapeutic video games for motor rehabilitation. Managing project timeline, coordinating with medical professionals, and overseeing technical implementation.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Laboratory Teaching Assistant</h3>
-                        <h4>PUCP Engineering Faculty - 2022-2023</h4>
-                        <p>Assisted in teaching biomedical engineering laboratory courses, mentoring students in CAD design, 3D printing, and biomedical signal processing techniques.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Volunteering Section -->
-        <section id="volunteering" class="section">
-            <div class="container">
-                <h2>Volunteering</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>STEM Education Mentor</h3>
-                        <h4>Local High Schools - 2023-Present</h4>
-                        <p>Mentoring high school students in STEM fields, particularly focusing on biomedical engineering applications and encouraging underrepresented groups to pursue engineering careers.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Community Health Technology Advocate</h3>
-                        <h4>Local Health Centers - 2022-Present</h4>
-                        <p>Volunteer work in community health centers, helping to implement and explain biomedical technologies, and supporting health technology literacy programs for local communities.</p>
-                    </div>
-
-                    <div class="timeline-item">
-                        <h3>Student Organization Leader</h3>
-                        <h4>Biomedical Engineering Student Association - 2021-2023</h4>
-                        <p>Led initiatives to promote biomedical engineering among students, organized workshops on emerging technologies, and coordinated research collaboration between students and faculty.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Let's Connect!</h2>
+                <p class="section-subtitle">Academic background, achievements, and learning journey.</p>
                 
-                <div class="contact-container">
-                    <div class="contact-form">
-                        <div id="statusMessage" class="status-message"></div>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your name">
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <div class="logo-placeholder pucp-logo">🏛️</div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-title">
+                                    <h3>B.Sc. Mechatronics Engineering</h3>
+                                    <h4><a href="#" class="university-link">Pontifical Catholic University of Peru (PUCP)</a></h4>
+                                    <span class="education-period">Mar 2020 – Dec 2024</span>
+                                </div>
+                                <div class="education-gpa">
+                                    <span class="gpa-badge">GPA 4.0/4.0</span>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            <div class="education-achievements">
+                                <p class="achievement-highlight">PRONABEC Children of Teachers Scholarship – full tuition and stipend (2020–24). GPA 4.0/4.0: ranked #1/90 (2021–2) and #2/24 (2024–2) in major.</p>
                             </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required placeholder="How can I help you?">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or idea..."></textarea>
-                            </div>
-                            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
-                        </form>
+                        </div>
                     </div>
 
-                    <div class="contact-links">
-                        <h3>Other Ways to Reach Me</h3>
-                        <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
-                            <span class="icon icon-email">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </span>
-                            <span>ariana.dextre@pucp.edu.pe</span>
-                        </a>
-                        <a href="https://github.com/arianadextre" target="_blank" class="contact-link">
-                            <span class="icon icon-github">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </span>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://linkedin.com/in/arianadextre" target="_blank" class="contact-link">
-                            <span class="icon icon-linkedin">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </span>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://twitter.com/arianadextre" target="_blank" class="contact-link">
-                            <span class="icon icon-twitter">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                </svg>
-                            </span>
-                            <span>Twitter</span>
-                        </a>
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <div class="logo-placeholder ut-logo">🤘</div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-title">
+                                    <h3>Academic Exchange, Mechanical Engineering</h3>
+                                    <h4><a href="#" class="university-link">The University of Texas at Austin</a></h4>
+                                    <span class="education-period">Jan – May 2023</span>
+                                </div>
+                                <div class="education-gpa">
+                                    <span class="gpa-badge">GPA 3.62/4.0</span>
+                                </div>
+                            </div>
+                            <div class="education-achievements">
+                                <p class="achievement-highlight">Top-ranked (#1) DARI Mobility Scholar (2023-I). GPA 3.62/4.0: University Honors. Spring 2023.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <div class="logo-placeholder harvard-logo">📚</div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-title">
+                                    <h3>Certificate, Ethics of Artificial Intelligence in Business</h3>
+                                    <h4><a href="#" class="university-link">Harvard Division of Continuing Education</a></h4>
+                                    <span class="education-period">Aug 2024</span>
+                                </div>
+                                <div class="education-gpa">
+                                    <span class="scholarship-badge">Excellence Scholarship</span>
+                                </div>
+                            </div>
+                            <div class="education-achievements">
+                                <p class="achievement-highlight">Excellence Scholarship awardee (1 of 90 PUCP students).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <div class="logo-placeholder makers-logo">⚙️</div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-title">
+                                    <h3>Makers Fellowship – MF5 Cohort</h3>
+                                    <h4><a href="#" class="university-link">Makers Fellowship (LATAM)</a></h4>
+                                    <span class="education-period">Apr 2025</span>
+                                </div>
+                                <div class="education-gpa">
+                                    <span class="selection-badge">&lt;1% Selection</span>
+                                </div>
+                            </div>
+                            <div class="education-achievements">
+                                <p class="achievement-highlight">Selected (&lt;1%) for business fellow: received training and mentoring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-logo">
+                            <div class="logo-placeholder ycombinator-logo">Y</div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-title">
+                                    <h3>AI Startup School – Selected Attendee</h3>
+                                    <h4><a href="#" class="university-link">Y Combinator</a></h4>
+                                    <span class="education-period">Jun 2025</span>
+                                </div>
+                                <div class="education-gpa">
+                                    <span class="selection-badge">1 of 2,500</span>
+                                </div>
+                            </div>
+                            <div class="education-achievements">
+                                <p class="achievement-highlight">Hand-picked (1 of 2,500 AI students) to attend talks by Altman, Ng, Musk, and others.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
