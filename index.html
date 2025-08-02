@@ -558,123 +558,125 @@
 </section>
 
 <style>
-    /* education */
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="education-logos-group">
+                            <div class="education-logo pucp-logo">
+                                <img src="pucp-logo.png" alt="PUCP Logo">
+                            </div>
+                            <div class="education-logo upch-logo">
+                                <img src="upch-logo.png" alt="UPCH Logo">
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Biomedical Engineering – Dual Degree Program</h3>
+                                <span class="Academic Standing-badge">Top third of the class</span>
+                            </div>
+                            <h4>Pontificia Universidad Católica del Perú & Universidad Peruana Cayetano Heredia (2022–Present)</h4>
+                            <p>This dual degree integrates engineering, life sciences, and medicine, giving me a broader perspective on healthcare innovation. Specializing in biomedical innovation, 3D bioprinting, biomaterials, genetic engineering, cell culture, microbiology, and biomedical signal analysis, with a focus on applying engineering principles to solve medical challenges.</p>
+                            <div class="achievement-note">Key Achievements: First place in Molecular Biology, Anatomy & Physiology, Microbiology, and Cell Culture.</div>
+                        </div>
+                    </div>
 
-    /* Para logos individuales */
-    .education-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
+                    <div class="timeline-item">
+                        <div class="education-logo lyn-logo">
+                            <img src="LYN-logo.png" alt="Lyn BioLearning Logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Advanced Biolearning Program</h3>
+                                <span class="scholarship-badge">Research Fellow</span>
+                            </div>
+                            <h4>Lyn BioLearning - 2024</h4>
+                            <p>Advanced research program focusing on biomedical innovation, synthetic biology, and biotechnology applications in healthcare.</p>
+                            <div class="achievement-note">Selected as research fellow for innovative biomedical technology development.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="education-logo p4h-logo">
+                            <img src="P4Hbionic-logo.png" alt="P4H Bionics Logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Bionic Prosthetics Workshop</h3>
+                                <span class="scholarship-badge">Certificate</span>
+                            </div>
+                            <h4>P4H Bionics - 2023</h4>
+                            <p>Specialized training in bionic prosthetics design, 3D printing applications for medical devices, and EMG signal integration for prosthetic control systems.</p>
+                            <div class="achievement-note">Completed advanced module in EMG-controlled prosthetic development.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="education-logo icpna-logo">
+                            <img src="icpna-logo.png" alt="ICPNA Logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>English – Advanced Level</h3>
+                                <span class="scholarship-badge">Excellence Certificate</span>
+                            </div>
+                            <h4>ICPNA – Instituto Cultural Peruano Norteamericano (2019-2022)</h4>
+                            <p>Completed all levels of the English language program. Advanced proficiency demonstrated through academic writing, presentations, and research in English. Consistently ranked among the top students of the program.</p>
+                            <div class="achievement-note">Presented academic projects and research in English.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="education-logo coursera-logo">
+                            <img src="coursera-logo.png" alt="Coursera Logo">
+                        </div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Machine Learning & Data Science</h3>
+                                <span class="gpa-badge">Certified</span>
+                            </div>
+                            <h4>Coursera - Multiple Courses - 2022-2023</h4>
+                            <p>Comprehensive certification in machine learning, data analysis, and biomedical signal processing through specialized courses from top universities.</p>
+                            <div class="achievement-note">Completed 8 specialized courses with distinction in biomedical applications.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        /* Ajustes SOLO para el tamaño de los logos */
+
+/* Para logos individuales */
+.education-logo {
+    width: 50px !important;
+    height: 50px !important;
 }
 
 .education-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 4px;
 }
 
 /* Para el grupo de logos duales (PUCP y UPCH) */
 .education-logos-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
 }
 
 .education-logos-group .education-logo {
-    width: 45px;
-    height: 45px;
+    width: 45px !important;
+    height: 45px !important;
 }
 
 .education-logos-group .education-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 2px;
 }
-
-/* Otros estilos necesarios para el diseño */
-.timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.education-content {
-    flex: 1;
-}
-
-.education-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.education-header h3 {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    font-weight: 600;
-    margin: 0;
-}
-
-.education-header h4 {
-    font-size: 1rem;
-    color: #6c757d;
-    font-weight: 500;
-    margin: 8px 0;
-}
-
-.education-content p {
-    color: #495057;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/* Badges */
-.scholarship-badge, 
-.gpa-badge, 
-.Academic\\ Standing-badge {
-    background: #007bff;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.gpa-badge {
-    background: #28a745;
-}
-
-.Academic\\ Standing-badge {
-    background: #17a2b8;
-}
-
-.achievement-note {
-    background: #e8f5e8;
-    color: #2d5a2d;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    border-left: 3px solid #28a745;
-}
-</style>
-        
         <!-- Experience & Leadership Section -->
         <section id="experience-leadership" class="section">
             <div class="container">
