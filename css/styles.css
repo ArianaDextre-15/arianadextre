@@ -14,6 +14,8 @@
     --light-gray: #ECF0F1;
     --accent-color: #A084CA;
     --text-muted: #6B7280;
+    --neutral-gray: #6B7280;
+    --neutral-gray-bg: #F3F4F6;
 }
 
 body {
@@ -310,6 +312,7 @@ main {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    margin-top: 1rem;
 }
 
 .tag {
@@ -644,13 +647,14 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* Project Badges */
+/* Project Badges - ACTUALIZADO */
 .project-badges {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .badge {
@@ -662,6 +666,7 @@ main {
     letter-spacing: 0.5px;
 }
 
+/* Categorías principales - mantienen colores */
 .badge.mechatronics {
     background: #E3F2FD;
     color: #1565C0;
@@ -682,19 +687,21 @@ main {
     color: #7B1FA2;
 }
 
-.badge.completed {
-    background: #E8F5E8;
-    color: #2E7D32;
-}
-
-.badge.in-progress {
-    background: #FFF8E1;
-    color: #F57F17;
-}
-
+/* Estados - ahora en gris y posicionados en esquina superior derecha */
+.badge.completed,
+.badge.in-progress,
 .badge.research {
-    background: #E1F5FE;
-    color: #0277BD;
+    background: var(--neutral-gray-bg);
+    color: var(--neutral-gray);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 500;
 }
 
 /* Project Description */
@@ -886,6 +893,7 @@ main {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid var(--light-gray);
+    position: relative;
 }
 
 .mini-project-card:hover {
@@ -912,6 +920,7 @@ main {
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .mini-tag {
@@ -1090,5 +1099,13 @@ main {
     .project-badges {
         justify-content: center;
     }
+    
+    /* Ajustes móviles para badges de estado */
+    .badge.completed,
+    .badge.in-progress,
+    .badge.research {
+        position: static;
+        margin-top: 1rem;
+        display: inline-block;
+    }
 }
-
