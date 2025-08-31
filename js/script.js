@@ -140,7 +140,7 @@ function initializeContactForm() {
                 });
                 
                 if (response.ok) {
-                    statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronto. 💜';
+                    statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronnnnnto. 💜';
                     statusMessage.className = 'status-message success';
                     statusMessage.style.display = 'block';
                     form.reset();
