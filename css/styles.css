@@ -125,11 +125,26 @@ main {
     max-width: 800px;
     margin: 0 auto;
 }
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid white;
+    box-shadow: 0 20px 40px rgba(160, 132, 202, 0.3);
+    overflow: hidden;
+}
+
 .profile-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center; 
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero h1 {
@@ -148,7 +163,7 @@ main {
 
 .hero .description {
     font-size: 1.1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     color: var(--text-muted);
     max-width: 600px;
     margin-left: auto;
