@@ -713,3 +713,132 @@ main {
         gap: 2rem; 
     }
 }
+/* ============================================
+   AGREGAR ESTO AL FINAL DE TU styles.css
+   PARA ARREGLAR EL TECHNICAL SHOWCASE
+============================================ */
+
+/* Category Sections */
+.category-section {
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    background: var(--light-lilac);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(160, 132, 202, 0.08);
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Mini Projects Grid */
+.mini-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Mini Project Cards */
+.mini-project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--light-gray);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mini-project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--pastel-lilac) 0%, var(--accent-color) 100%);
+    border-radius: 15px 15px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mini-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(160, 132, 202, 0.15);
+}
+
+.mini-project-card:hover::before {
+    opacity: 1;
+}
+
+.mini-project-card h4 {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.mini-project-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+/* Mini Project Tags */
+.mini-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.mini-tag {
+    background: var(--cream);
+    color: var(--dark-gray);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.mini-project-card:hover .mini-tag {
+    background: var(--cream-dark);
+}
+
+/* Responsive para Technical Showcase */
+@media (max-width: 768px) {
+    .mini-projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-section {
+        padding: 1.5rem;
+    }
+}
