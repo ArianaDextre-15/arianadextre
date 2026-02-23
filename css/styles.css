@@ -100,10 +100,9 @@ main {
 }
 
 /* ============================================
-   NUEVA ESTRUCTURA DE HERO FULLSCREEN
+   HERO FULLSCREEN
 ============================================ */
 
-/* Hero Section - Fullscreen con ilustración */
 .hero {
     background: var(--pastel-lilac);
     min-height: 100vh;
@@ -135,17 +134,11 @@ main {
 }
 
 @keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
-/* Indicador de scroll */
+/* Scroll indicator */
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
@@ -178,37 +171,20 @@ main {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
 }
 
 @keyframes scroll {
-    0% {
-        opacity: 0;
-        top: 10px;
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-        top: 25px;
-    }
-    100% {
-        opacity: 0;
-        top: 10px;
-    }
+    0% { opacity: 0; top: 10px; }
+    40% { opacity: 1; }
+    80% { opacity: 0; top: 25px; }
+    100% { opacity: 0; top: 10px; }
 }
 
 /* ============================================
-   NUEVA SECCIÓN ABOUT ME - SPLIT SCREEN
+   ABOUT ME - SPLIT SCREEN
 ============================================ */
 
 .about-me-split {
@@ -221,7 +197,6 @@ main {
     gap: 0;
 }
 
-/* Lado izquierdo - Descripción */
 .about-description {
     padding: 5rem 4rem;
     display: flex;
@@ -261,7 +236,6 @@ main {
     font-weight: 600;
 }
 
-/* Skills en About Me */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +253,6 @@ main {
     box-shadow: 0 4px 12px rgba(160, 132, 202, 0.1);
 }
 
-/* Lado derecho - Foto */
 .about-photo {
     position: relative;
     overflow: hidden;
@@ -296,7 +269,6 @@ main {
     object-position: center;
 }
 
-/* Decoración en la foto */
 .photo-decoration {
     position: absolute;
     top: 0;
@@ -307,7 +279,6 @@ main {
     pointer-events: none;
 }
 
-/* CTA Button */
 .cta-button {
     background: var(--cream);
     color: var(--accent-color);
@@ -330,10 +301,9 @@ main {
 }
 
 /* ============================================
-   RESTO DE ESTILOS ORIGINALES
+   SECTION HEADERS
 ============================================ */
 
-/* Section Headers */
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -355,7 +325,55 @@ main {
     border-radius: 2px;
 }
 
-/* Projects Grid */
+/* ============================================
+   BADGES
+============================================ */
+
+.badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Colores por categoría */
+.badge.rehabilitation   { background: #F3E5F5; color: #7B1FA2; }
+.badge.vr               { background: #E8EAF6; color: #3949AB; }
+.badge.biomedical       { background: #E8F5E8; color: #2E7D32; }
+.badge.mechatronics     { background: #E3F2FD; color: #1565C0; }
+.badge.ai               { background: #FFF3E0; color: #F57C00; }
+.badge.aerospace        { background: #FFF8E1; color: #F9A825; }
+.badge.medical-training { background: #E0F7FA; color: #00838F; }
+.badge.biofabrication   { background: #F1F8E9; color: #558B2F; }
+
+/* Badges de estado */
+.badge.completed,
+.badge.in-progress,
+.badge.research {
+    background: #F3F4F6;
+    color: #6B7280;
+    position: static;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Contenedor de badges dentro de project-card */
+.project-card .project-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* ============================================
+   PROJECTS GRID
+============================================ */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -454,7 +472,10 @@ main {
     transform: translateY(-2px);
 }
 
-/* Timeline */
+/* ============================================
+   TIMELINE
+============================================ */
+
 .timeline {
     position: relative;
     margin: 3rem 0;
@@ -483,13 +504,8 @@ main {
     border: 1px solid var(--light-gray);
 }
 
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    left: 55%;
-}
+.timeline-item:nth-child(odd)  { left: 0; }
+.timeline-item:nth-child(even) { left: 55%; }
 
 .timeline-item::before {
     content: '';
@@ -503,13 +519,8 @@ main {
     box-shadow: 0 2px 8px rgba(160, 132, 202, 0.2);
 }
 
-.timeline-item:nth-child(odd)::before {
-    right: -25px;
-}
-
-.timeline-item:nth-child(even)::before {
-    left: -25px;
-}
+.timeline-item:nth-child(odd)::before  { right: -25px; }
+.timeline-item:nth-child(even)::before { left: -25px; }
 
 .timeline-item h3 {
     color: var(--dark-gray);
@@ -529,7 +540,10 @@ main {
     line-height: 1.6;
 }
 
-/* Contact Form */
+/* ============================================
+   CONTACT
+============================================ */
+
 .contact-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -600,7 +614,6 @@ main {
     cursor: not-allowed;
 }
 
-/* Other Ways to Reach Me Section */
 .contact-links {
     background: var(--light-lilac);
     padding: 3rem;
@@ -646,13 +659,15 @@ main {
     justify-content: center;
 }
 
-/* SVG Icons */
-.icon-email svg { width: 20px; height: 20px; }
-.icon-github svg { width: 20px; height: 20px; }
-.icon-linkedin svg { width: 20px; height: 20px; }
+.icon-email svg,
+.icon-github svg,
+.icon-linkedin svg,
 .icon-twitter svg { width: 20px; height: 20px; }
 
-/* Status Messages */
+/* ============================================
+   STATUS MESSAGES
+============================================ */
+
 .status-message {
     padding: 1rem;
     border-radius: 10px;
@@ -674,51 +689,10 @@ main {
     border: 1px solid #f5c6cb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .about-me-split {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-photo {
-        min-height: 60vh;
-    }
-    
-    .about-description {
-        padding: 4rem 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-illustration img {
-        max-width: 95%;
-    }
-    
-    .about-description h2 {
-        font-size: 2rem;
-    }
-    
-    .about-description p {
-        font-size: 1rem;
-    }
-    
-    .timeline::before { left: 20px; }
-    .timeline-item { width: calc(100% - 40px); left: 40px !important; }
-    .timeline-item::before { left: -25px !important; }
-    .projects-grid { grid-template-columns: 1fr; }
-    nav ul { gap: 1rem; flex-wrap: wrap; }
-    .skills { justify-content: center; }
-    .contact-container { 
-        grid-template-columns: 1fr; 
-        gap: 2rem; 
-    }
-}
 /* ============================================
-   AGREGAR ESTO AL FINAL DE TU styles.css
-   PARA ARREGLAR EL TECHNICAL SHOWCASE
+   TECHNICAL SHOWCASE - CATEGORY SECTIONS
 ============================================ */
 
-/* Category Sections */
 .category-section {
     margin-bottom: 4rem;
     padding: 2.5rem;
@@ -749,7 +723,6 @@ main {
     border-radius: 2px;
 }
 
-/* Mini Projects Grid */
 .mini-projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -757,7 +730,6 @@ main {
     margin-top: 2rem;
 }
 
-/* Mini Project Cards */
 .mini-project-card {
     background: white;
     border-radius: 15px;
@@ -810,7 +782,6 @@ main {
     flex-grow: 1;
 }
 
-/* Mini Project Tags */
 .mini-project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -832,97 +803,37 @@ main {
     background: var(--cream-dark);
 }
 
-/* Responsive para Technical Showcase */
-@media (max-width: 768px) {
-    .mini-projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .category-section {
-        padding: 1.5rem;
-    }
-}
-/* Fix badges en project-card */
-.project-card .project-badges {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-.project-card .project-badges .badge.completed,
-.project-card .project-badges .badge.in-progress,
-.project-card .project-badges .badge.research {
-    position: static;
-    top: auto;
-    right: auto;
-    font-size: 0.8rem;
-    padding: 0.4rem 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Badges de categoría que faltan */
-.badge.vr {
-    background: #E8EAF6;
-    color: #3949AB;
-}
-
-.badge.medical-training {
-    background: #E0F7FA;
-    color: #00838F;
-}
-
-.badge.biofabrication {
-    background: #F1F8E9;
-    color: #558B2F;
-}
-
-.badge.aerospace {
-    background: #FFF8E1;
-    color: #F9A825;
-}
 /* ============================================
-   FIX BADGES EN PROJECT CARDS
+   RESPONSIVE
 ============================================ */
 
-.badge {
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+@media (max-width: 1024px) {
+    .about-me-split {
+        grid-template-columns: 1fr;
+    }
+    .about-photo {
+        min-height: 60vh;
+    }
+    .about-description {
+        padding: 4rem 2rem;
+    }
 }
 
-/* Colores por categoría */
-.badge.rehabilitation { background: #F3E5F5; color: #7B1FA2; }
-.badge.vr            { background: #E8EAF6; color: #3949AB; }
-.badge.biomedical    { background: #E8F5E8; color: #2E7D32; }
-.badge.mechatronics  { background: #E3F2FD; color: #1565C0; }
-.badge.ai            { background: #FFF3E0; color: #F57C00; }
-.badge.aerospace     { background: #FFF8E1; color: #F9A825; }
-.badge.medical-training  { background: #E0F7FA; color: #00838F; }
-.badge.biofabrication    { background: #F1F8E9; color: #558B2F; }
+@media (max-width: 768px) {
+    .hero-illustration img { max-width: 95%; }
+    .about-description h2  { font-size: 2rem; }
+    .about-description p   { font-size: 1rem; }
 
-/* Badges de estado - estáticos dentro de las cards */
-.project-card .project-badges {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
+    .timeline::before { left: 20px; }
+    .timeline-item { width: calc(100% - 40px); left: 40px !important; }
+    .timeline-item::before { left: -25px !important; }
 
-.badge.completed,
-.badge.in-progress,
-.badge.research {
-    background: #F3F4F6;
-    color: #6B7280;
-    position: static;
-    font-size: 0.75rem;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: normal;
+    .projects-grid       { grid-template-columns: 1fr; }
+    .mini-projects-grid  { grid-template-columns: 1fr; }
+    .category-section    { padding: 1.5rem; }
+
+    nav ul { gap: 1rem; flex-wrap: wrap; }
+    .skills { justify-content: center; }
+
+    .contact-container { grid-template-columns: 1fr; gap: 2rem; }
 }
