@@ -883,3 +883,46 @@ main {
     background: #FFF8E1;
     color: #F9A825;
 }
+/* ============================================
+   FIX BADGES EN PROJECT CARDS
+============================================ */
+
+.badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Colores por categoría */
+.badge.rehabilitation { background: #F3E5F5; color: #7B1FA2; }
+.badge.vr            { background: #E8EAF6; color: #3949AB; }
+.badge.biomedical    { background: #E8F5E8; color: #2E7D32; }
+.badge.mechatronics  { background: #E3F2FD; color: #1565C0; }
+.badge.ai            { background: #FFF3E0; color: #F57C00; }
+.badge.aerospace     { background: #FFF8E1; color: #F9A825; }
+.badge.medical-training  { background: #E0F7FA; color: #00838F; }
+.badge.biofabrication    { background: #F1F8E9; color: #558B2F; }
+
+/* Badges de estado - estáticos dentro de las cards */
+.project-card .project-badges {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.badge.completed,
+.badge.in-progress,
+.badge.research {
+    background: #F3F4F6;
+    color: #6B7280;
+    position: static;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+}
