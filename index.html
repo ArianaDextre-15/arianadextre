@@ -12,10 +12,24 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
+
+    <!-- NUEVO HEADER AGREGADO -->
+    <header class="professional-header">
+        <div class="header-illustration">
+            <img src="header-illustration.png" alt="Biomedical Lab Illustration">
+        </div>
+        <div class="header-title">
+            <h1>Ariana Dextre</h1>
+            <p class="header-subtitle">PORTFOLIO</p>
+        </div>
+    </header>
+
+    <!-- NAV ACTUALIZADO (solo se agregó About Me) -->
     <nav>
         <div class="container">
             <ul>
                 <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-section="about">About Me</a></li>
                 <li><a href="#" class="nav-link" data-section="research-projects">Research & Projects</a></li>
                 <li><a href="#" class="nav-link" data-section="technical-showcase">Technical Showcase</a></li>
                 <li><a href="#" class="nav-link" data-section="education">Education</a></li>
@@ -27,32 +41,40 @@
     </nav>
 
     <main>
-        <!-- Home Section - HERO FULLSCREEN CON ILUSTRACIÓN -->
+
+        <!-- HOME SECTION REEMPLAZADO COMPLETAMENTE -->
         <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-illustration">
-                    <img src="IMG_7604.jpeg" alt="Ariana's Portfolio Illustration">
-                </div>
-                <div class="scroll-indicator">
-                    <span></span>
+            <div class="hero-simple">
+                <div class="hero-content-centered">
+                    <h2 class="hero-title-elegant">Ariana Dextre</h2>
+                    <p class="hero-subtitle-elegant">PORTFOLIO</p>
+                    <p class="hero-tagline">Biomedical Engineering · Research · Innovation</p>
+                    <a href="#" class="cta-button-elegant nav-link" data-section="research-projects">
+                        Explore My Work
+                    </a>
                 </div>
             </div>
-            
-            <!-- About Me Section - SPLIT SCREEN -->
-            <div class="about-me-split">
-                <div class="about-description">
+        </section>
+
+        <!-- NUEVA SECCIÓN ABOUT AGREGADA -->
+        <section id="about" class="section">
+            <div class="about-container-simple">
+                <div class="about-illustration-side">
+                    <img src="IMG_7602.jpeg" alt="Ariana Dextre">
+                </div>
+                <div class="about-content-side">
                     <h2>About Me</h2>
                     <p>
-                        I've always been fascinated by how the human body works—and even more by how we can 
-                        understand, replicate, and improve it through technology. That curiosity led me to explore 
-                        everything from 3D bioprinting and genetic engineering to biomedical signals and health tech design.
+                        I've always been fascinated by how the human body works—and even more by how we can understand, replicate, and improve it through technology. That curiosity led me to explore everything from 3D bioprinting and genetic engineering to biomedical signals and health tech design.
                     </p>
                     <p>
-                        I enjoy collaborating with people from different fields and believe the best innovations happen 
-                        when <span class="highlight">science, creativity, and empathy</span> come together.
+                        I enjoy collaborating with people from different fields and believe the best innovations happen when 
+                        <span class="highlight">science, creativity, and empathy</span> come together.
                     </p>
                     
-                    <p style="font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">I've built strong technical skills in the following tools and platforms:</p>
+                    <p style="font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">
+                        I've built strong technical skills in the following tools and platforms:
+                    </p>
                     
                     <div class="skills">
                         <span class="skill-tag">Fusion 360 & Inventor</span>
@@ -65,12 +87,9 @@
                         <span class="skill-tag">Git & GitHub</span>
                     </div>
                     
-                    <a href="#" class="cta-button nav-link" data-section="research-projects">Explore Projects</a>
-                </div>
-                
-                <div class="about-photo">
-                    <img src="IMG_7602.jpeg" alt="Ariana Dextre">
-                    <div class="photo-decoration"></div>
+                    <a href="#" class="btn-read-more nav-link" data-section="research-projects">
+                        View Projects
+                    </a>
                 </div>
             </div>
         </section>
