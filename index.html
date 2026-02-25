@@ -5,32 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ariana Dextre - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon del osito - NUEVAS LÍNEAS AGREGADAS -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
-
-    <header class="professional-header">
-        <div class="header-illustration">
-            <img src="header-illustration.png" alt="Biomedical Lab Illustration">
-        </div>
-        <div class="header-title">
-            <h1>Ariana Dextre</h1>
-            <p class="header-subtitle">PORTFOLIO</p>
-        </div>
-    </header>
-
     <nav>
         <div class="container">
             <ul>
                 <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-section="about">About Me</a></li>
-                <li><a href="#" class="nav-link" data-section="research-projects">Research &amp; Projects</a></li>
+                <li><a href="#" class="nav-link" data-section="research-projects">Research & Projects</a></li>
                 <li><a href="#" class="nav-link" data-section="technical-showcase">Technical Showcase</a></li>
                 <li><a href="#" class="nav-link" data-section="education">Education</a></li>
-                <li><a href="#" class="nav-link" data-section="experience-leadership">Experience &amp; Leadership</a></li>
+                <li><a href="#" class="nav-link" data-section="experience-leadership">Experience & Leadership</a></li>
                 <li><a href="#" class="nav-link" data-section="volunteering">Volunteering</a></li>
                 <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
@@ -38,63 +27,61 @@
     </nav>
 
     <main>
-
-<!-- HOME + ABOUT ME JUNTOS - UNA SOLA SECCIÓN -->
-<section id="home" class="section active">
-    <div class="home-about-combined">
-        
-        <!-- Hero Intro - Más compacto y elegante -->
-        <div class="hero-intro">
-            <h1>Ariana Dextre</h1>
-            <p class="tagline">Biomedical Engineering · Research · Innovation</p>
-            <p class="subtitle">Bridging Biology and Technology</p>
-        </div>
-
-        <!-- About Me Integrado -->
-        <div class="about-integrated">
-            <!-- Foto a la izquierda -->
-            <div class="about-photo-side">
-                <img src="IMG_7602.jpeg" alt="Ariana Dextre">
+        <!-- Home Section - HERO FULLSCREEN CON ILUSTRACIÓN -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-illustration">
+                    <img src="IMG_7604.jpeg" alt="Ariana's Portfolio Illustration">
+                </div>
+                <div class="scroll-indicator">
+                    <span></span>
+                </div>
             </div>
-
-            <!-- Contenido a la derecha -->
-            <div class="about-content-side">
-                <h2>About Me</h2>
-                <p>
-                    I've always been fascinated by how the human body works—and even more by how we can 
-                    understand, replicate, and improve it through technology. That curiosity led me to explore 
-                    everything from 3D bioprinting and genetic engineering to biomedical signals and health tech design.
-                </p>
-                <p>
-                    I enjoy collaborating with people from different fields and believe the best innovations happen 
-                    when <span class="highlight">science, creativity, and empathy</span> come together.
-                </p>
-                
-                <p class="skills-title">Technical Skills & Tools</p>
-                
-                <div class="skills">
-                    <span class="skill-tag">Fusion 360 & Inventor</span>
-                    <span class="skill-tag">PrusaSlicer & Bambu Studio</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">MATLAB</span>
-                    <span class="skill-tag">MedGemma</span>
-                    <span class="skill-tag">Unity</span>
-                    <span class="skill-tag">RStudio</span>
-                    <span class="skill-tag">Git & GitHub</span>
+            
+            <!-- About Me Section - SPLIT SCREEN -->
+            <div class="about-me-split">
+                <div class="about-description">
+                    <h2>About Me</h2>
+                    <p>
+                        I've always been fascinated by how the human body works—and even more by how we can 
+                        understand, replicate, and improve it through technology. That curiosity led me to explore 
+                        everything from 3D bioprinting and genetic engineering to biomedical signals and health tech design.
+                    </p>
+                    <p>
+                        I enjoy collaborating with people from different fields and believe the best innovations happen 
+                        when <span class="highlight">science, creativity, and empathy</span> come together.
+                    </p>
+                    
+                    <p style="font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">I've built strong technical skills in the following tools and platforms:</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">Fusion 360 & Inventor</span>
+                        <span class="skill-tag">PrusaSlicer & Bambu Studio</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">MedGemma</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">RStudio</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                    </div>
+                    
+                    <a href="#" class="cta-button nav-link" data-section="research-projects">Explore Projects</a>
                 </div>
                 
-                <a href="#" class="btn-explore nav-link" data-section="research-projects">Explore My Work</a>
+                <div class="about-photo">
+                    <img src="IMG_7602.jpeg" alt="Ariana Dextre">
+                    <div class="photo-decoration"></div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-        <!-- RESEARCH & PROJECTS -->
+        <!-- Research & Projects Section -->
         <section id="research-projects" class="section">
             <div class="container">
-                <h2>Research &amp; Projects</h2>
+                <h2>Research & Projects</h2>
                 <div class="projects-grid">
-
+                    
+                    <!-- Chef Rehab VR Game -->
                     <div class="project-card" data-project="game">
                         <div class="project-img">🎮</div>
                         <div class="project-badges">
@@ -105,13 +92,18 @@
                         <h3>Chef Rehab: An Immersive VR Game for Upper Limb Rehabilitation</h3>
                         <p>An immersive VR game designed to support motor rehabilitation for people with multiple sclerosis through interactive cooking tasks. The game leverages gamification and task-oriented training to improve upper limb motor function.</p>
                         <div class="project-tags">
-                            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">VR Headset</span><span class="tag">Rehabilitation</span><span class="tag">Gamification</span>
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">VR Headset</span>
+                            <span class="tag">Rehabilitation</span>
+                            <span class="tag">Gamification</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/game.html" class="project-link">View Full Project</a>
                         </div>
                     </div>
 
+                    <!-- BPPV Training Model -->
                     <div class="project-card" data-project="bppv">
                         <div class="project-img">🦴</div>
                         <div class="project-badges">
@@ -122,13 +114,18 @@
                         <h3>BPPV Training Model with 3D Printed Inner Ear</h3>
                         <p>Development of a simulation-based training model for evaluation and repositioning maneuvers of Benign Paroxysmal Positional Vertigo (BPPV) using 3D printing of the inner ear. Collaboration with Instituto Nacional de Rehabilitación and Universidad Peruana Cayetano Heredia.</p>
                         <div class="project-tags">
-                            <span class="tag">3D Printing</span><span class="tag">Medical Simulation</span><span class="tag">Anatomical Modeling</span><span class="tag">Clinical Training</span><span class="tag">CAD Design</span>
+                            <span class="tag">3D Printing</span>
+                            <span class="tag">Medical Simulation</span>
+                            <span class="tag">Anatomical Modeling</span>
+                            <span class="tag">Clinical Training</span>
+                            <span class="tag">CAD Design</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/bppv.html" class="project-link">View Full Project</a>
                         </div>
                     </div>
 
+                    <!-- 3D Bioprinted Stomach Model -->
                     <div class="project-card" data-project="stomach">
                         <div class="project-img">🖨️</div>
                         <div class="project-badges">
@@ -139,13 +136,18 @@
                         <h3>3D Bioprinted Stomach Model</h3>
                         <p>Creation of a bioprinted stomach model for medical research and educational purposes. The project focuses on developing anatomically accurate tissue constructs for surgical training and advancing biofabrication techniques.</p>
                         <div class="project-tags">
-                            <span class="tag">3D Bioprinting</span><span class="tag">Tissue Engineering</span><span class="tag">Biomaterials</span><span class="tag">CAD Design</span><span class="tag">Medical Education</span>
+                            <span class="tag">3D Bioprinting</span>
+                            <span class="tag">Tissue Engineering</span>
+                            <span class="tag">Biomaterials</span>
+                            <span class="tag">CAD Design</span>
+                            <span class="tag">Medical Education</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/stomach.html" class="project-link">View Full Project</a>
                         </div>
                     </div>
 
+                    <!-- Gorix Package Sorting -->
                     <div class="project-card" data-project="gorix">
                         <div class="project-img">📦</div>
                         <div class="project-badges">
@@ -156,13 +158,19 @@
                         <h3>Gorix: Automated Package Sorting System</h3>
                         <p>Modular mechatronic system for automated package classification using barcode detection and independent sorting modules. Designed to reduce space requirements while maintaining scalability.</p>
                         <div class="project-tags">
-                            <span class="tag">Mechanical Design</span><span class="tag">Control Systems</span><span class="tag">Computer Vision</span><span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Python</span>
+                            <span class="tag">Mechanical Design</span>
+                            <span class="tag">Control Systems</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Arduino</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/gorix.html" class="project-link">View Full Project</a>
                         </div>
                     </div>
 
+                    <!-- Preconceptional Drug Research -->
                     <div class="project-card" data-project="insn">
                         <div class="project-img">🧬</div>
                         <div class="project-badges">
@@ -173,13 +181,17 @@
                         <h3>Preconceptional Drug Consumption as Risk Factor for Congenital Malformations</h3>
                         <p>Research study analyzing preconceptional drug consumption as a risk factor for congenital malformations at Instituto Nacional de Salud del Niño de San Borja (2020-2025). Epidemiological analysis focused on identifying patterns and preventable risk factors.</p>
                         <div class="project-tags">
-                            <span class="tag">Epidemiological Research</span><span class="tag">Statistical Analysis</span><span class="tag">Medical Data Analysis</span><span class="tag">Clinical Research</span>
+                            <span class="tag">Epidemiological Research</span>
+                            <span class="tag">Statistical Analysis</span>
+                            <span class="tag">Medical Data Analysis</span>
+                            <span class="tag">Clinical Research</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/insn.html" class="project-link">View Full Project</a>
                         </div>
                     </div>
 
+                    <!-- Phantoms + Payload for Rockets -->
                     <div class="project-card" data-project="rockets">
                         <div class="project-img">🚀</div>
                         <div class="project-badges">
@@ -190,7 +202,11 @@
                         <h3>Phantoms + Payload for Rockets</h3>
                         <p>Development of phantom models and payload systems for rocket testing and research applications. The project involves designing robust payload structures and sensor integration for aerospace testing.</p>
                         <div class="project-tags">
-                            <span class="tag">Aerospace Engineering</span><span class="tag">Payload Design</span><span class="tag">Testing Systems</span><span class="tag">Mechatronics</span><span class="tag">Embedded Systems</span>
+                            <span class="tag">Aerospace Engineering</span>
+                            <span class="tag">Payload Design</span>
+                            <span class="tag">Testing Systems</span>
+                            <span class="tag">Mechatronics</span>
+                            <span class="tag">Embedded Systems</span>
                         </div>
                         <div class="project-links">
                             <a href="projects/rockets.html" class="project-link">View Full Project</a>
@@ -201,442 +217,785 @@
             </div>
         </section>
 
-        <!-- TECHNICAL SHOWCASE -->
-        <section id="technical-showcase" class="section">
-            <div class="container">
-                <h2>Technical Showcase</h2>
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Explore my technical skills through hands-on projects and practical applications. Each category showcases different tools and technologies I've mastered through coursework and personal development.
-                </p>
+        
+       <!-- Technical Showcase Section -->
+<section id="technical-showcase" class="section">
+    <div class="container">
+        <h2>Technical Showcase</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Explore my technical skills through hands-on projects and practical applications. Each category showcases different tools and technologies I've mastered through coursework and personal development.
+        </p>
 
-                <div class="category-section">
-                    <h3 class="category-title">🦾 Prosthetics &amp; Medical Devices</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Biomechanical Prosthetics 3D Step-by-Step</h4><p>Comprehensive training in designing and manufacturing 3D printed biomechanical prosthetics from concept to final product.</p><div class="mini-project-tags"><span class="mini-tag">3D Printing</span><span class="mini-tag">Biomechanics</span><span class="mini-tag">CAD Design</span></div></div>
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Bionic Prosthetics 3D: Basic Model</h4><p>Fundamental concepts and practical implementation of basic bionic prosthetic designs with motorization principles.</p><div class="mini-project-tags"><span class="mini-tag">Bionic Design</span><span class="mini-tag">Fusion 360</span><span class="mini-tag">Mechatronics</span></div></div>
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Bionic Prosthetics 3D: Intermediate Model</h4><p>Advanced bionic prosthetic systems incorporating sensors, actuators, and control mechanisms for enhanced functionality.</p><div class="mini-project-tags"><span class="mini-tag">Advanced Design</span><span class="mini-tag">Control Systems</span><span class="mini-tag">Integration</span></div></div>
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Motorization and Control of Biomechanical Prosthetics 3D</h4><p>Implementation of motor control systems and sensor integration for functional biomechanical prosthetic devices.</p><div class="mini-project-tags"><span class="mini-tag">Motor Control</span><span class="mini-tag">Arduino</span><span class="mini-tag">Electronics</span></div></div>
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Exoskeletons</h4><p>Design and development of wearable exoskeleton systems for mobility assistance and rehabilitation applications.</p><div class="mini-project-tags"><span class="mini-tag">Exoskeleton Design</span><span class="mini-tag">Biomechanics</span><span class="mini-tag">Rehabilitation</span></div></div>
-                        <div class="mini-project-card" data-category="prosthetics"><h4>Prosthetic Devices for Pets</h4><p>Specialized prosthetic design and manufacturing for veterinary applications, adapted to different animal anatomies.</p><div class="mini-project-tags"><span class="mini-tag">Veterinary Design</span><span class="mini-tag">Custom Fitting</span><span class="mini-tag">3D Printing</span></div></div>
+        <!-- Prosthetics & Medical Devices Category -->
+        <div class="category-section">
+            <h3 class="category-title">🦾 Prosthetics & Medical Devices</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="prosthetics" data-project="biomechanical-prosthetics">
+                    <h4>Biomechanical Prosthetics 3D Step-by-Step</h4>
+                    <p>Comprehensive training in designing and manufacturing 3D printed biomechanical prosthetics from concept to final product.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">3D Printing</span>
+                        <span class="mini-tag">Biomechanics</span>
+                        <span class="mini-tag">CAD Design</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="prosthetics" data-project="bionic-basic">
+                    <h4>Bionic Prosthetics 3D: Basic Model</h4>
+                    <p>Fundamental concepts and practical implementation of basic bionic prosthetic designs with motorization principles.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Bionic Design</span>
+                        <span class="mini-tag">Fusion 360</span>
+                        <span class="mini-tag">Mechatronics</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="prosthetics" data-project="bionic-intermediate">
+                    <h4>Bionic Prosthetics 3D: Intermediate Model</h4>
+                    <p>Advanced bionic prosthetic systems incorporating sensors, actuators, and control mechanisms for enhanced functionality.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Advanced Design</span>
+                        <span class="mini-tag">Control Systems</span>
+                        <span class="mini-tag">Integration</span>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h3 class="category-title">🔧 CAD Design &amp; Manufacturing</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="cad"><h4>Introduction to Parametric Design with Autodesk Fusion 360</h4><p>Advanced parametric modeling techniques using Fusion 360 for biomedical and mechanical design applications.</p><div class="mini-project-tags"><span class="mini-tag">Fusion 360</span><span class="mini-tag">Parametric Design</span><span class="mini-tag">CAD</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>Selected Topics in Fusion360</h4><p>Specialized Fusion 360 workflows for complex assemblies, simulations, and advanced modeling techniques.</p><div class="mini-project-tags"><span class="mini-tag">Advanced CAD</span><span class="mini-tag">Simulation</span><span class="mini-tag">Assembly Design</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>3D Mechanism Design with Bionic Focus</h4><p>Design and analysis of biomimetic mechanisms inspired by natural systems for robotic and prosthetic applications.</p><div class="mini-project-tags"><span class="mini-tag">Mechanism Design</span><span class="mini-tag">Biomimetics</span><span class="mini-tag">Kinematics</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>Stress Analysis in Biomechanical Parts</h4><p>Finite element analysis (FEA) and structural optimization for biomechanical components and medical devices.</p><div class="mini-project-tags"><span class="mini-tag">FEA</span><span class="mini-tag">Structural Analysis</span><span class="mini-tag">Optimization</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>Design and Production of 3D Splints</h4><p>Custom orthotic splint design using 3D scanning and parametric modeling for patient-specific medical devices.</p><div class="mini-project-tags"><span class="mini-tag">Medical Devices</span><span class="mini-tag">Custom Fitting</span><span class="mini-tag">Orthotics</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>3D Bio-Cover for Leg</h4><p>Design and fabrication of aesthetic and functional leg covers for prosthetic devices using additive manufacturing.</p><div class="mini-project-tags"><span class="mini-tag">Prosthetic Covers</span><span class="mini-tag">Aesthetic Design</span><span class="mini-tag">3D Printing</span></div></div>
-                        <div class="mini-project-card" data-category="cad"><h4>Optimization Techniques for Mechanical Design</h4><p>Advanced optimization methods including topology optimization and generative design for biomedical applications.</p><div class="mini-project-tags"><span class="mini-tag">Topology Optimization</span><span class="mini-tag">Generative Design</span><span class="mini-tag">CAE</span></div></div>
+                <div class="mini-project-card" data-category="prosthetics" data-project="motorization">
+                    <h4>Motorization and Control of Biomechanical Prosthetics 3D</h4>
+                    <p>Implementation of motor control systems and sensor integration for functional biomechanical prosthetic devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Motor Control</span>
+                        <span class="mini-tag">Arduino</span>
+                        <span class="mini-tag">Electronics</span>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h3 class="category-title">🖨️ 3D Printing &amp; Advanced Manufacturing</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="manufacturing"><h4>3D Printing from Scratch</h4><p>Comprehensive introduction to 3D printing technologies, materials, and best practices for biomedical applications.</p><div class="mini-project-tags"><span class="mini-tag">FDM Printing</span><span class="mini-tag">Slicing</span><span class="mini-tag">Materials</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>3D Printing: Basic Principles and Guided Practices</h4><p>Advanced 3D printing techniques including multi-material printing, support strategies, and post-processing methods.</p><div class="mini-project-tags"><span class="mini-tag">Advanced Printing</span><span class="mini-tag">Multi-Material</span><span class="mini-tag">Post-Processing</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>Advanced Additive Manufacturing in Resin (SLA-DLP-Mono)</h4><p>High-resolution resin-based 3D printing technologies for detailed biomedical models and precision parts.</p><div class="mini-project-tags"><span class="mini-tag">SLA/DLP</span><span class="mini-tag">Resin Printing</span><span class="mini-tag">High Resolution</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>Bioorganic Design and Biomedical Manufacturing</h4><p>Organic modeling techniques and biomedical manufacturing processes for anatomically accurate medical models.</p><div class="mini-project-tags"><span class="mini-tag">Organic Modeling</span><span class="mini-tag">Medical Models</span><span class="mini-tag">Anatomical Design</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>Physics of 3D Printing</h4><p>Understanding the fundamental physics behind additive manufacturing processes, material behavior, and quality optimization.</p><div class="mini-project-tags"><span class="mini-tag">Material Science</span><span class="mini-tag">Print Physics</span><span class="mini-tag">Quality Control</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>Ender 3D Printer Optimization for Bionic Systems</h4><p>Custom modifications and optimization of Ender 3D printers for specialized bionic and biomedical applications.</p><div class="mini-project-tags"><span class="mini-tag">Printer Modification</span><span class="mini-tag">Optimization</span><span class="mini-tag">Custom Setup</span></div></div>
-                        <div class="mini-project-card" data-category="manufacturing"><h4>Advanced Materials</h4><p>Exploration of advanced materials for biomedical applications including biocompatible polymers and composite materials.</p><div class="mini-project-tags"><span class="mini-tag">Biomaterials</span><span class="mini-tag">Composites</span><span class="mini-tag">Material Selection</span></div></div>
+                <div class="mini-project-card" data-category="prosthetics" data-project="exoskeletons">
+                    <h4>Exoskeletons</h4>
+                    <p>Design and development of wearable exoskeleton systems for mobility assistance and rehabilitation applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Exoskeleton Design</span>
+                        <span class="mini-tag">Biomechanics</span>
+                        <span class="mini-tag">Rehabilitation</span>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h3 class="category-title">🤖 Robotics &amp; Mechatronics</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="robotics"><h4>Introduction to Robot Design and Construction</h4><p>Fundamentals of robotic systems design, including kinematics, dynamics, and control systems for mobile robots.</p><div class="mini-project-tags"><span class="mini-tag">Robotics</span><span class="mini-tag">Kinematics</span><span class="mini-tag">Control Systems</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Robotic Hand: Design and Construction</h4><p>Complete development of an articulated robotic hand including mechanical design, actuation, and sensor integration.</p><div class="mini-project-tags"><span class="mini-tag">Robotic Hand</span><span class="mini-tag">Actuation</span><span class="mini-tag">Sensors</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Design and Construction of a Robotic Finger</h4><p>Detailed study of finger mechanisms, tendon-driven systems, and precision control for dexterous manipulation.</p><div class="mini-project-tags"><span class="mini-tag">Finger Design</span><span class="mini-tag">Tendon Systems</span><span class="mini-tag">Precision Control</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Design and Construction of an Animatronic</h4><p>Creating life-like animatronic systems with synchronized movements and realistic expressions for entertainment and education.</p><div class="mini-project-tags"><span class="mini-tag">Animatronics</span><span class="mini-tag">Servo Control</span><span class="mini-tag">Synchronized Motion</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Design and Construction of a Flexible Bio-Gripper</h4><p>Soft robotics approach to gripper design using flexible materials and adaptive grasping strategies.</p><div class="mini-project-tags"><span class="mini-tag">Soft Robotics</span><span class="mini-tag">Adaptive Grasping</span><span class="mini-tag">Flexible Materials</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Hexapod Bio-Robots</h4><p>Six-legged walking robots inspired by insect locomotion, including gait generation and terrain adaptation.</p><div class="mini-project-tags"><span class="mini-tag">Hexapod</span><span class="mini-tag">Gait Generation</span><span class="mini-tag">Locomotion</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Quadruped Robots</h4><p>Four-legged robotic platforms with dynamic balance and advanced locomotion capabilities for complex terrains.</p><div class="mini-project-tags"><span class="mini-tag">Quadruped</span><span class="mini-tag">Dynamic Balance</span><span class="mini-tag">Advanced Locomotion</span></div></div>
-                        <div class="mini-project-card" data-category="robotics"><h4>Educational BioRobot (InMoov Model)</h4><p>Building and programming a full-scale humanoid robot based on the open-source InMoov project for research and education.</p><div class="mini-project-tags"><span class="mini-tag">Humanoid Robot</span><span class="mini-tag">InMoov</span><span class="mini-tag">Open Source</span></div></div>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h3 class="category-title">⚡ Electronics &amp; Embedded Systems</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="electronics"><h4>Introduction to Electronics</h4><p>Fundamental electronics principles including circuit analysis, component selection, and PCB design for biomedical devices.</p><div class="mini-project-tags"><span class="mini-tag">Electronics</span><span class="mini-tag">Circuit Design</span><span class="mini-tag">PCB</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Basic EMG Sensor Step-by-Step</h4><p>Design and construction of electromyography (EMG) sensors for muscle activity detection and prosthetic control.</p><div class="mini-project-tags"><span class="mini-tag">EMG</span><span class="mini-tag">Biosignals</span><span class="mini-tag">Amplification</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Basic Electrocardiogram Sensor (ECG)</h4><p>ECG sensor development using instrumentation amplifiers for cardiac signal acquisition and processing.</p><div class="mini-project-tags"><span class="mini-tag">ECG</span><span class="mini-tag">Cardiac Signals</span><span class="mini-tag">Medical Sensors</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Electrooculogram Sensor (EOG)</h4><p>Development of EOG sensors for eye movement tracking and human-machine interface applications.</p><div class="mini-project-tags"><span class="mini-tag">EOG</span><span class="mini-tag">Eye Tracking</span><span class="mini-tag">HMI</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Electronic Design of Biosignal Sensors</h4><p>Advanced circuit design and simulation for various biological signal acquisition systems with noise reduction techniques.</p><div class="mini-project-tags"><span class="mini-tag">Biosignal Processing</span><span class="mini-tag">Circuit Simulation</span><span class="mini-tag">Noise Reduction</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Biological Signal Processing</h4><p>Digital signal processing techniques for filtering, feature extraction, and analysis of biomedical signals.</p><div class="mini-project-tags"><span class="mini-tag">DSP</span><span class="mini-tag">Signal Analysis</span><span class="mini-tag">Feature Extraction</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Electronic Devices</h4><p>Study of semiconductor devices, transistors, and integrated circuits for biomedical electronics applications.</p><div class="mini-project-tags"><span class="mini-tag">Semiconductors</span><span class="mini-tag">Transistors</span><span class="mini-tag">IC Design</span></div></div>
-                        <div class="mini-project-card" data-category="electronics"><h4>Applied Electronics: RLC, Diodes and Voltage Regulation</h4><p>Advanced electronic components and power regulation systems for embedded biomedical device applications.</p><div class="mini-project-tags"><span class="mini-tag">Power Electronics</span><span class="mini-tag">Voltage Regulation</span><span class="mini-tag">Diodes</span></div></div>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h3 class="category-title">💻 Programming &amp; Artificial Intelligence</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="programming"><h4>Introduction to Programming with Arduino</h4><p>Embedded programming fundamentals using Arduino platform for sensor integration and actuator control.</p><div class="mini-project-tags"><span class="mini-tag">Arduino</span><span class="mini-tag">C/C++</span><span class="mini-tag">Embedded Systems</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Programming with Python</h4><p>Python programming for data analysis, automation, and machine learning applications in biomedical engineering.</p><div class="mini-project-tags"><span class="mini-tag">Python</span><span class="mini-tag">Data Analysis</span><span class="mini-tag">Automation</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Computer Vision with OpenCV</h4><p>Real-time image processing and computer vision applications using OpenCV for gesture recognition and object detection.</p><div class="mini-project-tags"><span class="mini-tag">OpenCV</span><span class="mini-tag">Computer Vision</span><span class="mini-tag">Real-Time Processing</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Robotic Hand Control with Computer Vision / OpenCV</h4><p>Integration of computer vision and robotic control for gesture-based manipulation of robotic hands.</p><div class="mini-project-tags"><span class="mini-tag">Gesture Recognition</span><span class="mini-tag">Robot Control</span><span class="mini-tag">Real-Time Vision</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Neural Networks and Artificial Intelligence</h4><p>Fundamentals of neural networks and AI implementation for pattern recognition in biomedical applications.</p><div class="mini-project-tags"><span class="mini-tag">Neural Networks</span><span class="mini-tag">AI</span><span class="mini-tag">Pattern Recognition</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Introduction to Neural Networks and Deep Learning</h4><p>Deep learning architectures and training techniques for medical image analysis and biosignal classification.</p><div class="mini-project-tags"><span class="mini-tag">Deep Learning</span><span class="mini-tag">CNNs</span><span class="mini-tag">Medical AI</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>Deep Neural Networks and Supervised Learning</h4><p>Advanced deep learning techniques including transfer learning and model optimization for biomedical datasets.</p><div class="mini-project-tags"><span class="mini-tag">Advanced DL</span><span class="mini-tag">Transfer Learning</span><span class="mini-tag">Model Training</span></div></div>
-                        <div class="mini-project-card" data-category="programming"><h4>STM32F407VG Programming with Simulink</h4><p>Model-based design and code generation for embedded systems using MATLAB/Simulink and STM32 microcontrollers.</p><div class="mini-project-tags"><span class="mini-tag">Simulink</span><span class="mini-tag">STM32</span><span class="mini-tag">Model-Based Design</span></div></div>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h3 class="category-title">🎛️ Sensors &amp; Control Systems</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="sensors"><h4>Introduction to Motor Control with Arduino</h4><p>DC, servo, and stepper motor control using Arduino for robotic and mechatronic applications.</p><div class="mini-project-tags"><span class="mini-tag">Motor Control</span><span class="mini-tag">PWM</span><span class="mini-tag">Arduino</span></div></div>
-                        <div class="mini-project-card" data-category="sensors"><h4>Introduction to Sensor Programming and Use</h4><p>Integration and programming of various sensors including ultrasonic, IR, and environmental sensors.</p><div class="mini-project-tags"><span class="mini-tag">Sensor Integration</span><span class="mini-tag">Data Acquisition</span><span class="mini-tag">Calibration</span></div></div>
-                        <div class="mini-project-card" data-category="sensors"><h4>Programming and Use of Multi-Functional Sensors</h4><p>Advanced sensor fusion techniques combining multiple sensor inputs for robust perception systems.</p><div class="mini-project-tags"><span class="mini-tag">Sensor Fusion</span><span class="mini-tag">IMU</span><span class="mini-tag">Multi-Sensor Systems</span></div></div>
-                        <div class="mini-project-card" data-category="sensors"><h4>Easy Module and Advanced Sensors</h4><p>Working with advanced sensor modules and development boards for rapid prototyping of sensing systems.</p><div class="mini-project-tags"><span class="mini-tag">Advanced Sensors</span><span class="mini-tag">Module Integration</span><span class="mini-tag">Prototyping</span></div></div>
-                        <div class="mini-project-card" data-category="sensors"><h4>Wireless Applications (Bluetooth)</h4><p>Bluetooth communication protocols and wireless control systems for IoT and wearable medical devices.</p><div class="mini-project-tags"><span class="mini-tag">Bluetooth</span><span class="mini-tag">Wireless Communication</span><span class="mini-tag">IoT</span></div></div>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h3 class="category-title">🥽 Virtual Reality &amp; Interactive Systems</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="vr"><h4>Virtual Reality</h4><p>VR application development for medical training simulations and rehabilitation exercises using Unity and VR SDKs.</p><div class="mini-project-tags"><span class="mini-tag">Unity VR</span><span class="mini-tag">Medical Simulation</span><span class="mini-tag">Immersive Experience</span></div></div>
-                    </div>
-                </div>
-
-                <div class="category-section">
-                    <h3 class="category-title">🏥 Biomedical Engineering</h3>
-                    <div class="mini-projects-grid">
-                        <div class="mini-project-card" data-category="biomedical"><h4>Biomimetics</h4><p>Study and application of biological principles to engineering design, focusing on nature-inspired solutions.</p><div class="mini-project-tags"><span class="mini-tag">Biomimetics</span><span class="mini-tag">Bio-Inspired Design</span><span class="mini-tag">Nature Engineering</span></div></div>
-                        <div class="mini-project-card" data-category="biomedical"><h4>3D Respirators and Devices</h4><p>Design and manufacturing of respiratory support devices and emergency medical equipment using 3D printing.</p><div class="mini-project-tags"><span class="mini-tag">Medical Devices</span><span class="mini-tag">Respiratory Support</span><span class="mini-tag">Emergency Equipment</span></div></div>
-                        <div class="mini-project-card" data-category="biomedical"><h4>Structural Analysis</h4><p>Finite element analysis and structural optimization for biomedical implants and orthopedic devices.</p><div class="mini-project-tags"><span class="mini-tag">FEA</span><span class="mini-tag">Structural Mechanics</span><span class="mini-tag">Implant Design</span></div></div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================
-             EDUCATION — lista limpia estilo imagen ref
-        ============================================ -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2>Education</h2>
-                <p class="section-subtitle">Academic degrees, programs, and certifications.</p>
-
-                <!-- Formal Education -->
-                <div class="edu-group">
-                    <p class="edu-group-label">Formal Education</p>
-                    <p class="edu-group-subtitle">Academic degrees and language programs.</p>
-
-                    <div class="edu-item">
-                        <div class="edu-logo-wrap">
-                            <div class="edu-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
-                            <div class="edu-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
-                        </div>
-                        <div class="edu-body">
-                            <div class="edu-header-row">
-                                <div>
-                                    <h4 class="edu-title">Biomedical Engineering – Dual Degree Program</h4>
-                                    <span class="edu-institution">Pontificia Universidad Católica del Perú &amp; Universidad Peruana Cayetano Heredia</span>
-                                    <span class="edu-date">Mar 2022 – Present</span>
-                                </div>
-                                <span class="edu-badge">Top third of the class</span>
-                            </div>
-                            <p class="edu-desc">Dual degree integrating engineering, life sciences, and medicine, with a broader perspective on healthcare innovation. Specializing in biomedical innovation, 3D bioprinting, biomaterials, genetic engineering, cell culture, microbiology, and biomedical signal analysis.</p>
-                            <p class="edu-achievement">🏆 First place in Molecular Biology, Anatomy &amp; Physiology, Microbiology, and Cell Culture.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="edu-item">
-                        <div class="edu-logo-wrap">
-                            <div class="edu-logo-box">
-                                <img src="icpna-logo.png" alt="ICPNA">
-                            </div>
-                        </div>
-                        <div class="edu-body">
-                            <div class="edu-header-row">
-                                <div>
-                                    <h4 class="edu-title">English – Advanced Level</h4>
-                                    <span class="edu-institution">ICPNA – Instituto Cultural Peruano Norteamericano</span>
-                                    <span class="edu-date">2019 – 2022</span>
-                                </div>
-                                <span class="edu-badge">Excellence Certificate</span>
-                            </div>
-                            <p class="edu-desc">Completed all levels of the English language program with advanced proficiency in academic writing, presentations, and research. Consistently ranked among the top students of the program.</p>
-                            <p class="edu-achievement">✓ Presented academic projects and research in English.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Complementary Education -->
-                <div class="edu-group edu-group-second">
-                    <p class="edu-group-label">Complementary Education</p>
-                    <p class="edu-group-subtitle">Certificates, fellowships, and specialized programs.</p>
-
-                    <div class="edu-item">
-                        <div class="edu-logo-wrap">
-                            <div class="edu-logo-box">
-                                <img src="P4Hbionic-logo.png" alt="P4H Bionics">
-                            </div>
-                        </div>
-                        <div class="edu-body">
-                            <div class="edu-header-row">
-                                <div>
-                                    <h4 class="edu-title">Bionic Prosthetics Workshop</h4>
-                                    <span class="edu-institution">P4H Bionics</span>
-                                    <span class="edu-date">2023</span>
-                                </div>
-                                <span class="edu-badge">Certificate</span>
-                            </div>
-                            <p class="edu-desc">Specialized training in bionic prosthetics design, 3D printing for medical devices, and EMG signal integration for prosthetic control systems.</p>
-                            <p class="edu-achievement">✓ Completed advanced module in EMG-controlled prosthetic development.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="edu-item">
-                        <div class="edu-logo-wrap">
-                            <div class="edu-logo-box">
-                                <img src="byolearning-logo.png" alt="Lyn BioLearning">
-                            </div>
-                        </div>
-                        <div class="edu-body">
-                            <div class="edu-header-row">
-                                <div>
-                                    <h4 class="edu-title">Advanced Biolearning Program</h4>
-                                    <span class="edu-institution">Lyn BioLearning</span>
-                                    <span class="edu-date">2024</span>
-                                </div>
-                                <span class="edu-badge">Research Fellow</span>
-                            </div>
-                            <p class="edu-desc">Advanced research program focusing on biomedical innovation, synthetic biology, and biotechnology applications in healthcare.</p>
-                            <p class="edu-achievement">✓ Selected as research fellow for innovative biomedical technology development.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="edu-item">
-                        <div class="edu-logo-wrap">
-                            <div class="edu-logo-box">
-                                <img src="coursera-logo.png" alt="Coursera">
-                            </div>
-                        </div>
-                        <div class="edu-body">
-                            <div class="edu-header-row">
-                                <div>
-                                    <h4 class="edu-title">Machine Learning &amp; Data Science</h4>
-                                    <span class="edu-institution">Coursera – Multiple Courses</span>
-                                    <span class="edu-date">2022 – 2023</span>
-                                </div>
-                                <span class="edu-badge">Certified</span>
-                            </div>
-                            <p class="edu-desc">Comprehensive certification in machine learning, data analysis, and biomedical signal processing through specialized courses from top universities.</p>
-                            <p class="edu-achievement">✓ Completed 8 specialized courses with distinction in biomedical applications.</p>
-                        </div>
+                <div class="mini-project-card" data-category="prosthetics" data-project="pet-prosthetics">
+                    <h4>Prosthetic Devices for Pets</h4>
+                    <p>Specialized prosthetic design and manufacturing for veterinary applications, adapted to different animal anatomies.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Veterinary Design</span>
+                        <span class="mini-tag">Custom Fitting</span>
+                        <span class="mini-tag">3D Printing</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- ============================================
-             EXPERIENCE & LEADERSHIP — lista limpia
-        ============================================ -->
+        <!-- CAD Design & Manufacturing Category -->
+        <div class="category-section">
+            <h3 class="category-title">🔧 CAD Design & Manufacturing</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="cad" data-project="parametric-design">
+                    <h4>Introduction to Parametric Design with Autodesk Fusion 360</h4>
+                    <p>Advanced parametric modeling techniques using Fusion 360 for biomedical and mechanical design applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Fusion 360</span>
+                        <span class="mini-tag">Parametric Design</span>
+                        <span class="mini-tag">CAD</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="cad" data-project="fusion360-topics">
+                    <h4>Selected Topics in Fusion360</h4>
+                    <p>Specialized Fusion 360 workflows for complex assemblies, simulations, and advanced modeling techniques.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Advanced CAD</span>
+                        <span class="mini-tag">Simulation</span>
+                        <span class="mini-tag">Assembly Design</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="cad" data-project="bionic-mechanisms">
+                    <h4>3D Mechanism Design with Bionic Focus</h4>
+                    <p>Design and analysis of biomimetic mechanisms inspired by natural systems for robotic and prosthetic applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Mechanism Design</span>
+                        <span class="mini-tag">Biomimetics</span>
+                        <span class="mini-tag">Kinematics</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="cad" data-project="stress-analysis">
+                    <h4>Stress Analysis in Biomechanical Parts</h4>
+                    <p>Finite element analysis (FEA) and structural optimization for biomechanical components and medical devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">FEA</span>
+                        <span class="mini-tag">Structural Analysis</span>
+                        <span class="mini-tag">Optimization</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="cad" data-project="splints">
+                    <h4>Design and Production of 3D Splints</h4>
+                    <p>Custom orthotic splint design using 3D scanning and parametric modeling for patient-specific medical devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Medical Devices</span>
+                        <span class="mini-tag">Custom Fitting</span>
+                        <span class="mini-tag">Orthotics</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="cad" data-project="biocover">
+                    <h4>3D Bio-Cover for Leg</h4>
+                    <p>Design and fabrication of aesthetic and functional leg covers for prosthetic devices using additive manufacturing.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Prosthetic Covers</span>
+                        <span class="mini-tag">Aesthetic Design</span>
+                        <span class="mini-tag">3D Printing</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="cad" data-project="optimization">
+                    <h4>Optimization Techniques for Mechanical Design</h4>
+                    <p>Advanced optimization methods including topology optimization and generative design for biomedical applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Topology Optimization</span>
+                        <span class="mini-tag">Generative Design</span>
+                        <span class="mini-tag">CAE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Printing & Advanced Manufacturing Category -->
+        <div class="category-section">
+            <h3 class="category-title">🖨️ 3D Printing & Advanced Manufacturing</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="manufacturing" data-project="3d-printing-basics">
+                    <h4>3D Printing from Scratch</h4>
+                    <p>Comprehensive introduction to 3D printing technologies, materials, and best practices for biomedical applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">FDM Printing</span>
+                        <span class="mini-tag">Slicing</span>
+                        <span class="mini-tag">Materials</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="manufacturing" data-project="advanced-printing">
+                    <h4>3D Printing: Basic Principles and Guided Practices</h4>
+                    <p>Advanced 3D printing techniques including multi-material printing, support strategies, and post-processing methods.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Advanced Printing</span>
+                        <span class="mini-tag">Multi-Material</span>
+                        <span class="mini-tag">Post-Processing</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="manufacturing" data-project="resin-printing">
+                    <h4>Advanced Additive Manufacturing in Resin (SLA-DLP-Mono)</h4>
+                    <p>High-resolution resin-based 3D printing technologies for detailed biomedical models and precision parts.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">SLA/DLP</span>
+                        <span class="mini-tag">Resin Printing</span>
+                        <span class="mini-tag">High Resolution</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="manufacturing" data-project="bioorganic-design">
+                    <h4>Bioorganic Design and Biomedical Manufacturing</h4>
+                    <p>Organic modeling techniques and biomedical manufacturing processes for anatomically accurate medical models.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Organic Modeling</span>
+                        <span class="mini-tag">Medical Models</span>
+                        <span class="mini-tag">Anatomical Design</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="manufacturing" data-project="3d-physics">
+                    <h4>Physics of 3D Printing</h4>
+                    <p>Understanding the fundamental physics behind additive manufacturing processes, material behavior, and quality optimization.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Material Science</span>
+                        <span class="mini-tag">Print Physics</span>
+                        <span class="mini-tag">Quality Control</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="manufacturing" data-project="ender-optimization">
+                    <h4>Ender 3D Printer Optimization for Bionic Systems</h4>
+                    <p>Custom modifications and optimization of Ender 3D printers for specialized bionic and biomedical applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Printer Modification</span>
+                        <span class="mini-tag">Optimization</span>
+                        <span class="mini-tag">Custom Setup</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="manufacturing" data-project="advanced-materials">
+                    <h4>Advanced Materials</h4>
+                    <p>Exploration of advanced materials for biomedical applications including biocompatible polymers and composite materials.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Biomaterials</span>
+                        <span class="mini-tag">Composites</span>
+                        <span class="mini-tag">Material Selection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Robotics & Mechatronics Category -->
+        <div class="category-section">
+            <h3 class="category-title">🤖 Robotics & Mechatronics</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="robotics" data-project="intro-robotics">
+                    <h4>Introduction to Robot Design and Construction</h4>
+                    <p>Fundamentals of robotic systems design, including kinematics, dynamics, and control systems for mobile robots.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Robotics</span>
+                        <span class="mini-tag">Kinematics</span>
+                        <span class="mini-tag">Control Systems</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="robotics" data-project="robotic-hand">
+                    <h4>Robotic Hand: Design and Construction</h4>
+                    <p>Complete development of an articulated robotic hand including mechanical design, actuation, and sensor integration.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Robotic Hand</span>
+                        <span class="mini-tag">Actuation</span>
+                        <span class="mini-tag">Sensors</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="robotics" data-project="robotic-finger">
+                    <h4>Design and Construction of a Robotic Finger</h4>
+                    <p>Detailed study of finger mechanisms, tendon-driven systems, and precision control for dexterous manipulation.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Finger Design</span>
+                        <span class="mini-tag">Tendon Systems</span>
+                        <span class="mini-tag">Precision Control</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="robotics" data-project="animatronic">
+                    <h4>Design and Construction of an Animatronic</h4>
+                    <p>Creating life-like animatronic systems with synchronized movements and realistic expressions for entertainment and education.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Animatronics</span>
+                        <span class="mini-tag">Servo Control</span>
+                        <span class="mini-tag">Synchronized Motion</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="robotics" data-project="bio-gripper">
+                    <h4>Design and Construction of a Flexible Bio-Gripper</h4>
+                    <p>Soft robotics approach to gripper design using flexible materials and adaptive grasping strategies.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Soft Robotics</span>
+                        <span class="mini-tag">Adaptive Grasping</span>
+                        <span class="mini-tag">Flexible Materials</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="robotics" data-project="hexapod">
+                    <h4>Hexapod Bio-Robots</h4>
+                    <p>Six-legged walking robots inspired by insect locomotion, including gait generation and terrain adaptation.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Hexapod</span>
+                        <span class="mini-tag">Gait Generation</span>
+                        <span class="mini-tag">Locomotion</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="robotics" data-project="quadruped">
+                    <h4>Quadruped Robots</h4>
+                    <p>Four-legged robotic platforms with dynamic balance and advanced locomotion capabilities for complex terrains.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Quadruped</span>
+                        <span class="mini-tag">Dynamic Balance</span>
+                        <span class="mini-tag">Advanced Locomotion</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="robotics" data-project="inmoov">
+                    <h4>Educational BioRobot (InMoov Model)</h4>
+                    <p>Building and programming a full-scale humanoid robot based on the open-source InMoov project for research and education.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Humanoid Robot</span>
+                        <span class="mini-tag">InMoov</span>
+                        <span class="mini-tag">Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Electronics & Embedded Systems Category -->
+        <div class="category-section">
+            <h3 class="category-title">⚡ Electronics & Embedded Systems</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="electronics" data-project="intro-electronics">
+                    <h4>Introduction to Electronics</h4>
+                    <p>Fundamental electronics principles including circuit analysis, component selection, and PCB design for biomedical devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Electronics</span>
+                        <span class="mini-tag">Circuit Design</span>
+                        <span class="mini-tag">PCB</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="electronics" data-project="emg-sensor">
+                    <h4>Basic EMG Sensor Step-by-Step</h4>
+                    <p>Design and construction of electromyography (EMG) sensors for muscle activity detection and prosthetic control.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">EMG</span>
+                        <span class="mini-tag">Biosignals</span>
+                        <span class="mini-tag">Amplification</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="electronics" data-project="ecg-sensor">
+                    <h4>Basic Electrocardiogram Sensor (ECG)</h4>
+                    <p>ECG sensor development using instrumentation amplifiers for cardiac signal acquisition and processing.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">ECG</span>
+                        <span class="mini-tag">Cardiac Signals</span>
+                        <span class="mini-tag">Medical Sensors</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="electronics" data-project="eog-sensor">
+                    <h4>Electrooculogram Sensor (EOG)</h4>
+                    <p>Development of EOG sensors for eye movement tracking and human-machine interface applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">EOG</span>
+                        <span class="mini-tag">Eye Tracking</span>
+                        <span class="mini-tag">HMI</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="electronics" data-project="biosignal-design">
+                    <h4>Electronic Design of Biosignal Sensors</h4>
+                    <p>Advanced circuit design and simulation for various biological signal acquisition systems with noise reduction techniques.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Biosignal Processing</span>
+                        <span class="mini-tag">Circuit Simulation</span>
+                        <span class="mini-tag">Noise Reduction</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="electronics" data-project="biosignal-processing">
+                    <h4>Biological Signal Processing</h4>
+                    <p>Digital signal processing techniques for filtering, feature extraction, and analysis of biomedical signals.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">DSP</span>
+                        <span class="mini-tag">Signal Analysis</span>
+                        <span class="mini-tag">Feature Extraction</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="electronics" data-project="electronic-devices">
+                    <h4>Electronic Devices</h4>
+                    <p>Study of semiconductor devices, transistors, and integrated circuits for biomedical electronics applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Semiconductors</span>
+                        <span class="mini-tag">Transistors</span>
+                        <span class="mini-tag">IC Design</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="electronics" data-project="applied-electronics">
+                    <h4>Applied Electronics: RLC, Diodes and Voltage Regulation</h4>
+                    <p>Advanced electronic components and power regulation systems for embedded biomedical device applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Power Electronics</span>
+                        <span class="mini-tag">Voltage Regulation</span>
+                        <span class="mini-tag">Diodes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programming & AI Category -->
+        <div class="category-section">
+            <h3 class="category-title">💻 Programming & Artificial Intelligence</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="programming" data-project="arduino">
+                    <h4>Introduction to Programming with Arduino</h4>
+                    <p>Embedded programming fundamentals using Arduino platform for sensor integration and actuator control.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Arduino</span>
+                        <span class="mini-tag">C/C++</span>
+                        <span class="mini-tag">Embedded Systems</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="programming" data-project="python">
+                    <h4>Programming with Python</h4>
+                    <p>Python programming for data analysis, automation, and machine learning applications in biomedical engineering.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Python</span>
+                        <span class="mini-tag">Data Analysis</span>
+                        <span class="mini-tag">Automation</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="programming" data-project="opencv">
+                    <h4>Computer Vision with OpenCV</h4>
+                    <p>Real-time image processing and computer vision applications using OpenCV for gesture recognition and object detection.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">OpenCV</span>
+                        <span class="mini-tag">Computer Vision</span>
+                        <span class="mini-tag">Real-Time Processing</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="programming" data-project="hand-control-opencv">
+                    <h4>Robotic Hand Control with Computer Vision / OpenCV</h4>
+                    <p>Integration of computer vision and robotic control for gesture-based manipulation of robotic hands.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Gesture Recognition</span>
+                        <span class="mini-tag">Robot Control</span>
+                        <span class="mini-tag">Real-Time Vision</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="programming" data-project="neural-networks">
+                    <h4>Neural Networks and Artificial Intelligence</h4>
+                    <p>Fundamentals of neural networks and AI implementation for pattern recognition in biomedical applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Neural Networks</span>
+                        <span class="mini-tag">AI</span>
+                        <span class="mini-tag">Pattern Recognition</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="programming" data-project="deep-learning-intro">
+                    <h4>Introduction to Neural Networks and Deep Learning</h4>
+                    <p>Deep learning architectures and training techniques for medical image analysis and biosignal classification.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Deep Learning</span>
+                        <span class="mini-tag">CNNs</span>
+                        <span class="mini-tag">Medical AI</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="programming" data-project="deep-learning-advanced">
+                    <h4>Deep Neural Networks and Supervised Learning</h4>
+                    <p>Advanced deep learning techniques including transfer learning and model optimization for biomedical datasets.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Advanced DL</span>
+                        <span class="mini-tag">Transfer Learning</span>
+                        <span class="mini-tag">Model Training</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="programming" data-project="stm32-simulink">
+                    <h4>STM32F407VG Programming with Simulink</h4>
+                    <p>Model-based design and code generation for embedded systems using MATLAB/Simulink and STM32 microcontrollers.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Simulink</span>
+                        <span class="mini-tag">STM32</span>
+                        <span class="mini-tag">Model-Based Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sensors & Control Systems Category -->
+        <div class="category-section">
+            <h3 class="category-title">🎛️ Sensors & Control Systems</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="sensors" data-project="motor-control">
+                    <h4>Introduction to Motor Control with Arduino</h4>
+                    <p>DC, servo, and stepper motor control using Arduino for robotic and mechatronic applications.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Motor Control</span>
+                        <span class="mini-tag">PWM</span>
+                        <span class="mini-tag">Arduino</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="sensors" data-project="sensor-programming">
+                    <h4>Introduction to Sensor Programming and Use</h4>
+                    <p>Integration and programming of various sensors including ultrasonic, IR, and environmental sensors.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Sensor Integration</span>
+                        <span class="mini-tag">Data Acquisition</span>
+                        <span class="mini-tag">Calibration</span>
+                    </div>
+                </div>
+                
+                <div class="mini-project-card" data-category="sensors" data-project="multifunctional-sensors">
+                    <h4>Programming and Use of Multi-Functional Sensors</h4>
+                    <p>Advanced sensor fusion techniques combining multiple sensor inputs for robust perception systems.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Sensor Fusion</span>
+                        <span class="mini-tag">IMU</span>
+                        <span class="mini-tag">Multi-Sensor Systems</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="sensors" data-project="advanced-sensors">
+                    <h4>Easy Module and Advanced Sensors</h4>
+                    <p>Working with advanced sensor modules and development boards for rapid prototyping of sensing systems.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Advanced Sensors</span>
+                        <span class="mini-tag">Module Integration</span>
+                        <span class="mini-tag">Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="sensors" data-project="wireless-bluetooth">
+                    <h4>Wireless Applications (Bluetooth)</h4>
+                    <p>Bluetooth communication protocols and wireless control systems for IoT and wearable medical devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Bluetooth</span>
+                        <span class="mini-tag">Wireless Communication</span>
+                        <span class="mini-tag">IoT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VR & Interactive Systems Category -->
+        <div class="category-section">
+            <h3 class="category-title">🥽 Virtual Reality & Interactive Systems</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="vr" data-project="virtual-reality">
+                    <h4>Virtual Reality</h4>
+                    <p>VR application development for medical training simulations and rehabilitation exercises using Unity and VR SDKs.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Unity VR</span>
+                        <span class="mini-tag">Medical Simulation</span>
+                        <span class="mini-tag">Immersive Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biomedical Engineering Category -->
+        <div class="category-section">
+            <h3 class="category-title">🏥 Biomedical Engineering</h3>
+            <div class="mini-projects-grid">
+                <div class="mini-project-card" data-category="biomedical" data-project="biomimetics">
+                    <h4>Biomimetics</h4>
+                    <p>Study and application of biological principles to engineering design, focusing on nature-inspired solutions.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Biomimetics</span>
+                        <span class="mini-tag">Bio-Inspired Design</span>
+                        <span class="mini-tag">Nature Engineering</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="biomedical" data-project="respirators">
+                    <h4>3D Respirators and Devices</h4>
+                    <p>Design and manufacturing of respiratory support devices and emergency medical equipment using 3D printing.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">Medical Devices</span>
+                        <span class="mini-tag">Respiratory Support</span>
+                        <span class="mini-tag">Emergency Equipment</span>
+                    </div>
+                </div>
+
+                <div class="mini-project-card" data-category="biomedical" data-project="structural-analysis">
+                    <h4>Structural Analysis</h4>
+                    <p>Finite element analysis and structural optimization for biomedical implants and orthopedic devices.</p>
+                    <div class="mini-project-tags">
+                        <span class="mini-tag">FEA</span>
+                        <span class="mini-tag">Structural Mechanics</span>
+                        <span class="mini-tag">Implant Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Education Section -->
+<section id="education" class="section">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="education-logo coursera-logo">
+                    <img src="coursera-logo.png" alt="Coursera Logo">
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>Machine Learning & Data Science</h3>
+                        <span class="gpa-badge">Certified</span>
+                    </div>
+                    <h4>Coursera - Multiple Courses - 2022-2023</h4>
+                    <p>Comprehensive certification in machine learning, data analysis, and biomedical signal processing through specialized courses from top universities.</p>
+                    <div class="achievement-note">Completed 8 specialized courses with distinction in biomedical applications.</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="education-logo lyn-logo">
+                    <img src="byolearning-logo.png" alt="Lyn BioLearning Logo">
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>Advanced Biolearning Program</h3>
+                        <span class="scholarship-badge">Research Fellow</span>
+                    </div>
+                    <h4>Lyn BioLearning - 2024</h4>
+                    <p>Advanced research program focusing on biomedical innovation, synthetic biology, and biotechnology applications in healthcare.</p>
+                    <div class="achievement-note">Selected as research fellow for innovative biomedical technology development.</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="education-logo p4h-logo">
+                    <img src="P4Hbionic-logo.png" alt="P4H Bionics Logo">
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>Bionic Prosthetics Workshop</h3>
+                        <span class="scholarship-badge">Certificate</span>
+                    </div>
+                    <h4>P4H Bionics - 2023</h4>
+                    <p>Specialized training in bionic prosthetics design, 3D printing applications for medical devices, and EMG signal integration for prosthetic control systems.</p>
+                    <div class="achievement-note">Completed advanced module in EMG-controlled prosthetic development.</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="education-logos-group">
+                    <div class="education-logo pucp-logo">
+                        <img src="pucp-logo.png" alt="PUCP Logo">
+                    </div>
+                    <div class="education-logo upch-logo">
+                        <img src="upch-logo.png" alt="UPCH Logo">
+                    </div>
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>Biomedical Engineering – Dual Degree Program</h3>
+                        <span class="Academic Standing-badge">Top third of the class</span>
+                    </div>
+                    <h4>Pontificia Universidad Católica del Perú & Universidad Peruana Cayetano Heredia (2022–Present)</h4>
+                    <p>This dual degree integrates engineering, life sciences, and medicine, giving me a broader perspective on healthcare innovation. Specializing in biomedical innovation, 3D bioprinting, biomaterials, genetic engineering, cell culture, microbiology, and biomedical signal analysis, with a focus on applying engineering principles to solve medical challenges.</p>
+                    <div class="achievement-note">Key Achievements: First place in Molecular Biology, Anatomy & Physiology, Microbiology, and Cell Culture.</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="education-logo icpna-logo">
+                    <img src="icpna-logo.png" alt="ICPNA Logo">
+                </div>
+                <div class="education-content">
+                    <div class="education-header">
+                        <h3>English – Advanced Level</h3>
+                        <span class="scholarship-badge">Excellence Certificate</span>
+                    </div>
+                    <h4>ICPNA – Instituto Cultural Peruano Norteamericano (2019-2022)</h4>
+                    <p>Completed all levels of the English language program. Advanced proficiency demonstrated through academic writing, presentations, and research in English. Consistently ranked among the top students of the program.</p>
+                    <div class="achievement-note">Presented academic projects and research in English.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* SOLO ajuste de tamaño de logos - agregar a tu CSS existente */
+
+.education-logo {
+   width: 50px !important;
+   height: 50px !important;
+}
+
+.education-logo img {
+   width: 100% !important;
+   height: 100% !important;
+   object-fit: contain !important;
+}
+
+.education-logos-group {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   align-items: center;
+}
+
+.education-logos-group .education-logo {
+   width: 45px !important;
+   height: 45px !important;
+}
+</style>
+        
+        
+        <!-- Experience & Leadership Section -->
         <section id="experience-leadership" class="section">
             <div class="container">
-                <h2>Experience &amp; Leadership</h2>
-                <p class="section-subtitle">Research roles, leadership positions, and academic achievements.</p>
-
-                <div class="exp-list">
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Researcher – FabCore Facilities (Biofabrication Area)</h4>
-                                    <span class="exp-institution">Pontificia Universidad Católica del Perú</span>
-                                    <span class="exp-date">Jun 2025 – Present</span>
-                                </div>
-                                <span class="exp-badge exp-badge-research">Research</span>
-                            </div>
-                            <p class="exp-desc">Researcher in a multidisciplinary project aimed at improving sleep quality through personalized aromatic capsules, melatonin patches, and a digital monitoring system. Responsible for developing a functional, stable, and safe transdermal patch with controlled melatonin release, combining principles of biofabrication, materials science, and biomedical engineering.</p>
-                        </div>
+                <h2>Experience & Leadership</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Researcher – FabCore Facilities (Biofabrication Area)</h3>
+                        <h4>Pontificia Universidad Católica del Perú (Jun 2025 – Present)</h4>
+                        <p>Researcher in a multidisciplinary project aimed at improving sleep quality through personalized aromatic capsules, melatonin patches, and a digital monitoring system. Responsible for developing a functional, stable, and safe transdermal patch with controlled melatonin release, combining principles of biofabrication, materials science, and biomedical engineering.</p>
                     </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Editorial Team Member – IEEE-EMBS Student Chapter</h4>
-                                    <span class="exp-institution">Pontificia Universidad Católica del Perú</span>
-                                    <span class="exp-date">Jan 2025 – Present</span>
-                                </div>
-                                <span class="exp-badge exp-badge-leadership">Leadership</span>
-                            </div>
-                            <p class="exp-desc">Editorial team member for the annual magazine and bulletin of the IEEE Engineering in Medicine and Biology Society (EMBS) PUCP student chapter, responsible for scientific communication, article editing, and content creation.</p>
-                        </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Project Leader – LIBRA (Biomechanics and Rehabilitation Laboratory)</h3>
+                        <h4>Pontificia Universidad Católica del Perú (Sep 2024 – Feb 2025)</h4>
+                        <p>Leading a research project focused on a virtual reality videogame for shoulder and arm rehabilitation. Responsibilities include defining the game concept and managing the development in Unity, while coordinating a multidisciplinary team to make therapy more interactive.</p>
                     </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                🏆
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">2nd Place – PASKA Hackathon</h4>
-                                    <span class="exp-institution">IEEE Peru</span>
-                                    <span class="exp-date">Mar 2025</span>
-                                </div>
-                                <span class="exp-badge exp-badge-award">Award</span>
-                            </div>
-                            <p class="exp-desc">Achieved 2nd place in the national PASKA hackathon organized by IEEE Peru, bringing together all IEEE student branches in the country. Proposed the "Portable Intracellular Mineralogram", a non-invasive portable device to detect heavy metal exposure in children affected by mining contamination in La Oroya, Peru.</p>
-                        </div>
+                    
+                    <div class="timeline-item">
+                        <h3>2nd Place – PASKA Hackathon</h3>
+                        <h4>IEEE Peru (Mar 2025)</h4>
+                        <p>Achieved 2nd place in the national PASKA hackathon organized by IEEE Peru, which brought together all IEEE student branches in the country. Proposed the "Portable Intracellular Mineralogram", a non-invasive portable device to detect heavy metal exposure in children affected by mining contamination in La Oroya, Peru.</p>
                     </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Project Leader – LIBRA (Biomechanics and Rehabilitation Laboratory)</h4>
-                                    <span class="exp-institution">Pontificia Universidad Católica del Perú</span>
-                                    <span class="exp-date">Sep 2024 – Feb 2025</span>
-                                </div>
-                                <span class="exp-badge exp-badge-leadership">Leadership</span>
-                            </div>
-                            <p class="exp-desc">Leading a research project focused on a virtual reality videogame for shoulder and arm rehabilitation. Defining the game concept and managing the development in Unity, while coordinating a multidisciplinary team to make therapy more interactive.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Lab Assistant – FabCore Facilities (Biofabrication Area)</h4>
-                                    <span class="exp-institution">Pontificia Universidad Católica del Perú</span>
-                                    <span class="exp-date">Sep 2024 – Feb 2025</span>
-                                </div>
-                                <span class="exp-badge exp-badge-research">Research</span>
-                            </div>
-                            <p class="exp-desc">6-month collaboration supporting the adaptation of 3D printers into bioprinters, including mechanical reconditioning, assisting in the design and fabrication of custom components, and helping with hardware/software calibration for bioprinting applications.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Project Leader – EyeSafe, Laboratory of Research and Development (LID)</h4>
-                                    <span class="exp-institution">Universidad Peruana Cayetano Heredia</span>
-                                    <span class="exp-date">Jul 2023 – Feb 2024</span>
-                                </div>
-                                <span class="exp-badge exp-badge-leadership">Leadership</span>
-                            </div>
-                            <p class="exp-desc">Led the EyeSafe project, coordinating hospital validation visits, managing software documentation and the GitHub repository, supporting clinical testing, and leading the team in designing mechanical components and CAD models for the device.</p>
-                        </div>
+                    <div class="timeline-item">
+                        <h3>Editorial Team Member – IEEE-EMBS Student Chapter</h3>
+                        <h4>Pontificia Universidad Católica del Perú (Jan 2025 – Present)</h4>
+                        <p>Editorial team member for the annual magazine and bulletin of the IEEE Engineering in Medicine and Biology Society (EMBS) PUCP student chapter, responsible for scientific communication, article editing, and content creation.</p>
                     </div>
 
+    
+                    <div class="timeline-item">
+                        <h3>Lab Assistant – FabCore Facilities (Biofabrication Area)</h3>
+                        <h4>Pontificia Universidad Católica del Perú (Sep 2024 – Feb 2025)</h4>
+                        <p>6-month collaboration supporting the adaptation of 3D printers into bioprinters, including mechanical reconditioning, assisting in the design and fabrication of custom components, and helping with hardware/software calibration for bioprinting applications.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Project Leader – EyeSafe, Laboratory of Research and Development (LID)</h3>
+                        <h4>Universidad Peruana Cayetano Heredia (Jul 2023 – Feb 2024)</h4>
+                        <p>Led the EyeSafe project, coordinating hospital validation visits, managing software documentation and the GitHub repository, supporting clinical testing, and leading the team in designing mechanical components and CAD models for the device.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ============================================
-             VOLUNTEERING — lista limpia
-        ============================================ -->
+        <!-- Volunteering Section -->
         <section id="volunteering" class="section">
             <div class="container">
                 <h2>Volunteering</h2>
-                <p class="section-subtitle">Community initiatives and social impact work.</p>
-
-                <div class="exp-list">
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                💛
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Volunteer – Refugio de Sonrisas ONG</h4>
-                                    <span class="exp-institution">Refugio de Sonrisas</span>
-                                    <span class="exp-date">Jul 2025 – Present</span>
-                                </div>
-                                <span class="exp-badge exp-badge-vol">Volunteer</span>
-                            </div>
-                            <p class="exp-desc">Supporting educational, recreational, and emotional activities for vulnerable children and adolescents in foster homes and hospitals across Peru.</p>
-                        </div>
-                    </div>
-                    <div class="edu-divider"></div>
-
-                    <div class="exp-item">
-                        <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                💻
-                            </div>
-                        </div>
-                        <div class="exp-body">
-                            <div class="exp-header-row">
-                                <div>
-                                    <h4 class="exp-title">Volunteer – Women in Tech Peru</h4>
-                                    <span class="exp-institution">Women in Tech Peru</span>
-                                    <span class="exp-date">2023</span>
-                                </div>
-                                <span class="exp-badge exp-badge-vol">Volunteer</span>
-                            </div>
-                            <p class="exp-desc">Coordinated events, meetups, and workshops to promote diversity and inclusion in technology, with a special focus on empowering women and creating opportunities for their participation in STEM fields. Over 500 participants benefited from these initiatives.</p>
-                        </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Volunteer – Refugio de Sonrisas ONG</h3>
+                        <h4>(Jul 2025 – Present)</h4>
+                        <p>Supporting educational, recreational, and emotional activities for vulnerable children and adolescents in foster homes and hospitals across Peru.</p>
                     </div>
 
+                    <div class="timeline-item">
+                        <h3>Volunteer – Women in Tech Peru</h3>
+                        <h4>2023</h4>
+                        <p>Coordinated events, meetups, and workshops to promote diversity and inclusion in technology, with a special focus on empowering women and creating opportunities for their participation in STEM fields. Over 500 participants benefited from these initiatives.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
                 <h2>Let's Connect!</h2>
+                
                 <div class="contact-container">
                     <div class="contact-form">
                         <div id="statusMessage" class="status-message"></div>
@@ -660,25 +1019,39 @@
                             <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
                         </form>
                     </div>
+
                     <div class="contact-links">
                         <h3>Other Ways to Reach Me</h3>
                         <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
-                            <span class="icon icon-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+                            <span class="icon icon-email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
                             <span>ariana.dextre@pucp.edu.pe</span>
                         </a>
                         <a href="https://github.com/arianadextre" target="_blank" class="contact-link">
-                            <span class="icon icon-github"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span>
+                            <span class="icon icon-github">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </span>
                             <span>GitHub</span>
                         </a>
                         <a href="https://www.linkedin.com/in/ariana-marcela-dextre-palomino-4bb085369/" target="_blank" class="contact-link">
-                            <span class="icon icon-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
-                            <span>LinkedIn</span>
-                        </a>
+                          <span class="icon icon-linkedin">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </span>
+                        <span>LinkedIn</span>
+                    </a>
+                        
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <script src="js/script.js"></script>
