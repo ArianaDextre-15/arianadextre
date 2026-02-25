@@ -6,15 +6,53 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnimations();
     initializeTechnicalShowcaseNavigation();
     initialize3DViewer();
+    initializeShrinkingHeader(); // NUEVA FUNCIÓN
     
     // Handle navigation from hash on page load
     handleHashNavigation();
 });
 
-// Initialize main navigation
+// NUEVA FUNCIÓN: Initialize shrinking header
+function initializeShrinkingHeader() {
+    const header = document.querySelector('.professional-header');
+    const nav = document.querySelector('nav');
+    const main = document.querySelector('main');
+    
+    if (!header || !nav || !main) return;
+    
+    // Check current section and apply header state
+    const checkHeaderState = () => {
+        const homeSection = document.getElementById('home');
+        const isHomeActive = homeSection && homeSection.classList.contains('active');
+        
+        if (isHomeActive) {
+            header.classList.remove('small');
+            nav.classList.remove('moved-up');
+            main.classList.remove('header-small');
+        } else {
+            header.classList.add('small');
+            nav.classList.add('moved-up');
+            main.classList.add('header-small');
+        }
+    };
+    
+    // Check on load
+    checkHeaderState();
+    
+    // Check whenever a section changes
+    const observer = new MutationObserver(checkHeaderState);
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section, { attributes: true, attributeFilter: ['class'] });
+    });
+}
+
+// Initialize main navigation (ACTUALIZADO)
 function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
+    const header = document.querySelector('.professional-header');
+    const nav = document.querySelector('nav');
+    const main = document.querySelector('main');
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -44,6 +82,17 @@ function initializeNavigation() {
             if (targetSectionElement) {
                 targetSectionElement.classList.add('active');
                 
+                // HEADER SHRINKING LOGIC
+                if (targetSection === 'home') {
+                    header.classList.remove('small');
+                    nav.classList.remove('moved-up');
+                    main.classList.remove('header-small');
+                } else {
+                    header.classList.add('small');
+                    nav.classList.add('moved-up');
+                    main.classList.add('header-small');
+                }
+                
                 // Update URL hash
                 history.pushState(null, null, `#${targetSection}`);
                 
@@ -54,9 +103,12 @@ function initializeNavigation() {
     });
 }
 
-// Handle hash navigation on page load and back/forward buttons
+// Handle hash navigation on page load and back/forward buttons (ACTUALIZADO)
 function handleHashNavigation() {
     const hash = window.location.hash.substring(1);
+    const header = document.querySelector('.professional-header');
+    const nav = document.querySelector('nav');
+    const main = document.querySelector('main');
     
     if (hash) {
         const targetSection = document.getElementById(hash);
@@ -70,6 +122,24 @@ function handleHashNavigation() {
             // Add active classes
             targetNavLink.classList.add('active');
             targetSection.classList.add('active');
+            
+            // HEADER SHRINKING LOGIC
+            if (hash === 'home') {
+                header.classList.remove('small');
+                nav.classList.remove('moved-up');
+                main.classList.remove('header-small');
+            } else {
+                header.classList.add('small');
+                nav.classList.add('moved-up');
+                main.classList.add('header-small');
+            }
+        }
+    } else {
+        // If no hash, show home by default
+        if (header && nav && main) {
+            header.classList.remove('small');
+            nav.classList.remove('moved-up');
+            main.classList.remove('header-small');
         }
     }
 }
@@ -140,7 +210,7 @@ function initializeContactForm() {
                 });
                 
                 if (response.ok) {
-                    statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronnnnnto. 💜';
+                    statusMessage.textContent = '¡Mensaje enviado exitosamente! Te contactaré pronto. 💜';
                     statusMessage.className = 'status-message success';
                     statusMessage.style.display = 'block';
                     form.reset();
