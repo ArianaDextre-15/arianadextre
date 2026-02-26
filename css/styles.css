@@ -178,11 +178,11 @@ main {
 
 .hero-simple {
     background: var(--white-warm);
-    min-height: 60vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 2rem;
+    padding: 3rem 2rem 3.5rem;
     border-bottom: 1px solid var(--nude-dark);
 }
 
@@ -442,11 +442,11 @@ main {
 
 .project-badges {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
     flex-wrap: wrap;
-    position: relative;
+    position: static;
 }
 
 .badge {
@@ -503,10 +503,8 @@ main {
 .badge.in-progress {
     background: var(--nude-dark);
     color: var(--text-secondary);
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 0.7rem;
+    position: static;
+    font-size: 0.72rem;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     text-transform: none;
@@ -1273,7 +1271,8 @@ main {
     text-transform: uppercase;
     text-align: left;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
 }
 
 /* Quitar el ::after decorativo en estas secciones */
@@ -1289,9 +1288,10 @@ main {
     font-size: 1rem;
     color: var(--text-muted);
     text-align: left;
-    margin-top: 0;
+    margin-top: 0.4rem;
     margin-bottom: 2.5rem;
     letter-spacing: 0;
+    display: block;
 }
 
 /* Grupos (EDUCATION / COMPLEMENTARY EDUCATION) */
@@ -1304,14 +1304,14 @@ main {
     margin-top: 4rem;
 }
 
-/* Título del subgrupo — mayúsculas espaciadas como "COMPLEMENTARY EDUCATION" */
+/* Título del subgrupo — pequeño espaciado como "COMPLEMENTARY EDUCATION" en ref */
 .edu-group-label {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: 6px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--text-muted);
     margin: 0 0 0.4rem;
     display: block;
 }
