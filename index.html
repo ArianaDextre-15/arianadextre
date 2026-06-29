@@ -9,6 +9,57 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <style>
+        /* ── Certificates section ── */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .cert-card {
+            background: var(--card-bg, #fff);
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: box-shadow 0.2s;
+        }
+        .cert-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+        .cert-icon { font-size: 2rem; }
+        .cert-title { font-weight: 700; font-size: 1rem; margin: 0; color: var(--text, #111); }
+        .cert-issuer { font-size: 0.85rem; color: var(--text-muted, #6b7280); margin: 0; }
+        .cert-date { font-size: 0.8rem; color: var(--text-muted, #6b7280); }
+        .cert-badge {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #e0f2fe;
+            color: #0369a1;
+            width: fit-content;
+        }
+        .cert-badge.highlight { background: #fef9c3; color: #854d0e; }
+        .cert-link {
+            margin-top: auto;
+            font-size: 0.82rem;
+            color: var(--accent, #2563eb);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .cert-link:hover { text-decoration: underline; }
+        .certs-group-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 2.5rem 0 0.5rem;
+            color: var(--text, #111);
+            border-bottom: 2px solid var(--border, #e5e7eb);
+            padding-bottom: 0.4rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,6 +77,7 @@
                 <li><a href="#" class="nav-link" data-section="technical-showcase">Technical Showcase</a></li>
                 <li><a href="#" class="nav-link" data-section="education">Education</a></li>
                 <li><a href="#" class="nav-link" data-section="experience-leadership">Experience &amp; Leadership</a></li>
+                <li><a href="#" class="nav-link" data-section="certificates">Certificates</a></li>
                 <li><a href="#" class="nav-link" data-section="volunteering">Volunteering</a></li>
                 <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
@@ -316,7 +368,6 @@
                 <h2>Education</h2>
                 <p class="section-subtitle">Formal academic degrees and programs.</p>
 
-                <!-- EDUCATION group -->
                 <div class="edu-group">
 
                     <div class="edu-item">
@@ -359,7 +410,6 @@
 
                 </div>
 
-                <!-- COMPLEMENTARY EDUCATION group -->
                 <div class="edu-group edu-group-second">
                     <p class="edu-group-label">Complementary Education</p>
                     <p class="edu-group-subtitle">Certificates, fellowships, and additional learning experiences.</p>
@@ -419,25 +469,42 @@
                             <p class="edu-achievement">✓ Completed 8 specialized courses with distinction in biomedical applications.</p>
                         </div>
                     </div>
+                    <div class="edu-divider"></div>
+
+                    <div class="edu-item">
+                        <div class="edu-logo-wrap">
+                            <div class="edu-logo-box"><img src="coursera-logo.png" alt="Coursera"></div>
+                        </div>
+                        <div class="edu-body">
+                            <div class="edu-header-row">
+                                <div>
+                                    <h4 class="edu-title">Recent Certifications (2025–2026)</h4>
+                                    <span class="edu-institution">Coursera / INSNSB / University of Glasgow / Lyn Biolearning / University of Colorado</span>
+                                    <span class="edu-date">2025 – 2026</span>
+                                </div>
+                                <span class="edu-badge">Certified</span>
+                            </div>
+                            <p class="edu-desc">Advanced AI in Health (INSNSB, 2026) · Game Design &amp; Development with Unity (Coursera, 2026) · Introduction to Medical Software (University of Glasgow, 2025) · Biomedical Visualisation (Yale/Coursera, 2025) · Engineering Genetic Circuits (Coursera, 2025) · Data Science in R for Biosciences (Lyn Biolearning, 2025) · AI for Healthcare Systems Specialization (University of Colorado/Coursera, 2025).</p>
+                            <p class="edu-achievement">✓ Scientific Research Course – INSNSB 2026 &nbsp;|&nbsp; Research Seedbed – FABCORE PUCP 2025</p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- ============================================
-             EXPERIENCE & LEADERSHIP — lista limpia
-        ============================================ -->
+        <!-- EXPERIENCE & LEADERSHIP -->
         <section id="experience-leadership" class="section">
             <div class="container">
                 <h2>Experience &amp; Leadership</h2>
                 <p class="section-subtitle">Research roles, leadership positions, and academic achievements.</p>
 
                 <div class="exp-list">
-<div class="exp-item">
+
+                    <!-- NEW: BioXR -->
+                    <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
+                            <div class="exp-logo-box"><img src="upch-logo.png" alt="UPCH"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -453,9 +520,10 @@
                     </div>
                     <div class="edu-divider"></div>
 
+                    <!-- NEW: EBCP Latam / CMU -->
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.1rem; display:flex; align-items:center; justify-content:center; font-weight:bold;">CMU</div>
+                            <div class="exp-logo-box" style="font-size:0.85rem; display:flex; align-items:center; justify-content:center; font-weight:700; letter-spacing:0.5px;">CMU</div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -471,11 +539,10 @@
                     </div>
                     <div class="edu-divider"></div>
 
+                    <!-- NEW: LIBME -->
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
+                            <div class="exp-logo-box"><img src="upch-logo.png" alt="UPCH"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -491,11 +558,10 @@
                     </div>
                     <div class="edu-divider"></div>
 
+                    <!-- NEW: LAVI -->
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
+                            <div class="exp-logo-box"><img src="upch-logo.png" alt="UPCH"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -510,11 +576,10 @@
                         </div>
                     </div>
                     <div class="edu-divider"></div>
+
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
+                            <div class="exp-logo-box"><img src="pucp-logo.png" alt="PUCP"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -532,9 +597,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
+                            <div class="exp-logo-box"><img src="pucp-logo.png" alt="PUCP"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -552,9 +615,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                🏆
-                            </div>
+                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">🏆</div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -572,9 +633,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
+                            <div class="exp-logo-box"><img src="pucp-logo.png" alt="PUCP"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -592,9 +651,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="pucp-logo.png" alt="PUCP">
-                            </div>
+                            <div class="exp-logo-box"><img src="pucp-logo.png" alt="PUCP"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -612,9 +669,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box">
-                                <img src="upch-logo.png" alt="UPCH">
-                            </div>
+                            <div class="exp-logo-box"><img src="upch-logo.png" alt="UPCH"></div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -633,9 +688,121 @@
             </div>
         </section>
 
-        <!-- ============================================
-             VOLUNTEERING — lista limpia
-        ============================================ -->
+        <!-- ============================================================
+             CERTIFICATES — NEW SECTION
+        ============================================================ -->
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2>Certificates</h2>
+                <p class="section-subtitle">Verified credentials from research institutions, universities, and online platforms.</p>
+
+                <!-- In-person / Presencial -->
+                <p class="certs-group-label">🏛️ In-Person Programs</p>
+                <div class="certs-grid">
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🔬</div>
+                        <p class="cert-title">Investigación Científica</p>
+                        <p class="cert-issuer">Instituto Nacional de Salud del Niño de San Borja (INSNSB)</p>
+                        <span class="cert-date">2026</span>
+                        <span class="cert-badge highlight">Presencial</span>
+                        <!-- Replace # with the real URL once you upload the certificate -->
+                        <a class="cert-link" href="certificates/insnsb-investigacion-2026.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🧪</div>
+                        <p class="cert-title">Semillero de Investigación</p>
+                        <p class="cert-issuer">FabCore – Pontificia Universidad Católica del Perú</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge highlight">Presencial</span>
+                        <a class="cert-link" href="certificates/fabcore-semillero-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                </div>
+
+                <!-- Online / Virtual -->
+                <p class="certs-group-label">💻 Online Courses &amp; Specializations</p>
+                <div class="certs-grid">
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🤖</div>
+                        <p class="cert-title">Curso Avanzado de IA Generativa en Salud</p>
+                        <p class="cert-issuer">INSNSB</p>
+                        <span class="cert-date">2026</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/insnsb-ia-salud-2026.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🎮</div>
+                        <p class="cert-title">Game Design and Development with Unity Specialization</p>
+                        <p class="cert-issuer">Coursera</p>
+                        <span class="cert-date">2026</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/coursera-unity-2026.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🏥</div>
+                        <p class="cert-title">Introduction to Medical Software</p>
+                        <p class="cert-issuer">University of Glasgow</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/glasgow-medical-software-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🧠</div>
+                        <p class="cert-title">Biomedical Visualisation</p>
+                        <p class="cert-issuer">Yale University / Coursera</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/yale-biomedical-vis-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🧬</div>
+                        <p class="cert-title">Engineering Genetic Circuits</p>
+                        <p class="cert-issuer">Coursera</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/coursera-genetic-circuits-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">📊</div>
+                        <p class="cert-title">Data Science en R para Biociencias</p>
+                        <p class="cert-issuer">Lyn Biolearning</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/lyn-datascience-r-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">⚕️</div>
+                        <p class="cert-title">AI for Healthcare Systems Specialization</p>
+                        <p class="cert-issuer">University of Colorado / Coursera</p>
+                        <span class="cert-date">2025</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/colorado-ai-healthcare-2025.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon">🦾</div>
+                        <p class="cert-title">Diseño de Prótesis Biomecánicas</p>
+                        <p class="cert-issuer">P4H Bionics</p>
+                        <span class="cert-date">2024</span>
+                        <span class="cert-badge">Virtual</span>
+                        <a class="cert-link" href="certificates/p4h-protesis-2024.pdf" target="_blank">View Certificate ↗</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VOLUNTEERING -->
         <section id="volunteering" class="section">
             <div class="container">
                 <h2>Volunteering</h2>
@@ -643,11 +810,28 @@
 
                 <div class="exp-list">
 
+                    <!-- NEW: GIA -->
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                💛
+                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">🚀</div>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-header-row">
+                                <div>
+                                    <h4 class="exp-title">Volunteer – Aerospace Engineering Group (GIA)</h4>
+                                    <span class="exp-institution">Grupo de Ingeniería Aeroespacial</span>
+                                    <span class="exp-date">Jul 2025 – Mar 2026</span>
+                                </div>
+                                <span class="exp-badge exp-badge-vol">Volunteer</span>
                             </div>
+                            <p class="exp-desc">Participated in the design, analysis, and testing of propulsion systems and spacesuit technologies. Collaborated in the development of projects oriented toward space exploration and astronaut safety.</p>
+                        </div>
+                    </div>
+                    <div class="edu-divider"></div>
+
+                    <div class="exp-item">
+                        <div class="exp-logo-wrap">
+                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">💛</div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -665,9 +849,7 @@
 
                     <div class="exp-item">
                         <div class="exp-logo-wrap">
-                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">
-                                💻
-                            </div>
+                            <div class="exp-logo-box" style="font-size:1.5rem; display:flex; align-items:center; justify-content:center;">💻</div>
                         </div>
                         <div class="exp-body">
                             <div class="exp-header-row">
@@ -715,9 +897,9 @@
                     </div>
                     <div class="contact-links">
                         <h3>Other Ways to Reach Me</h3>
-                        <a href="/cdn-cgi/l/email-protection#f0918299919e91de949588848295b080859380de959485de8095" class="contact-link">
+                        <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
                             <span class="icon icon-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
-                            <span><span class="__cf_email__" data-cfemail="4524372c242b246b21203d31372005353026356b2021306b3520">[email&#160;protected]</span></span>
+                            <span>ariana.dextre@pucp.edu.pe</span>
                         </a>
                         <a href="https://github.com/arianadextre" target="_blank" class="contact-link">
                             <span class="icon icon-github"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span>
@@ -727,7 +909,6 @@
                             <span class="icon icon-linkedin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
                             <span>LinkedIn</span>
                         </a>
-            
                     </div>
                 </div>
             </div>
