@@ -487,7 +487,33 @@ nav.side-nav a:hover::after { width: 60%; }
 .skill-card .chips { gap: 0.35rem; }
 .skill-card .chip { font-size: 0.8rem; padding: 0.12rem 0.6rem; background: var(--nude-light); }
 
+.news-tag {
+    align-self: start;
+    justify-self: start;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #705A30;
+    background: #F3ECDD;
+    border-radius: 999px;
+    padding: 0.05rem 0.6rem;
+    margin-top: 0.15rem;
+}
+
+.badge.award { background: #F3ECDD; color: #705A30; }
+.proj-thumb.t-award { background: linear-gradient(135deg, #F3ECDD, #FBF8F2); }
+
 /* ---------- Experience / Education tweaks ---------- */
+
+.exp-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--lilac-accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--lilac-soft);
+}
+.exp-link:hover { color: var(--text-primary); border-bottom-color: var(--lilac-accent); }
 
 .content .edu-item,
 .content .exp-item { padding: 1.5rem 0; }
