@@ -830,3 +830,23 @@ nav.side-nav a { font-size: 0.95rem; }
 }
 
 .proj:last-child { border-bottom: 0; padding-bottom: 0.5rem; }
+
+/* Text sizes for DM Sans on cards, buttons and form */
+.eyebrow { font-size: 0.7rem; letter-spacing: 3px; }
+.btn { font-size: 0.92rem; font-weight: 500; letter-spacing: 0.2px; }
+.skill-card h4 { font-size: 0.98rem; font-weight: 500; }
+.skill-card p { font-size: 0.88rem; }
+.skill-card .chip { font-size: 0.72rem; }
+.cert-card .cert-title { font-size: 0.95rem; font-weight: 500; }
+.cert-card .cert-issuer { font-size: 0.85rem; font-weight: 500; }
+.cert-meta { font-size: 0.82rem; }
+.cert-badge { font-size: 0.72rem; font-weight: 500; }
+.cert-link { font-size: 0.86rem; font-weight: 500; }
+.content .edu-group-label { font-size: 0.7rem; }
+.content .edu-group-subtitle { font-size: 0.9rem; }
+.content .form-group label { font-size: 0.9rem; }
+.content .form-group input,
+.content .form-group textarea { font-size: 0.95rem; }
+.content .submit-btn { font-size: 0.95rem; font-weight: 500; }
+.content .contact-links h3 { font-size: 1.3rem; font-weight: 400; }
+.content .contact-link { font-size: 0.9rem; }

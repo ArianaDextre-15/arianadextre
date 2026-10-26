@@ -40,7 +40,7 @@
                 <ul>
                     <li><a href="#home">About</a></li>
                     <li><a href="#research-projects">Projects</a></li>
-                    <li><a href="#technical-showcase">Design Work</a></li>
+                    <li><a href="#technical-showcase">Technical Showcase</a></li>
                     <li><a href="#experience-leadership">Experience</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#certificates">Certificates</a></li>
@@ -72,6 +72,11 @@
                     <span class="highlight">science, creativity, and empathy</span> come together.
                 </p>
 
+                <div class="intro-actions">
+                    <a class="btn btn-primary" href="#research-projects">Explore My Work</a>
+                    <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+                </div>
+
                 <p class="mini-label">Highlights</p>
                 <ul class="news">
                     <li><time>Oct 2026</time><span>Started an internship at <strong>CISA – UPCH</strong>, developing neonatal and pediatric airway biomodels for medical education.</span></li>
@@ -80,11 +85,25 @@
                     <li><time>Jan 2026</time><span>Started as intern at the <strong>BioXR Immersive Lab</strong> (UPCH) — VR simulation for transfusion medicine training.</span></li>
                     <li><time>Jun 2025</time><span>Selected for <strong>EBCP Latam 2025</strong> at Dr. Christian Cuba Samaniego's Lab, Carnegie Mellon University.</span></li>
                 </ul>
+
+                <p class="mini-label">Tools &amp; Platforms</p>
+                <div class="chips">
+                    <span class="chip">Fusion 360 &amp; Inventor</span>
+                    <span class="chip">PrusaSlicer &amp; Bambu Studio</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">MATLAB</span>
+                    <span class="chip">MedGemma</span>
+                    <span class="chip">Unity</span>
+                    <span class="chip">RStudio</span>
+                    <span class="chip">Git &amp; GitHub</span>
+                </div>
             </section>
 
             <!-- RESEARCH & PROJECTS -->
             <section id="research-projects" class="block">
+                <p class="eyebrow">Portfolio</p>
                 <h2>Research &amp; Projects</h2>
+                <p class="lead">Research and engineering projects I'm leading or contributing to. Filter by area to find what you're looking for.</p>
 
                 <div class="filters" role="group" aria-label="Filter projects" data-filter-for="projects">
                     <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -244,32 +263,102 @@
                 </div>
             </section>
 
-            <!-- DESIGN WORK -->
+            <!-- TECHNICAL SHOWCASE -->
             <section id="technical-showcase" class="block">
-                <h2>Design Work</h2>
-                <p class="section-subtitle">Selected CAD models from my prosthetics and mechanism design work (Autodesk Fusion 360).</p>
-                <div class="gallery">
-                    <figure>
-                        <img src="showcase/protesis-brazo.png" alt="CAD model of a 3D printed arm prosthesis designed over a 3D scan of the residual limb" loading="lazy">
-                        <figcaption><strong>Arm prosthesis</strong>Designed over a 3D scan of the residual limb</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="showcase/protesis-exoesqueleto.png" alt="CAD model of a hand exoskeleton with linkages and a linear actuator" loading="lazy">
-                        <figcaption><strong>Hand exoskeleton</strong>Linkage mechanism with linear actuator</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="showcase/bio-cover-3d%20pierna.png" alt="CAD model of an aesthetic cover for a leg prosthesis" loading="lazy">
-                        <figcaption><strong>Leg prosthesis bio-cover</strong>Aesthetic and functional cover for 3D printing</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="showcase/animatronico.png" alt="CAD model of an animatronic eye mechanism driven by servo motors" loading="lazy">
-                        <figcaption><strong>Animatronic eyes</strong>Servo-driven eye and eyelid mechanism</figcaption>
-                    </figure>
+                <p class="eyebrow">Hands-on skills</p>
+                <h2>Technical Showcase</h2>
+                <p class="lead">Hands-on projects and practical applications from my coursework and personal development, grouped by area.</p>
+
+                <div class="filters" role="group" aria-label="Filter technical skills" data-filter-for="skills" data-default="prosthetics">
+                    <button class="filter" type="button" data-filter="prosthetics" aria-pressed="true">🦾 Prosthetics</button>
+                    <button class="filter" type="button" data-filter="cad" aria-pressed="false">🔧 CAD &amp; Manufacturing</button>
+                    <button class="filter" type="button" data-filter="manufacturing" aria-pressed="false">🖨️ 3D Printing</button>
+                    <button class="filter" type="button" data-filter="robotics" aria-pressed="false">🤖 Robotics</button>
+                    <button class="filter" type="button" data-filter="electronics" aria-pressed="false">⚡ Electronics</button>
+                    <button class="filter" type="button" data-filter="programming" aria-pressed="false">💻 Programming &amp; AI</button>
+                    <button class="filter" type="button" data-filter="sensors" aria-pressed="false">🎛️ Sensors &amp; Control</button>
+                    <button class="filter" type="button" data-filter="vr" aria-pressed="false">🥽 VR</button>
+                    <button class="filter" type="button" data-filter="biomedical" aria-pressed="false">🏥 Biomedical</button>
+                    <button class="filter" type="button" data-filter="all" aria-pressed="false">See all</button>
+                </div>
+
+                <div class="skill-grid" id="skills">
+                    <!-- Prosthetics & Medical Devices -->
+                    <div class="skill-card" data-cat="prosthetics"><img src="showcase/protesis-brazo.png" alt="CAD model of a 3D printed arm prosthesis over a scanned residual limb" loading="lazy"><h4>Biomechanical Prosthetics 3D Step-by-Step</h4><p>Comprehensive training in designing and manufacturing 3D printed biomechanical prosthetics from concept to final product.</p><div class="chips"><span class="chip">3D Printing</span><span class="chip">Biomechanics</span><span class="chip">CAD Design</span></div></div>
+                    <div class="skill-card" data-cat="prosthetics"><h4>Bionic Prosthetics 3D: Basic Model</h4><p>Fundamental concepts and practical implementation of basic bionic prosthetic designs with motorization principles.</p><div class="chips"><span class="chip">Bionic Design</span><span class="chip">Fusion 360</span><span class="chip">Mechatronics</span></div></div>
+                    <div class="skill-card" data-cat="prosthetics"><h4>Bionic Prosthetics 3D: Intermediate Model</h4><p>Advanced bionic prosthetic systems incorporating sensors, actuators, and control mechanisms for enhanced functionality.</p><div class="chips"><span class="chip">Advanced Design</span><span class="chip">Control Systems</span><span class="chip">Integration</span></div></div>
+                    <div class="skill-card" data-cat="prosthetics"><h4>Motorization and Control of Biomechanical Prosthetics 3D</h4><p>Implementation of motor control systems and sensor integration for functional biomechanical prosthetic devices.</p><div class="chips"><span class="chip">Motor Control</span><span class="chip">Arduino</span><span class="chip">Electronics</span></div></div>
+                    <div class="skill-card" data-cat="prosthetics"><img src="showcase/protesis-exoesqueleto.png" alt="CAD model of a hand exoskeleton with linkages and actuator" loading="lazy"><h4>Exoskeletons</h4><p>Design and development of wearable exoskeleton systems for mobility assistance and rehabilitation applications.</p><div class="chips"><span class="chip">Exoskeleton Design</span><span class="chip">Biomechanics</span><span class="chip">Rehabilitation</span></div></div>
+                    <div class="skill-card" data-cat="prosthetics"><h4>Prosthetic Devices for Pets</h4><p>Specialized prosthetic design and manufacturing for veterinary applications, adapted to different animal anatomies.</p><div class="chips"><span class="chip">Veterinary Design</span><span class="chip">Custom Fitting</span><span class="chip">3D Printing</span></div></div>
+
+                    <!-- CAD Design & Manufacturing -->
+                    <div class="skill-card" data-cat="cad"><h4>Introduction to Parametric Design with Autodesk Fusion 360</h4><p>Advanced parametric modeling techniques using Fusion 360 for biomedical and mechanical design applications.</p><div class="chips"><span class="chip">Fusion 360</span><span class="chip">Parametric Design</span><span class="chip">CAD</span></div></div>
+                    <div class="skill-card" data-cat="cad"><h4>Selected Topics in Fusion360</h4><p>Specialized Fusion 360 workflows for complex assemblies, simulations, and advanced modeling techniques.</p><div class="chips"><span class="chip">Advanced CAD</span><span class="chip">Simulation</span><span class="chip">Assembly Design</span></div></div>
+                    <div class="skill-card" data-cat="cad"><h4>3D Mechanism Design with Bionic Focus</h4><p>Design and analysis of biomimetic mechanisms inspired by natural systems for robotic and prosthetic applications.</p><div class="chips"><span class="chip">Mechanism Design</span><span class="chip">Biomimetics</span><span class="chip">Kinematics</span></div></div>
+                    <div class="skill-card" data-cat="cad"><h4>Stress Analysis in Biomechanical Parts</h4><p>Finite element analysis (FEA) and structural optimization for biomechanical components and medical devices.</p><div class="chips"><span class="chip">FEA</span><span class="chip">Structural Analysis</span><span class="chip">Optimization</span></div></div>
+                    <div class="skill-card" data-cat="cad"><h4>Design and Production of 3D Splints</h4><p>Custom orthotic splint design using 3D scanning and parametric modeling for patient-specific medical devices.</p><div class="chips"><span class="chip">Medical Devices</span><span class="chip">Custom Fitting</span><span class="chip">Orthotics</span></div></div>
+                    <div class="skill-card" data-cat="cad"><img src="showcase/bio-cover-3d%20pierna.png" alt="CAD model of a 3D printed aesthetic cover for a leg prosthesis" loading="lazy"><h4>3D Bio-Cover for Leg</h4><p>Design and fabrication of aesthetic and functional leg covers for prosthetic devices using additive manufacturing.</p><div class="chips"><span class="chip">Prosthetic Covers</span><span class="chip">Aesthetic Design</span><span class="chip">3D Printing</span></div></div>
+                    <div class="skill-card" data-cat="cad"><h4>Optimization Techniques for Mechanical Design</h4><p>Advanced optimization methods including topology optimization and generative design for biomedical applications.</p><div class="chips"><span class="chip">Topology Optimization</span><span class="chip">Generative Design</span><span class="chip">CAE</span></div></div>
+
+                    <!-- 3D Printing & Advanced Manufacturing -->
+                    <div class="skill-card" data-cat="manufacturing"><h4>3D Printing from Scratch</h4><p>Comprehensive introduction to 3D printing technologies, materials, and best practices for biomedical applications.</p><div class="chips"><span class="chip">FDM Printing</span><span class="chip">Slicing</span><span class="chip">Materials</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>3D Printing: Basic Principles and Guided Practices</h4><p>Advanced 3D printing techniques including multi-material printing, support strategies, and post-processing methods.</p><div class="chips"><span class="chip">Advanced Printing</span><span class="chip">Multi-Material</span><span class="chip">Post-Processing</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>Advanced Additive Manufacturing in Resin (SLA-DLP-Mono)</h4><p>High-resolution resin-based 3D printing technologies for detailed biomedical models and precision parts.</p><div class="chips"><span class="chip">SLA/DLP</span><span class="chip">Resin Printing</span><span class="chip">High Resolution</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>Bioorganic Design and Biomedical Manufacturing</h4><p>Organic modeling techniques and biomedical manufacturing processes for anatomically accurate medical models.</p><div class="chips"><span class="chip">Organic Modeling</span><span class="chip">Medical Models</span><span class="chip">Anatomical Design</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>Physics of 3D Printing</h4><p>Understanding the fundamental physics behind additive manufacturing processes, material behavior, and quality optimization.</p><div class="chips"><span class="chip">Material Science</span><span class="chip">Print Physics</span><span class="chip">Quality Control</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>Ender 3D Printer Optimization for Bionic Systems</h4><p>Custom modifications and optimization of Ender 3D printers for specialized bionic and biomedical applications.</p><div class="chips"><span class="chip">Printer Modification</span><span class="chip">Optimization</span><span class="chip">Custom Setup</span></div></div>
+                    <div class="skill-card" data-cat="manufacturing"><h4>Advanced Materials</h4><p>Exploration of advanced materials for biomedical applications including biocompatible polymers and composite materials.</p><div class="chips"><span class="chip">Biomaterials</span><span class="chip">Composites</span><span class="chip">Material Selection</span></div></div>
+
+                    <!-- Robotics & Mechatronics -->
+                    <div class="skill-card" data-cat="robotics"><h4>Introduction to Robot Design and Construction</h4><p>Fundamentals of robotic systems design, including kinematics, dynamics, and control systems for mobile robots.</p><div class="chips"><span class="chip">Robotics</span><span class="chip">Kinematics</span><span class="chip">Control Systems</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Robotic Hand: Design and Construction</h4><p>Complete development of an articulated robotic hand including mechanical design, actuation, and sensor integration.</p><div class="chips"><span class="chip">Robotic Hand</span><span class="chip">Actuation</span><span class="chip">Sensors</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Design and Construction of a Robotic Finger</h4><p>Detailed study of finger mechanisms, tendon-driven systems, and precision control for dexterous manipulation.</p><div class="chips"><span class="chip">Finger Design</span><span class="chip">Tendon Systems</span><span class="chip">Precision Control</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><img src="showcase/animatronico.png" alt="CAD model of an animatronic eye mechanism driven by servos" loading="lazy"><h4>Design and Construction of an Animatronic</h4><p>Creating life-like animatronic systems with synchronized movements and realistic expressions for entertainment and education.</p><div class="chips"><span class="chip">Animatronics</span><span class="chip">Servo Control</span><span class="chip">Synchronized Motion</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Design and Construction of a Flexible Bio-Gripper</h4><p>Soft robotics approach to gripper design using flexible materials and adaptive grasping strategies.</p><div class="chips"><span class="chip">Soft Robotics</span><span class="chip">Adaptive Grasping</span><span class="chip">Flexible Materials</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Hexapod Bio-Robots</h4><p>Six-legged walking robots inspired by insect locomotion, including gait generation and terrain adaptation.</p><div class="chips"><span class="chip">Hexapod</span><span class="chip">Gait Generation</span><span class="chip">Locomotion</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Quadruped Robots</h4><p>Four-legged robotic platforms with dynamic balance and advanced locomotion capabilities for complex terrains.</p><div class="chips"><span class="chip">Quadruped</span><span class="chip">Dynamic Balance</span><span class="chip">Advanced Locomotion</span></div></div>
+                    <div class="skill-card" data-cat="robotics"><h4>Educational BioRobot (InMoov Model)</h4><p>Building and programming a full-scale humanoid robot based on the open-source InMoov project for research and education.</p><div class="chips"><span class="chip">Humanoid Robot</span><span class="chip">InMoov</span><span class="chip">Open Source</span></div></div>
+
+                    <!-- Electronics & Embedded Systems -->
+                    <div class="skill-card" data-cat="electronics"><h4>Introduction to Electronics</h4><p>Fundamental electronics principles including circuit analysis, component selection, and PCB design for biomedical devices.</p><div class="chips"><span class="chip">Electronics</span><span class="chip">Circuit Design</span><span class="chip">PCB</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Basic EMG Sensor Step-by-Step</h4><p>Design and construction of electromyography (EMG) sensors for muscle activity detection and prosthetic control.</p><div class="chips"><span class="chip">EMG</span><span class="chip">Biosignals</span><span class="chip">Amplification</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Basic Electrocardiogram Sensor (ECG)</h4><p>ECG sensor development using instrumentation amplifiers for cardiac signal acquisition and processing.</p><div class="chips"><span class="chip">ECG</span><span class="chip">Cardiac Signals</span><span class="chip">Medical Sensors</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Electrooculogram Sensor (EOG)</h4><p>Development of EOG sensors for eye movement tracking and human-machine interface applications.</p><div class="chips"><span class="chip">EOG</span><span class="chip">Eye Tracking</span><span class="chip">HMI</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Electronic Design of Biosignal Sensors</h4><p>Advanced circuit design and simulation for various biological signal acquisition systems with noise reduction techniques.</p><div class="chips"><span class="chip">Biosignal Processing</span><span class="chip">Circuit Simulation</span><span class="chip">Noise Reduction</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Biological Signal Processing</h4><p>Digital signal processing techniques for filtering, feature extraction, and analysis of biomedical signals.</p><div class="chips"><span class="chip">DSP</span><span class="chip">Signal Analysis</span><span class="chip">Feature Extraction</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Electronic Devices</h4><p>Study of semiconductor devices, transistors, and integrated circuits for biomedical electronics applications.</p><div class="chips"><span class="chip">Semiconductors</span><span class="chip">Transistors</span><span class="chip">IC Design</span></div></div>
+                    <div class="skill-card" data-cat="electronics"><h4>Applied Electronics: RLC, Diodes and Voltage Regulation</h4><p>Advanced electronic components and power regulation systems for embedded biomedical device applications.</p><div class="chips"><span class="chip">Power Electronics</span><span class="chip">Voltage Regulation</span><span class="chip">Diodes</span></div></div>
+
+                    <!-- Programming & AI -->
+                    <div class="skill-card" data-cat="programming"><h4>Introduction to Programming with Arduino</h4><p>Embedded programming fundamentals using Arduino platform for sensor integration and actuator control.</p><div class="chips"><span class="chip">Arduino</span><span class="chip">C/C++</span><span class="chip">Embedded Systems</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Programming with Python</h4><p>Python programming for data analysis, automation, and machine learning applications in biomedical engineering.</p><div class="chips"><span class="chip">Python</span><span class="chip">Data Analysis</span><span class="chip">Automation</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Computer Vision with OpenCV</h4><p>Real-time image processing and computer vision applications using OpenCV for gesture recognition and object detection.</p><div class="chips"><span class="chip">OpenCV</span><span class="chip">Computer Vision</span><span class="chip">Real-Time Processing</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Robotic Hand Control with Computer Vision / OpenCV</h4><p>Integration of computer vision and robotic control for gesture-based manipulation of robotic hands.</p><div class="chips"><span class="chip">Gesture Recognition</span><span class="chip">Robot Control</span><span class="chip">Real-Time Vision</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Neural Networks and Artificial Intelligence</h4><p>Fundamentals of neural networks and AI implementation for pattern recognition in biomedical applications.</p><div class="chips"><span class="chip">Neural Networks</span><span class="chip">AI</span><span class="chip">Pattern Recognition</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Introduction to Neural Networks and Deep Learning</h4><p>Deep learning architectures and training techniques for medical image analysis and biosignal classification.</p><div class="chips"><span class="chip">Deep Learning</span><span class="chip">CNNs</span><span class="chip">Medical AI</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>Deep Neural Networks and Supervised Learning</h4><p>Advanced deep learning techniques including transfer learning and model optimization for biomedical datasets.</p><div class="chips"><span class="chip">Advanced DL</span><span class="chip">Transfer Learning</span><span class="chip">Model Training</span></div></div>
+                    <div class="skill-card" data-cat="programming"><h4>STM32F407VG Programming with Simulink</h4><p>Model-based design and code generation for embedded systems using MATLAB/Simulink and STM32 microcontrollers.</p><div class="chips"><span class="chip">Simulink</span><span class="chip">STM32</span><span class="chip">Model-Based Design</span></div></div>
+
+                    <!-- Sensors & Control Systems -->
+                    <div class="skill-card" data-cat="sensors"><h4>Introduction to Motor Control with Arduino</h4><p>DC, servo, and stepper motor control using Arduino for robotic and mechatronic applications.</p><div class="chips"><span class="chip">Motor Control</span><span class="chip">PWM</span><span class="chip">Arduino</span></div></div>
+                    <div class="skill-card" data-cat="sensors"><h4>Introduction to Sensor Programming and Use</h4><p>Integration and programming of various sensors including ultrasonic, IR, and environmental sensors.</p><div class="chips"><span class="chip">Sensor Integration</span><span class="chip">Data Acquisition</span><span class="chip">Calibration</span></div></div>
+                    <div class="skill-card" data-cat="sensors"><h4>Programming and Use of Multi-Functional Sensors</h4><p>Advanced sensor fusion techniques combining multiple sensor inputs for robust perception systems.</p><div class="chips"><span class="chip">Sensor Fusion</span><span class="chip">IMU</span><span class="chip">Multi-Sensor Systems</span></div></div>
+                    <div class="skill-card" data-cat="sensors"><h4>Easy Module and Advanced Sensors</h4><p>Working with advanced sensor modules and development boards for rapid prototyping of sensing systems.</p><div class="chips"><span class="chip">Advanced Sensors</span><span class="chip">Module Integration</span><span class="chip">Prototyping</span></div></div>
+                    <div class="skill-card" data-cat="sensors"><h4>Wireless Applications (Bluetooth)</h4><p>Bluetooth communication protocols and wireless control systems for IoT and wearable medical devices.</p><div class="chips"><span class="chip">Bluetooth</span><span class="chip">Wireless Communication</span><span class="chip">IoT</span></div></div>
+
+                    <!-- Virtual Reality -->
+                    <div class="skill-card" data-cat="vr"><h4>Virtual Reality</h4><p>VR application development for medical training simulations and rehabilitation exercises using Unity and VR SDKs.</p><div class="chips"><span class="chip">Unity VR</span><span class="chip">Medical Simulation</span><span class="chip">Immersive Experience</span></div></div>
+
+                    <!-- Biomedical Engineering -->
+                    <div class="skill-card" data-cat="biomedical"><h4>Biomimetics</h4><p>Study and application of biological principles to engineering design, focusing on nature-inspired solutions.</p><div class="chips"><span class="chip">Biomimetics</span><span class="chip">Bio-Inspired Design</span><span class="chip">Nature Engineering</span></div></div>
+                    <div class="skill-card" data-cat="biomedical"><h4>3D Respirators and Devices</h4><p>Design and manufacturing of respiratory support devices and emergency medical equipment using 3D printing.</p><div class="chips"><span class="chip">Medical Devices</span><span class="chip">Respiratory Support</span><span class="chip">Emergency Equipment</span></div></div>
+                    <div class="skill-card" data-cat="biomedical"><h4>Structural Analysis</h4><p>Finite element analysis and structural optimization for biomedical implants and orthopedic devices.</p><div class="chips"><span class="chip">FEA</span><span class="chip">Structural Mechanics</span><span class="chip">Implant Design</span></div></div>
                 </div>
             </section>
 
             <!-- EXPERIENCE & LEADERSHIP -->
             <section id="experience-leadership" class="block">
+                <p class="eyebrow">Experience</p>
                 <h2>Experience &amp; Awards</h2>
                 <p class="section-subtitle">Research internships, lab roles, and awards.</p>
 
@@ -460,6 +549,7 @@
 
             <!-- EDUCATION -->
             <section id="education" class="block">
+                <p class="eyebrow">Education</p>
                 <h2>Education</h2>
                 <p class="section-subtitle">Formal academic degrees and programs.</p>
 
@@ -504,66 +594,180 @@
                     </div>
 
                 </div>
+
+                <div class="edu-group edu-group-second">
+                    <p class="edu-group-label">Complementary Education</p>
+                    <p class="edu-group-subtitle">Certificates, fellowships, and additional learning experiences.</p>
+
+                    <div class="edu-item">
+                        <div class="edu-logo-wrap">
+                            <div class="edu-logo-box"><img src="P4Hbionic-logo.png" alt="P4H Bionics"></div>
+                        </div>
+                        <div class="edu-body">
+                            <div class="edu-header-row">
+                                <div>
+                                    <h4 class="edu-title">Bionic Prosthetics Workshop</h4>
+                                    <span class="edu-institution">P4H Bionics</span>
+                                    <span class="edu-date">2023</span>
+                                </div>
+                                <span class="edu-badge">Certificate</span>
+                            </div>
+                            <p class="edu-desc">Specialized training in bionic prosthetics design, 3D printing for medical devices, and EMG signal integration for prosthetic control systems.</p>
+                            <p class="edu-achievement">✓ Completed advanced module in EMG-controlled prosthetic development.</p>
+                        </div>
+                    </div>
+                    <div class="edu-divider"></div>
+
+                    <div class="edu-item">
+                        <div class="edu-logo-wrap">
+                            <div class="edu-logo-box"><img src="byolearning-logo.png" alt="Lyn BioLearning"></div>
+                        </div>
+                        <div class="edu-body">
+                            <div class="edu-header-row">
+                                <div>
+                                    <h4 class="edu-title">Advanced Biolearning Program</h4>
+                                    <span class="edu-institution">Lyn BioLearning</span>
+                                    <span class="edu-date">2024</span>
+                                </div>
+                                <span class="edu-badge">Research Fellow</span>
+                            </div>
+                            <p class="edu-desc">Advanced research program focusing on biomedical innovation, synthetic biology, and biotechnology applications in healthcare.</p>
+                            <p class="edu-achievement">✓ Selected as research fellow for innovative biomedical technology development.</p>
+                        </div>
+                    </div>
+                    <div class="edu-divider"></div>
+
+                    <div class="edu-item">
+                        <div class="edu-logo-wrap">
+                            <div class="edu-logo-box"><img src="coursera-logo.png" alt="Coursera"></div>
+                        </div>
+                        <div class="edu-body">
+                            <div class="edu-header-row">
+                                <div>
+                                    <h4 class="edu-title">Machine Learning &amp; Data Science</h4>
+                                    <span class="edu-institution">Coursera – Multiple Courses</span>
+                                    <span class="edu-date">2022 – 2023</span>
+                                </div>
+                                <span class="edu-badge">Certified</span>
+                            </div>
+                            <p class="edu-desc">Comprehensive certification in machine learning, data analysis, and biomedical signal processing through specialized courses from top universities.</p>
+                            <p class="edu-achievement">✓ Completed 8 specialized courses with distinction in biomedical applications.</p>
+                        </div>
+                    </div>
+                    <div class="edu-divider"></div>
+
+                    <div class="edu-item">
+                        <div class="edu-logo-wrap">
+                            <div class="edu-logo-box"><img src="coursera-logo.png" alt="Coursera"></div>
+                        </div>
+                        <div class="edu-body">
+                            <div class="edu-header-row">
+                                <div>
+                                    <h4 class="edu-title">Recent Certifications (2025–2026)</h4>
+                                    <span class="edu-institution">Coursera / INSNSB / University of Glasgow / Lyn Biolearning / University of Colorado</span>
+                                    <span class="edu-date">2025 – 2026</span>
+                                </div>
+                                <span class="edu-badge">Certified</span>
+                            </div>
+                            <p class="edu-desc">Advanced AI in Health (INSNSB, 2026) · Game Design &amp; Development with Unity (Coursera, 2026) · Introduction to Medical Software (University of Glasgow, 2025) · Biomedical Visualisation (Yale/Coursera, 2025) · Engineering Genetic Circuits (Coursera, 2025) · Data Science in R for Biosciences (Lyn Biolearning, 2025) · AI for Healthcare Systems Specialization (University of Colorado/Coursera, 2025).</p>
+                            <p class="edu-achievement">✓ Scientific Research Course – INSNSB 2026 &nbsp;|&nbsp; Research Seedbed &amp; Specialization in Digital Manufacturing and 3D Prototyping – FABRICUM/FabCore PUCP 2025</p>
+                        </div>
+                    </div>
+
+                </div>
             </section>
 
             <!-- CERTIFICATES -->
             <section id="certificates" class="block">
+                <p class="eyebrow">Credentials</p>
                 <h2>Certificates</h2>
                 <p class="section-subtitle">Verified credentials from research institutions, universities, and online platforms.</p>
 
-                <!-- "View" links only appear once the PDF exists in the certificates/ folder. -->
-                <p class="certs-group-label">In person</p>
-                <ul class="cert-list">
-                    <li>
-                        <div><p class="cert-title">Semillero de Investigación – Programa de Especialización en Tecnologías de Diseño, Manufactura Digital y Prototipado 3D para la Innovación</p><p class="cert-issuer">FABRICUM / FabCore – PUCP · 180 h</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/fabcore-semillero-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Investigación Científica</p><p class="cert-issuer">Instituto Nacional de Salud del Niño de San Borja (INSNSB)</p></div>
-                        <div class="cert-side"><span class="cert-year">2026</span><a class="cert-link" href="certificates/insnsb-investigacion-2026.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                </ul>
-                <p class="certs-group-label">Online</p>
-                <ul class="cert-list">
-                    <li>
-                        <div><p class="cert-title">Curso Avanzado de IA Generativa en Salud</p><p class="cert-issuer">INSNSB</p></div>
-                        <div class="cert-side"><span class="cert-year">2026</span><a class="cert-link" href="certificates/insnsb-ia-salud-2026.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Game Design and Development with Unity Specialization</p><p class="cert-issuer">Coursera</p></div>
-                        <div class="cert-side"><span class="cert-year">2026</span><a class="cert-link" href="certificates/coursera-unity-2026.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Introduction to Medical Software</p><p class="cert-issuer">University of Glasgow</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/glasgow-medical-software-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Biomedical Visualisation</p><p class="cert-issuer">Yale University / Coursera</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/yale-biomedical-vis-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Engineering Genetic Circuits</p><p class="cert-issuer">Coursera</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/coursera-genetic-circuits-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Data Science en R para Biociencias</p><p class="cert-issuer">Lyn Biolearning</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/lyn-datascience-r-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">AI for Healthcare Systems Specialization</p><p class="cert-issuer">University of Colorado / Coursera</p></div>
-                        <div class="cert-side"><span class="cert-year">2025</span><a class="cert-link" href="certificates/colorado-ai-healthcare-2025.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                    <li>
-                        <div><p class="cert-title">Diseño de Prótesis Biomecánicas</p><p class="cert-issuer">P4H Bionics</p></div>
-                        <div class="cert-side"><span class="cert-year">2024</span><a class="cert-link" href="certificates/p4h-protesis-2024.pdf" target="_blank" rel="noopener">View ↗</a></div>
-                    </li>
-                </ul>
+                <!-- "View Certificate" links only appear once the PDF exists in the certificates/ folder. -->
+                <p class="certs-group-label">🏛️ In-Person Programs</p>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">🔬</div>
+                        <p class="cert-title">Investigación Científica</p>
+                        <p class="cert-issuer">Instituto Nacional de Salud del Niño de San Borja (INSNSB)</p>
+                        <div class="cert-meta"><span>2026</span><span class="cert-badge highlight">Presencial</span></div>
+                        <a class="cert-link" href="certificates/insnsb-investigacion-2026.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🧪</div>
+                        <p class="cert-title">Semillero de Investigación – Programa de Especialización en Tecnologías de Diseño, Manufactura Digital y Prototipado 3D para la Innovación</p>
+                        <p class="cert-issuer">FABRICUM / FabCore – Pontificia Universidad Católica del Perú</p>
+                        <div class="cert-meta"><span>2025 · 180 h</span><span class="cert-badge highlight">Presencial</span></div>
+                        <a class="cert-link" href="certificates/fabcore-semillero-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <p class="certs-group-label">💻 Online Courses &amp; Specializations</p>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">🤖</div>
+                        <p class="cert-title">Curso Avanzado de IA Generativa en Salud</p>
+                        <p class="cert-issuer">INSNSB</p>
+                        <div class="cert-meta"><span>2026</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/insnsb-ia-salud-2026.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🎮</div>
+                        <p class="cert-title">Game Design and Development with Unity Specialization</p>
+                        <p class="cert-issuer">Coursera</p>
+                        <div class="cert-meta"><span>2026</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/coursera-unity-2026.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏥</div>
+                        <p class="cert-title">Introduction to Medical Software</p>
+                        <p class="cert-issuer">University of Glasgow</p>
+                        <div class="cert-meta"><span>2025</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/glasgow-medical-software-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🧠</div>
+                        <p class="cert-title">Biomedical Visualisation</p>
+                        <p class="cert-issuer">Yale University / Coursera</p>
+                        <div class="cert-meta"><span>2025</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/yale-biomedical-vis-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🧬</div>
+                        <p class="cert-title">Engineering Genetic Circuits</p>
+                        <p class="cert-issuer">Coursera</p>
+                        <div class="cert-meta"><span>2025</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/coursera-genetic-circuits-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">📊</div>
+                        <p class="cert-title">Data Science en R para Biociencias</p>
+                        <p class="cert-issuer">Lyn Biolearning</p>
+                        <div class="cert-meta"><span>2025</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/lyn-datascience-r-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">⚕️</div>
+                        <p class="cert-title">AI for Healthcare Systems Specialization</p>
+                        <p class="cert-issuer">University of Colorado / Coursera</p>
+                        <div class="cert-meta"><span>2025</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/colorado-ai-healthcare-2025.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🦾</div>
+                        <p class="cert-title">Diseño de Prótesis Biomecánicas</p>
+                        <p class="cert-issuer">P4H Bionics</p>
+                        <div class="cert-meta"><span>2024</span><span class="cert-badge">Virtual</span></div>
+                        <a class="cert-link" href="certificates/p4h-protesis-2024.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+                    </div>
+                </div>
             </section>
 
             <!-- VOLUNTEERING -->
             <section id="volunteering" class="block">
+                <p class="eyebrow">Community</p>
                 <h2>Volunteering</h2>
-                <p class="section-subtitle">Student organizations and research groups.</p>
+                <p class="section-subtitle">Community initiatives, social impact work, and events.</p>
 
                 <div class="exp-list">                    <div class="exp-item">
                         <div class="exp-logo-wrap">
@@ -617,6 +821,24 @@
                             <p class="exp-desc">Collaborated on research projects with training in biomaterials and synthesis and characterization techniques, taking part in research with environmental and social impact.</p>
                         </div>
                     </div>
+                    
+                    <div class="edu-divider"></div>
+                    <div class="exp-item">
+                        <div class="exp-logo-wrap">
+                            <div class="exp-logo-box">🎤</div>
+                        </div>
+                        <div class="exp-body">
+                            <div class="exp-header-row">
+                                <div>
+                                    <h4 class="exp-title">Participant – XVI Regional Congress &amp; I International Congress on Quality and Technological Innovation</h4>
+                                    <span class="exp-institution">Courses and technical sessions</span>
+                                    <span class="exp-date">Oct 24–26, 2024</span>
+                                </div>
+                                <span class="exp-badge exp-badge-leadership">Event</span>
+                            </div>
+                            <p class="exp-desc">Attended conferences and technical sessions focused on technical education and innovative technologies.</p>
+                        </div>
+                    </div>
 
                 
 
@@ -625,9 +847,35 @@
 
             <!-- CONTACT -->
             <section id="contact" class="block">
-                <h2>Contact</h2>
-                <p class="lead">Open to research collaborations and internships at the intersection of engineering and health.</p>
-                <div class="contact-row">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's Connect!</h2>
+                <p class="lead">Open to research collaborations, internships, and projects at the intersection of engineering and health.</p>
+
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <div id="statusMessage" class="status-message" role="status"></div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="How can I help you?">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or idea..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-links">
+                        <h3>Other Ways to Reach Me</h3>
                         <a href="mailto:ariana.dextre@pucp.edu.pe" class="contact-link">
                             <span class="icon icon-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
                             <span>ariana.dextre@pucp.edu.pe</span>
@@ -640,6 +888,7 @@
                             <span class="icon icon-github"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span>
                             <span>GitHub</span>
                         </a>
+                    </div>
                 </div>
             </section>
 
