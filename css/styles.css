@@ -1,7 +1,7 @@
 /* ============================================
-   GOOGLE FONTS - Playfair Display + Cormorant Garamond
+   GOOGLE FONTS - Fraunces (titles) + DM Sans (text)
 ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap');
 
 * {
     margin: 0;
@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
     background: var(--white-warm);
@@ -81,7 +81,7 @@ body {
 }
 
 .header-title h1 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 400;
     font-style: italic;
@@ -92,7 +92,7 @@ body {
 }
 
 .header-subtitle {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.85rem;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -126,7 +126,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--text-secondary);
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -192,7 +192,7 @@ main {
 }
 
 .hero-title-elegant {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 4rem;
     font-weight: 400;
     font-style: italic;
@@ -210,7 +210,7 @@ main {
 }
 
 .hero-subtitle-elegant {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.9rem;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -220,7 +220,7 @@ main {
 }
 
 .hero-tagline {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 1.2rem;
     color: var(--text-secondary);
     margin-bottom: 3rem;
@@ -234,7 +234,7 @@ main {
     border: none;
     border-radius: 30px;
     text-decoration: none;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
     display: inline-block;
@@ -280,7 +280,7 @@ main {
 }
 
 .about-content-side h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 400;
     font-style: italic;
@@ -300,7 +300,7 @@ main {
 }
 
 .about-content-side p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -324,7 +324,7 @@ main {
     color: var(--text-primary);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
     box-shadow: 0 2px 8px rgba(160, 144, 192, 0.08);
@@ -338,7 +338,7 @@ main {
     border: 1.5px solid var(--lilac-soft);
     border-radius: 25px;
     text-decoration: none;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
     display: inline-block;
@@ -354,7 +354,7 @@ main {
 
 /* Section Headers */
 .section h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.5rem;
     font-weight: 400;
     font-style: italic;
@@ -425,7 +425,7 @@ main {
 }
 
 .project-card h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     color: var(--text-primary);
     margin-bottom: 1rem;
     font-size: 1.3rem;
@@ -433,7 +433,7 @@ main {
 }
 
 .project-card p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.65;
@@ -615,7 +615,7 @@ main {
 }
 
 .project-title-clean {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.2rem;
     margin-bottom: 0.8rem;
     color: var(--text-primary);
@@ -652,7 +652,7 @@ main {
 }
 
 .project-section-clean h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
@@ -759,7 +759,7 @@ main {
 }
 
 .category-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: 2.5rem;
@@ -825,7 +825,7 @@ main {
 }
 
 .mini-project-card h4 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     color: var(--text-primary);
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -923,7 +923,7 @@ main {
 }
 
 .timeline-item h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -1026,7 +1026,7 @@ main {
 }
 
 .contact-links h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 1.8rem;
     color: var(--text-primary);
     margin-bottom: 2rem;
@@ -1263,7 +1263,7 @@ main {
 #education h2,
 #experience-leadership h2,
 #volunteering h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.4rem;
     font-weight: 400;
     font-style: normal;
@@ -1284,7 +1284,7 @@ main {
 
 /* Subtítulo gris debajo del h2 */
 .section-subtitle {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 1rem;
     color: var(--text-muted);
     text-align: left;
@@ -1306,7 +1306,7 @@ main {
 
 /* Título del subgrupo — pequeño espaciado como "COMPLEMENTARY EDUCATION" en ref */
 .edu-group-label {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 4px;
@@ -1317,7 +1317,7 @@ main {
 }
 
 .edu-group-subtitle {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.95rem;
     color: var(--text-muted);
     margin: 0 0 2rem;
@@ -1402,7 +1402,7 @@ main {
 /* Título principal — bold negro */
 .edu-title,
 .exp-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 1.25rem;
     font-weight: 600;
     font-style: normal;
@@ -1415,7 +1415,7 @@ main {
 .edu-institution,
 .exp-institution {
     display: block;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: var(--lilac-accent);
@@ -1427,7 +1427,7 @@ main {
 .edu-date,
 .exp-date {
     display: block;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.9rem;
     color: var(--text-muted);
     font-weight: 400;
@@ -1438,7 +1438,7 @@ main {
 .exp-badge {
     flex-shrink: 0;
     align-self: flex-start;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--text-secondary);
@@ -1453,7 +1453,7 @@ main {
 /* Descripción */
 .edu-desc,
 .exp-desc {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.7;
@@ -1462,7 +1462,7 @@ main {
 
 /* Logro */
 .edu-achievement {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     font-size: 0.92rem;
     color: var(--text-secondary);
     font-weight: 500;
